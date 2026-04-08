@@ -122,14 +122,8 @@
             align-items: center;
         }
 
-        .nav-logo {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .nav-logo span { color: #00b894; }
+        .nav-logo{display:flex;align-items:center;text-decoration:none}
+        .nav-logo img{height:45px;width:auto}
 
         .nav-links {
             display: flex;
@@ -1049,30 +1043,30 @@
     <!-- ============ NAV ============ -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="https://burundi.topaiafrica.com" class="nav-logo">Top AI <span>Burundi</span></a>
+            <a href="https://burundi.topaiafrica.com" class="nav-logo"><img src="https://topaiafrica.com/wp-content/uploads/2026/04/top-ai-africa-logo-v5.png" alt="Top AI Burundi logo - AI Agents & Automation Platform"></a>
             <ul class="nav-links">
-                <li><a href="https://topaiafrica.com">Accueil</a></li>
-                <li><a href="https://topaiafrica.com/en/about/">A Propos</a></li>
+                <li><a href="https://topaiafrica.com" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="https://topaiafrica.com/en/about/" data-fr="A Propos" data-en="About">A Propos</a></li>
                 <li><a href="https://topaiafrica.com/en/blog/">Blog</a></li>
                 <li><a href="https://topaiafrica.com/en/contact/">Contact</a></li>
                 <li>
                     <div class="lang-toggle">
-                        <button class="lang-btn active">FR</button>
-                        <button class="lang-btn">EN</button>
+                        <button class="lang-btn active" onclick="switchLang('fr')">FR</button>
+                        <button class="lang-btn" onclick="switchLang('en')">EN</button>
                     </div>
                 </li>
-                <li><a href="#book-demo" class="nav-cta">Demo Gratuite</a></li>
+                <li><a href="#book-demo" class="nav-cta" data-fr="Demo Gratuite" data-en="Free Demo">Demo Gratuite</a></li>
             </ul>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="https://topaiafrica.com">Accueil</a>
-            <a href="https://topaiafrica.com/en/about/">A Propos</a>
+            <a href="https://topaiafrica.com" data-fr="Accueil" data-en="Home">Accueil</a>
+            <a href="https://topaiafrica.com/en/about/" data-fr="A Propos" data-en="About">A Propos</a>
             <a href="https://topaiafrica.com/en/blog/">Blog</a>
             <a href="https://topaiafrica.com/en/contact/">Contact</a>
-            <a href="#book-demo" onclick="toggleMenu()">Demo Gratuite</a>
+            <a href="#book-demo" onclick="toggleMenu()" data-fr="Demo Gratuite" data-en="Free Demo">Demo Gratuite</a>
         </div>
     </nav>
 
@@ -1080,18 +1074,18 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <div class="hero-badge">N&deg;1 en Automatisation IA au Burundi &bull; Bureau &agrave; Bujumbura</div>
-                <h1>Votre Business Perd des Clients Chaque Jour.<br>
+                <div class="hero-badge" data-fr="N&deg;1 en Automatisation IA au Burundi &bull; Bureau &agrave; Bujumbura" data-en="#1 AI Automation in Burundi &bull; Office in Bujumbura">N&deg;1 en Automatisation IA au Burundi &bull; Bureau &agrave; Bujumbura</div>
+                <h1 data-fr="Votre Business Perd des Clients Chaque Jour.<br><span class='highlight'>Notre Agent IA R&eacute;pond en 60 Secondes.</span>" data-en="Your Business Loses Customers Every Day.<br><span class='highlight'>Our AI Agent Responds in 60 Seconds.</span>">Votre Business Perd des Clients Chaque Jour.<br>
                     <span class="highlight">Notre Agent IA R&eacute;pond en 60 Secondes.</span></h1>
-                <p class="hero-sub">Nous construisons des syst&egrave;mes IA pour les entreprises Burundaises &mdash; r&eacute;ponses instantan&eacute;es par SMS, WhatsApp et voix qui r&eacute;servent vos rendez-vous 24h/24.</p>
+                <p class="hero-sub" data-fr="Nous construisons des syst&egrave;mes IA pour les entreprises Burundaises &mdash; r&eacute;ponses instantan&eacute;es par SMS, WhatsApp et voix qui r&eacute;servent vos rendez-vous 24h/24." data-en="We build AI systems for Burundian businesses &mdash; instant SMS, WhatsApp, and voice responses that book appointments 24/7.">Nous construisons des syst&egrave;mes IA pour les entreprises Burundaises &mdash; r&eacute;ponses instantan&eacute;es par SMS, WhatsApp et voix qui r&eacute;servent vos rendez-vous 24h/24.</p>
                 <div class="hero-ctas">
-                    <a href="#book-demo" class="btn-primary">R&eacute;servez Votre D&eacute;mo Gratuite &rarr;</a>
-                    <a href="https://wa.me/25775605858?text=Bonjour%2C%20je%20veux%20une%20d%C3%A9mo%20IA" class="btn-whatsapp">&#128172; Nous &Eacute;crire sur WhatsApp</a>
+                    <a href="#book-demo" class="btn-primary" data-fr="R&eacute;servez Votre D&eacute;mo Gratuite &rarr;" data-en="Book Your Free Demo &rarr;">R&eacute;servez Votre D&eacute;mo Gratuite &rarr;</a>
+                    <a href="https://wa.me/25775605858?text=Bonjour%2C%20je%20veux%20une%20d%C3%A9mo%20IA" class="btn-whatsapp" data-fr="&#128172; Nous &Eacute;crire sur WhatsApp" data-en="&#128172; Message Us on WhatsApp">&#128172; Nous &Eacute;crire sur WhatsApp</a>
                 </div>
                 <div class="trust-bar">
-                    <div class="trust-item"><span class="num">50+</span> Entreprises Burundaises</div>
-                    <div class="trust-item"><span class="num">96%</span> Satisfaction Client</div>
-                    <div class="trust-item"><span class="num">Fran&ccedil;ais</span> &bull; Kirundi &bull; Anglais</div>
+                    <div class="trust-item"><span class="num">50+</span> <span data-fr="Entreprises Burundaises" data-en="Burundian Businesses">Entreprises Burundaises</span></div>
+                    <div class="trust-item"><span class="num">96%</span> <span data-fr="Satisfaction Client" data-en="Client Satisfaction">Satisfaction Client</span></div>
+                    <div class="trust-item"><span class="num" data-fr="Fran&ccedil;ais" data-en="French">Fran&ccedil;ais</span> &bull; Kirundi &bull; <span data-fr="Anglais" data-en="English">Anglais</span></div>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1099,27 +1093,27 @@
                     <div class="wa-header">
                         <div class="wa-avatar">IA</div>
                         <div>
-                            <div class="wa-name">Agent IA - Votre Business</div>
-                            <div class="wa-status">En ligne 24h/24</div>
+                            <div class="wa-name" data-fr="Agent IA - Votre Business" data-en="AI Agent - Your Business">Agent IA - Votre Business</div>
+                            <div class="wa-status" data-fr="En ligne 24h/24" data-en="Online 24/7">En ligne 24h/24</div>
                         </div>
                     </div>
-                    <div class="wa-bubble received">
+                    <div class="wa-bubble received" data-fr="Bonjour, j'ai vu votre annonce. Est-ce que je peux avoir plus d'informations sur vos services?<div class='wa-time'>21:47</div>" data-en="Hello, I saw your ad. Can I get more information about your services?<div class='wa-time'>21:47</div>">
                         Bonjour, j'ai vu votre annonce. Est-ce que je peux avoir plus d'informations sur vos services?
                         <div class="wa-time">21:47</div>
                     </div>
-                    <div class="wa-bubble sent">
+                    <div class="wa-bubble sent" data-fr="Bonjour! Merci pour votre int&eacute;r&ecirc;t. Je serais ravi de vous aider. Voici nos services principaux. Voulez-vous r&eacute;server un rendez-vous gratuit demain &agrave; 10h?<div class='wa-time'>21:47 &bull; 43 sec</div>" data-en="Hello! Thanks for your interest. I'd be happy to help. Here are our main services. Would you like to book a free appointment tomorrow at 10am?<div class='wa-time'>21:47 &bull; 43 sec</div>">
                         Bonjour! Merci pour votre int&eacute;r&ecirc;t. Je serais ravi de vous aider. Voici nos services principaux. Voulez-vous r&eacute;server un rendez-vous gratuit demain &agrave; 10h?
                         <div class="wa-time">21:47 &bull; 43 sec</div>
                     </div>
-                    <div class="wa-bubble received">
+                    <div class="wa-bubble received" data-fr="Oui, 10h c'est parfait!<div class='wa-time'>21:48</div>" data-en="Yes, 10am is perfect!<div class='wa-time'>21:48</div>">
                         Oui, 10h c'est parfait!
                         <div class="wa-time">21:48</div>
                     </div>
-                    <div class="wa-bubble sent">
+                    <div class="wa-bubble sent" data-fr="Parfait! Rendez-vous confirm&eacute; pour demain &agrave; 10h. Vous recevrez un SMS de rappel. &Agrave; demain!<div class='wa-time'>21:48</div>" data-en="Perfect! Appointment confirmed for tomorrow at 10am. You'll receive a reminder SMS. See you tomorrow!<div class='wa-time'>21:48</div>">
                         Parfait! Rendez-vous confirm&eacute; pour demain &agrave; 10h. Vous recevrez un SMS de rappel. &Agrave; demain!
                         <div class="wa-time">21:48</div>
                     </div>
-                    <div class="wa-badge">R&eacute;pondu en 43 sec &bull; Rendez-vous r&eacute;serv&eacute; &bull; 21h47</div>
+                    <div class="wa-badge" data-fr="R&eacute;pondu en 43 sec &bull; Rendez-vous r&eacute;serv&eacute; &bull; 21h47" data-en="Responded in 43 sec &bull; Appointment booked &bull; 9:47 PM">R&eacute;pondu en 43 sec &bull; Rendez-vous r&eacute;serv&eacute; &bull; 21h47</div>
                 </div>
             </div>
         </div>
@@ -1130,32 +1124,32 @@
         <div class="section-inner">
             <div class="problem-grid">
                 <div>
-                    <div class="section-label">Le Probl&egrave;me</div>
-                    <h2 class="section-title">Le Probl&egrave;me Que Chaque Entrepreneur Burundais Conna&icirc;t</h2>
+                    <div class="section-label" data-fr="Le Probl&egrave;me" data-en="The Problem">Le Probl&egrave;me</div>
+                    <h2 class="section-title" data-fr="Le Probl&egrave;me Que Chaque Entrepreneur Burundais Conna&icirc;t" data-en="The Problem Every Burundian Entrepreneur Knows">Le Probl&egrave;me Que Chaque Entrepreneur Burundais Conna&icirc;t</h2>
                     <ul class="problem-list">
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>Vous r&eacute;pondez au t&eacute;l&eacute;phone en servant un client. <strong>L'appelant raccroche.</strong> Cette vente est perdue.</span>
+                            <span data-fr="Vous r&eacute;pondez au t&eacute;l&eacute;phone en servant un client. <strong>L'appelant raccroche.</strong> Cette vente est perdue." data-en="You answer the phone while serving a customer. <strong>The caller hangs up.</strong> That sale is gone.">Vous r&eacute;pondez au t&eacute;l&eacute;phone en servant un client. <strong>L'appelant raccroche.</strong> Cette vente est perdue.</span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>Un client envoie un WhatsApp &agrave; <strong>21h</strong>. Vous le voyez le lendemain. <strong>Il a d&eacute;j&agrave; achet&eacute; ailleurs.</strong></span>
+                            <span data-fr="Un client envoie un WhatsApp &agrave; <strong>21h</strong>. Vous le voyez le lendemain. <strong>Il a d&eacute;j&agrave; achet&eacute; ailleurs.</strong>" data-en="A customer sends a WhatsApp at <strong>9 PM</strong>. You see it the next morning. <strong>They already bought elsewhere.</strong>">Un client envoie un WhatsApp &agrave; <strong>21h</strong>. Vous le voyez le lendemain. <strong>Il a d&eacute;j&agrave; achet&eacute; ailleurs.</strong></span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>Vous passez <strong>toute la journ&eacute;e</strong> &agrave; r&eacute;pondre aux m&ecirc;mes questions au lieu de <strong>d&eacute;velopper votre business</strong>.</span>
+                            <span data-fr="Vous passez <strong>toute la journ&eacute;e</strong> &agrave; r&eacute;pondre aux m&ecirc;mes questions au lieu de <strong>d&eacute;velopper votre business</strong>." data-en="You spend <strong>all day</strong> answering the same questions instead of <strong>growing your business</strong>.">Vous passez <strong>toute la journ&eacute;e</strong> &agrave; r&eacute;pondre aux m&ecirc;mes questions au lieu de <strong>d&eacute;velopper votre business</strong>.</span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>Vous ne pouvez pas embaucher <strong>3 employ&eacute;s</strong> juste pour r&eacute;pondre aux messages et appels.</span>
+                            <span data-fr="Vous ne pouvez pas embaucher <strong>3 employ&eacute;s</strong> juste pour r&eacute;pondre aux messages et appels." data-en="You can't afford to hire <strong>3 staff</strong> just to answer messages and calls.">Vous ne pouvez pas embaucher <strong>3 employ&eacute;s</strong> juste pour r&eacute;pondre aux messages et appels.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="stat-callout">
                     <div class="big-stat">67%</div>
-                    <p>des clients vont chez le concurrent si vous ne r&eacute;pondez pas dans les <span class="emphasis">5 minutes</span>.</p>
+                    <p data-fr="des clients vont chez le concurrent si vous ne r&eacute;pondez pas dans les <span class='emphasis'>5 minutes</span>." data-en="of customers go to a competitor if you don't respond within <span class='emphasis'>5 minutes</span>.">des clients vont chez le concurrent si vous ne r&eacute;pondez pas dans les <span class="emphasis">5 minutes</span>.</p>
                     <br>
-                    <p>Vous ne perdez pas des clients &agrave; cause de vos services.<br><span class="emphasis">Vous les perdez parce que vous &ecirc;tes trop lent.</span></p>
+                    <p data-fr="Vous ne perdez pas des clients &agrave; cause de vos services.<br><span class='emphasis'>Vous les perdez parce que vous &ecirc;tes trop lent.</span>" data-en="You're not losing customers because of your services.<br><span class='emphasis'>You're losing them because you're too slow.</span>">Vous ne perdez pas des clients &agrave; cause de vos services.<br><span class="emphasis">Vous les perdez parce que vous &ecirc;tes trop lent.</span></p>
                 </div>
             </div>
         </div>
@@ -1164,34 +1158,34 @@
     <!-- ============ SOLUTION ============ -->
     <section class="section">
         <div class="section-inner text-center">
-            <div class="section-label">La Solution</div>
-            <h2 class="section-title">Un Employ&eacute; IA Qui Travaille 24h/24 Pour Votre Business</h2>
-            <p class="section-subtitle">Votre agent IA r&eacute;pond instantan&eacute;ment sur tous les canaux &mdash; jour et nuit, week-end et jours f&eacute;ri&eacute;s.</p>
+            <div class="section-label" data-fr="La Solution" data-en="The Solution">La Solution</div>
+            <h2 class="section-title" data-fr="Un Employ&eacute; IA Qui Travaille 24h/24 Pour Votre Business" data-en="An AI Employee That Works 24/7 For Your Business">Un Employ&eacute; IA Qui Travaille 24h/24 Pour Votre Business</h2>
+            <p class="section-subtitle" data-fr="Votre agent IA r&eacute;pond instantan&eacute;ment sur tous les canaux &mdash; jour et nuit, week-end et jours f&eacute;ri&eacute;s." data-en="Your AI agent responds instantly on every channel &mdash; day and night, weekends and holidays.">Votre agent IA r&eacute;pond instantan&eacute;ment sur tous les canaux &mdash; jour et nuit, week-end et jours f&eacute;ri&eacute;s.</p>
         </div>
         <div class="section-inner">
             <div class="solution-grid">
                 <div class="solution-card">
                     <div class="solution-icon">&#128172;</div>
-                    <h3>R&eacute;ponse WhatsApp Instantan&eacute;e</h3>
-                    <p>Chaque message WhatsApp re&ccedil;oit une r&eacute;ponse personnalis&eacute;e en moins de 60 secondes. Jour et nuit. Sans exception.</p>
+                    <h3 data-fr="R&eacute;ponse WhatsApp Instantan&eacute;e" data-en="Instant WhatsApp Response">R&eacute;ponse WhatsApp Instantan&eacute;e</h3>
+                    <p data-fr="Chaque message WhatsApp re&ccedil;oit une r&eacute;ponse personnalis&eacute;e en moins de 60 secondes. Jour et nuit. Sans exception." data-en="Every WhatsApp message gets a personalized response in under 60 seconds. Day and night. No exceptions.">Chaque message WhatsApp re&ccedil;oit une r&eacute;ponse personnalis&eacute;e en moins de 60 secondes. Jour et nuit. Sans exception.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#9742;</div>
-                    <h3>Agent Vocal IA</h3>
-                    <p>L'IA rappelle vos clients avec une voix naturelle en Fran&ccedil;ais ou Kirundi. Qualifie le prospect. Prend le rendez-vous.</p>
+                    <h3 data-fr="Agent Vocal IA" data-en="AI Voice Agent">Agent Vocal IA</h3>
+                    <p data-fr="L'IA rappelle vos clients avec une voix naturelle en Fran&ccedil;ais ou Kirundi. Qualifie le prospect. Prend le rendez-vous." data-en="AI calls your customers back with a natural voice in French or Kirundi. Qualifies the lead. Books the appointment.">L'IA rappelle vos clients avec une voix naturelle en Fran&ccedil;ais ou Kirundi. Qualifie le prospect. Prend le rendez-vous.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#9993;</div>
-                    <h3>SMS + Suivi Automatique</h3>
-                    <p>S&eacute;quences SMS automatiques qui relancent les prospects jusqu'&agrave; ce qu'ils soient pr&ecirc;ts &agrave; acheter.</p>
+                    <h3 data-fr="SMS + Suivi Automatique" data-en="SMS + Auto Follow-Up">SMS + Suivi Automatique</h3>
+                    <p data-fr="S&eacute;quences SMS automatiques qui relancent les prospects jusqu'&agrave; ce qu'ils soient pr&ecirc;ts &agrave; acheter." data-en="Automated SMS sequences that follow up with leads until they're ready to buy.">S&eacute;quences SMS automatiques qui relancent les prospects jusqu'&agrave; ce qu'ils soient pr&ecirc;ts &agrave; acheter.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#128197;</div>
-                    <h3>R&eacute;servation de Rendez-vous</h3>
-                    <p>Les clients r&eacute;servent directement dans votre agenda. Plus de va-et-vient. Plus de rendez-vous manqu&eacute;s.</p>
+                    <h3 data-fr="R&eacute;servation de Rendez-vous" data-en="Appointment Booking">R&eacute;servation de Rendez-vous</h3>
+                    <p data-fr="Les clients r&eacute;servent directement dans votre agenda. Plus de va-et-vient. Plus de rendez-vous manqu&eacute;s." data-en="Customers book directly into your calendar. No back-and-forth. No missed appointments.">Les clients r&eacute;servent directement dans votre agenda. Plus de va-et-vient. Plus de rendez-vous manqu&eacute;s.</p>
                 </div>
             </div>
-            <div class="carrier-note">
+            <div class="carrier-note" data-fr="<strong>Compatible Lumitel, Econet</strong> et tous les op&eacute;rateurs Burundais &bull; Fonctionne aussi avec Mobile Money" data-en="<strong>Compatible with Lumitel, Econet</strong> and all Burundian carriers &bull; Also works with Mobile Money">
                 <strong>Compatible Lumitel, Econet</strong> et tous les op&eacute;rateurs Burundais &bull; Fonctionne aussi avec Mobile Money
             </div>
         </div>
@@ -1200,27 +1194,27 @@
     <!-- ============ HOW IT WORKS ============ -->
     <section class="section how-it-works" id="how-it-works">
         <div class="section-inner text-center">
-            <div class="section-label">Comment &Ccedil;a Marche</div>
-            <h2 class="section-title">Op&eacute;rationnel en 72 Heures</h2>
-            <p class="section-subtitle">Simple, rapide, sans comp&eacute;tences techniques. On g&egrave;re tout pour vous.</p>
+            <div class="section-label" data-fr="Comment &Ccedil;a Marche" data-en="How It Works">Comment &Ccedil;a Marche</div>
+            <h2 class="section-title" data-fr="Op&eacute;rationnel en 72 Heures" data-en="Live in 72 Hours">Op&eacute;rationnel en 72 Heures</h2>
+            <p class="section-subtitle" data-fr="Simple, rapide, sans comp&eacute;tences techniques. On g&egrave;re tout pour vous." data-en="Simple, fast, no technical skills needed. We handle everything for you.">Simple, rapide, sans comp&eacute;tences techniques. On g&egrave;re tout pour vous.</p>
             <div class="steps">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h3>D&eacute;mo Gratuite</h3>
-                    <p>15 minutes. On analyse votre temps de r&eacute;ponse actuel et on vous montre combien de clients vous perdez.</p>
+                    <h3 data-fr="D&eacute;mo Gratuite" data-en="Free Demo">D&eacute;mo Gratuite</h3>
+                    <p data-fr="15 minutes. On analyse votre temps de r&eacute;ponse actuel et on vous montre combien de clients vous perdez." data-en="15 minutes. We analyze your current response time and show you exactly how many customers you're losing.">15 minutes. On analyse votre temps de r&eacute;ponse actuel et on vous montre combien de clients vous perdez.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h3>On Construit Votre Syst&egrave;me IA</h3>
-                    <p>Agents IA personnalis&eacute;s pour WhatsApp, SMS, voix &mdash; int&eacute;gr&eacute;s &agrave; votre business. Pr&ecirc;t en 48-72h.</p>
+                    <h3 data-fr="On Construit Votre Syst&egrave;me IA" data-en="We Build Your AI System">On Construit Votre Syst&egrave;me IA</h3>
+                    <p data-fr="Agents IA personnalis&eacute;s pour WhatsApp, SMS, voix &mdash; int&eacute;gr&eacute;s &agrave; votre business. Pr&ecirc;t en 48-72h." data-en="Custom AI agents for WhatsApp, SMS, voice &mdash; integrated with your business. Ready in 48-72 hours.">Agents IA personnalis&eacute;s pour WhatsApp, SMS, voix &mdash; int&eacute;gr&eacute;s &agrave; votre business. Pr&ecirc;t en 48-72h.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h3>Vous Commencez &agrave; Vendre Plus</h3>
-                    <p>L'IA g&egrave;re chaque prospect instantan&eacute;ment. Vous vous concentrez sur la croissance de votre business.</p>
+                    <h3 data-fr="Vous Commencez &agrave; Vendre Plus" data-en="Start Selling More">Vous Commencez &agrave; Vendre Plus</h3>
+                    <p data-fr="L'IA g&egrave;re chaque prospect instantan&eacute;ment. Vous vous concentrez sur la croissance de votre business." data-en="AI handles every lead instantly. You focus on growing your business.">L'IA g&egrave;re chaque prospect instantan&eacute;ment. Vous vous concentrez sur la croissance de votre business.</p>
                 </div>
             </div>
-            <a href="#book-demo" class="btn-primary">R&eacute;servez Votre D&eacute;mo Gratuite &rarr;</a>
+            <a href="#book-demo" class="btn-primary" data-fr="R&eacute;servez Votre D&eacute;mo Gratuite &rarr;" data-en="Book Your Free Demo &rarr;">R&eacute;servez Votre D&eacute;mo Gratuite &rarr;</a>
         </div>
     </section>
 
@@ -1228,28 +1222,28 @@
     <section class="section social-proof">
         <div class="section-inner">
             <div class="text-center">
-                <div class="section-label">R&eacute;sultats</div>
-                <h2 class="section-title">Des Entreprises Burundaises Transform&eacute;es Par l'IA</h2>
-                <p class="section-subtitle">Voici ce qui se passe quand l'IA g&egrave;re vos prospects.</p>
+                <div class="section-label" data-fr="R&eacute;sultats" data-en="Results">R&eacute;sultats</div>
+                <h2 class="section-title" data-fr="Des Entreprises Burundaises Transform&eacute;es Par l'IA" data-en="Burundian Businesses Transformed By AI">Des Entreprises Burundaises Transform&eacute;es Par l'IA</h2>
+                <p class="section-subtitle" data-fr="Voici ce qui se passe quand l'IA g&egrave;re vos prospects." data-en="See what happens when AI handles your leads.">Voici ce qui se passe quand l'IA g&egrave;re vos prospects.</p>
             </div>
 
             <div class="featured-testimonial">
                 <div class="quote-mark">&ldquo;</div>
-                <blockquote>"On est pass&eacute; de perdre 40% de nos prospects &agrave; r&eacute;server 3X plus de rendez-vous d&egrave;s le premier mois. L'IA r&eacute;pond plus vite que n'importe quel humain."</blockquote>
+                <blockquote data-fr="&ldquo;On est pass&eacute; de perdre 40% de nos prospects &agrave; r&eacute;server 3X plus de rendez-vous d&egrave;s le premier mois. L'IA r&eacute;pond plus vite que n'importe quel humain.&rdquo;" data-en="&ldquo;We went from losing 40% of our leads to booking 3X more appointments in the first month. AI responds faster than any human could.&rdquo;">"On est pass&eacute; de perdre 40% de nos prospects &agrave; r&eacute;server 3X plus de rendez-vous d&egrave;s le premier mois. L'IA r&eacute;pond plus vite que n'importe quel humain."</blockquote>
                 <div class="testimonial-author">
                     <div class="author-avatar">AN</div>
                     <div class="author-info">
                         <div class="name">Aisha Nkurunziza</div>
-                        <div class="role">Directrice des Op&eacute;rations, AfriPay &mdash; Bujumbura</div>
+                        <div class="role" data-fr="Directrice des Op&eacute;rations, AfriPay &mdash; Bujumbura" data-en="Operations Director, AfriPay &mdash; Bujumbura">Directrice des Op&eacute;rations, AfriPay &mdash; Bujumbura</div>
                     </div>
                 </div>
-                <div class="testimonial-result">96% satisfaction client &bull; Temps de r&eacute;ponse: 60 secondes</div>
+                <div class="testimonial-result" data-fr="96% satisfaction client &bull; Temps de r&eacute;ponse: 60 secondes" data-en="96% customer satisfaction &bull; Response time: 60 seconds">96% satisfaction client &bull; Temps de r&eacute;ponse: 60 secondes</div>
             </div>
 
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"85% de r&eacute;duction du temps de traitement. On a &eacute;conomis&eacute; 30 heures par semaine. Un investissement incroyable."</blockquote>
+                    <blockquote data-fr="&ldquo;85% de r&eacute;duction du temps de traitement. On a &eacute;conomis&eacute; 30 heures par semaine. Un investissement incroyable.&rdquo;" data-en="&ldquo;85% reduction in processing time. We saved 30 hours per week. An incredible investment.&rdquo;">"85% de r&eacute;duction du temps de traitement. On a &eacute;conomis&eacute; 30 heures par semaine. Un investissement incroyable."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">JM</div>
                         <div class="author-info">
@@ -1257,23 +1251,23 @@
                             <div class="role">CEO, BujaTech Solutions</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">85% temps &eacute;conomis&eacute; &bull; 30h/semaine gagn&eacute;es</div>
+                    <div class="testimonial-result" data-fr="85% temps &eacute;conomis&eacute; &bull; 30h/semaine gagn&eacute;es" data-en="85% time saved &bull; 30 hrs/week gained">85% temps &eacute;conomis&eacute; &bull; 30h/semaine gagn&eacute;es</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"L'agent IA a r&eacute;duit nos co&ucirc;ts de $15,000/mois. Il g&egrave;re 80% des demandes clients sans intervention humaine."</blockquote>
+                    <blockquote data-fr="&ldquo;L'agent IA a r&eacute;duit nos co&ucirc;ts de $15,000/mois. Il g&egrave;re 80% des demandes clients sans intervention humaine.&rdquo;" data-en="&ldquo;Our AI agent cut our costs by $15,000/month. It handles 80% of customer requests without human intervention.&rdquo;">"L'agent IA a r&eacute;duit nos co&ucirc;ts de $15,000/mois. Il g&egrave;re 80% des demandes clients sans intervention humaine."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">GN</div>
                         <div class="author-info">
                             <div class="name">Grace Nibigira</div>
-                            <div class="role">Fondatrice, TransAfrica Logistics</div>
+                            <div class="role" data-fr="Fondatrice, TransAfrica Logistics" data-en="Founder, TransAfrica Logistics">Fondatrice, TransAfrica Logistics</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">$15,000/mois &eacute;conomis&eacute;s &bull; 65% r&eacute;duction co&ucirc;ts</div>
+                    <div class="testimonial-result" data-fr="$15,000/mois &eacute;conomis&eacute;s &bull; 65% r&eacute;duction co&ucirc;ts" data-en="$15,000/month saved &bull; 65% cost reduction">$15,000/mois &eacute;conomis&eacute;s &bull; 65% r&eacute;duction co&ucirc;ts</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"L'IA r&eacute;serve les rendez-vous directement dans mon agenda. Je suis pass&eacute;e de 5 &agrave; 14 mandats par mois."</blockquote>
+                    <blockquote data-fr="&ldquo;L'IA r&eacute;serve les rendez-vous directement dans mon agenda. Je suis pass&eacute;e de 5 &agrave; 14 mandats par mois.&rdquo;" data-en="&ldquo;AI books appointments directly into my calendar. I went from 5 to 14 listings per month.&rdquo;">"L'IA r&eacute;serve les rendez-vous directement dans mon agenda. Je suis pass&eacute;e de 5 &agrave; 14 mandats par mois."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">DM</div>
                         <div class="author-info">
@@ -1281,26 +1275,26 @@
                             <div class="role">Agent, Buja Real Estate</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">180% plus de rendez-vous &bull; 67% moins de no-shows</div>
+                    <div class="testimonial-result" data-fr="180% plus de rendez-vous &bull; 67% moins de no-shows" data-en="180% more appointments &bull; 67% fewer no-shows">180% plus de rendez-vous &bull; 67% moins de no-shows</div>
                 </div>
             </div>
 
             <div class="stats-row">
                 <div class="stat-box">
                     <div class="stat-num">50+</div>
-                    <div class="stat-label">Entreprises au Burundi</div>
+                    <div class="stat-label" data-fr="Entreprises au Burundi" data-en="Businesses in Burundi">Entreprises au Burundi</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-num">500+</div>
-                    <div class="stat-label">Workflows Automatis&eacute;s</div>
+                    <div class="stat-label" data-fr="Workflows Automatis&eacute;s" data-en="Workflows Automated">Workflows Automatis&eacute;s</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-num">96%</div>
-                    <div class="stat-label">Satisfaction Client</div>
+                    <div class="stat-label" data-fr="Satisfaction Client" data-en="Client Satisfaction">Satisfaction Client</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-num">60%</div>
-                    <div class="stat-label">R&eacute;duction des Co&ucirc;ts</div>
+                    <div class="stat-label" data-fr="R&eacute;duction des Co&ucirc;ts" data-en="Cost Reduction">R&eacute;duction des Co&ucirc;ts</div>
                 </div>
             </div>
         </div>
@@ -1309,51 +1303,51 @@
     <!-- ============ INDUSTRIES ============ -->
     <section class="section">
         <div class="section-inner text-center">
-            <div class="section-label">Secteurs</div>
-            <h2 class="section-title">Solutions IA Pour Chaque Secteur au Burundi</h2>
-            <p class="section-subtitle">Quel que soit votre secteur, si vous recevez des demandes clients, nous pouvons automatiser votre r&eacute;ponse.</p>
+            <div class="section-label" data-fr="Secteurs" data-en="Industries">Secteurs</div>
+            <h2 class="section-title" data-fr="Solutions IA Pour Chaque Secteur au Burundi" data-en="AI Solutions For Every Industry in Burundi">Solutions IA Pour Chaque Secteur au Burundi</h2>
+            <p class="section-subtitle" data-fr="Quel que soit votre secteur, si vous recevez des demandes clients, nous pouvons automatiser votre r&eacute;ponse." data-en="Whatever your industry, if you receive customer inquiries, we can automate your response.">Quel que soit votre secteur, si vous recevez des demandes clients, nous pouvons automatiser votre r&eacute;ponse.</p>
         </div>
         <div class="section-inner">
             <div class="industries-grid">
                 <div class="industry-card">
                     <div class="industry-icon">&#127968;</div>
-                    <h3>Immobilier</h3>
-                    <p>R&eacute;ponse instantan&eacute;e aux demandes de visite</p>
+                    <h3 data-fr="Immobilier" data-en="Real Estate">Immobilier</h3>
+                    <p data-fr="R&eacute;ponse instantan&eacute;e aux demandes de visite" data-en="Instant response to property viewing requests">R&eacute;ponse instantan&eacute;e aux demandes de visite</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#127973;</div>
-                    <h3>Sant&eacute;</h3>
-                    <p>Prise de rendez-vous automatique pour cliniques</p>
+                    <h3 data-fr="Sant&eacute;" data-en="Healthcare">Sant&eacute;</h3>
+                    <p data-fr="Prise de rendez-vous automatique pour cliniques" data-en="Automatic appointment booking for clinics">Prise de rendez-vous automatique pour cliniques</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#128179;</div>
                     <h3>Finance & Mobile Money</h3>
-                    <p>Support client 24/7 sur WhatsApp</p>
+                    <p data-fr="Support client 24/7 sur WhatsApp" data-en="24/7 customer support on WhatsApp">Support client 24/7 sur WhatsApp</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#128722;</div>
-                    <h3>Commerce</h3>
-                    <p>Suivi automatique des commandes</p>
+                    <h3 data-fr="Commerce" data-en="Retail">Commerce</h3>
+                    <p data-fr="Suivi automatique des commandes" data-en="Automatic order tracking">Suivi automatique des commandes</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#127806;</div>
                     <h3>Agriculture</h3>
-                    <p>Alertes SMS m&eacute;t&eacute;o et prix du march&eacute;</p>
+                    <p data-fr="Alertes SMS m&eacute;t&eacute;o et prix du march&eacute;" data-en="SMS weather alerts and market prices">Alertes SMS m&eacute;t&eacute;o et prix du march&eacute;</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#127891;</div>
-                    <h3>&Eacute;ducation</h3>
-                    <p>Inscription et support &eacute;tudiant automatis&eacute;</p>
+                    <h3 data-fr="&Eacute;ducation" data-en="Education">&Eacute;ducation</h3>
+                    <p data-fr="Inscription et support &eacute;tudiant automatis&eacute;" data-en="Automated enrollment and student support">Inscription et support &eacute;tudiant automatis&eacute;</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#127962;</div>
-                    <h3>H&ocirc;tellerie</h3>
-                    <p>R&eacute;servation et gestion d'avis automatique</p>
+                    <h3 data-fr="H&ocirc;tellerie" data-en="Hospitality">H&ocirc;tellerie</h3>
+                    <p data-fr="R&eacute;servation et gestion d'avis automatique" data-en="Automated booking and review management">R&eacute;servation et gestion d'avis automatique</p>
                 </div>
                 <div class="industry-card">
                     <div class="industry-icon">&#128666;</div>
-                    <h3>Logistique</h3>
-                    <p>Suivi des livraisons en temps r&eacute;el</p>
+                    <h3 data-fr="Logistique" data-en="Logistics">Logistique</h3>
+                    <p data-fr="Suivi des livraisons en temps r&eacute;el" data-en="Real-time delivery tracking">Suivi des livraisons en temps r&eacute;el</p>
                 </div>
             </div>
         </div>
@@ -1364,39 +1358,39 @@
         <div class="section-inner">
             <div class="form-grid">
                 <div class="form-benefits">
-                    <div class="section-label">D&eacute;mo Gratuite</div>
-                    <h2>Votre D&eacute;mo Gratuite Inclut:</h2>
+                    <div class="section-label" data-fr="D&eacute;mo Gratuite" data-en="Free Demo">D&eacute;mo Gratuite</div>
+                    <h2 data-fr="Votre D&eacute;mo Gratuite Inclut:" data-en="Your Free Demo Includes:">Votre D&eacute;mo Gratuite Inclut:</h2>
                     <ul class="form-benefits-list">
-                        <li><div class="check-icon">&#10003;</div> D&eacute;mo en direct de votre agent IA r&eacute;pondant &agrave; un vrai prospect</li>
-                        <li><div class="check-icon">&#10003;</div> Analyse de votre temps de r&eacute;ponse actuel</li>
-                        <li><div class="check-icon">&#10003;</div> Projection ROI personnalis&eacute;e pour votre business</li>
-                        <li><div class="check-icon">&#10003;</div> Plan d'action complet &mdash; &agrave; garder m&ecirc;me si vous ne nous choisissez pas</li>
+                        <li><div class="check-icon">&#10003;</div> <span data-fr="D&eacute;mo en direct de votre agent IA r&eacute;pondant &agrave; un vrai prospect" data-en="Live demo of your AI agent responding to a real lead">D&eacute;mo en direct de votre agent IA r&eacute;pondant &agrave; un vrai prospect</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-fr="Analyse de votre temps de r&eacute;ponse actuel" data-en="Analysis of your current response time">Analyse de votre temps de r&eacute;ponse actuel</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-fr="Projection ROI personnalis&eacute;e pour votre business" data-en="Custom ROI projection for your business">Projection ROI personnalis&eacute;e pour votre business</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-fr="Plan d'action complet &mdash; &agrave; garder m&ecirc;me si vous ne nous choisissez pas" data-en="Full action plan &mdash; yours to keep even if you don't choose us">Plan d'action complet &mdash; &agrave; garder m&ecirc;me si vous ne nous choisissez pas</span></li>
                     </ul>
                     <div class="local-box">
                         <div class="icon">&#128205;</div>
-                        <p><strong>Bureau &agrave; Bujumbura</strong><br>10 Chauss&eacute;e d'Uvira, Bujumbura<br>T&eacute;l: +257 75 60 58 58<br>Consultations en personne disponibles</p>
+                        <p><strong data-fr="Bureau &agrave; Bujumbura" data-en="Office in Bujumbura">Bureau &agrave; Bujumbura</strong><br>10 Chauss&eacute;e d'Uvira, Bujumbura<br>T&eacute;l: +257 75 60 58 58<br><span data-fr="Consultations en personne disponibles" data-en="In-person consultations available">Consultations en personne disponibles</span></p>
                     </div>
                 </div>
                 <div class="form-card">
-                    <h3>R&eacute;servez Ma D&eacute;mo Gratuite</h3>
-                    <p class="form-sub">15 minutes &bull; Sans engagement &bull; Sans carte bancaire</p>
+                    <h3 data-fr="R&eacute;servez Ma D&eacute;mo Gratuite" data-en="Book My Free Demo">R&eacute;servez Ma D&eacute;mo Gratuite</h3>
+                    <p class="form-sub" data-fr="15 minutes &bull; Sans engagement &bull; Sans carte bancaire" data-en="15 minutes &bull; No commitment &bull; No credit card">15 minutes &bull; Sans engagement &bull; Sans carte bancaire</p>
                     <form id="demoForm">
                         <div class="form-group">
-                            <label for="name">Nom Complet *</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                            <label for="name" data-fr="Nom Complet *" data-en="Full Name *">Nom Complet *</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom complet" data-placeholder-fr="Votre nom complet" data-placeholder-en="Your full name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">T&eacute;l&eacute;phone / WhatsApp *</label>
+                            <label for="phone" data-fr="T&eacute;l&eacute;phone / WhatsApp *" data-en="Phone / WhatsApp *">T&eacute;l&eacute;phone / WhatsApp *</label>
                             <input type="tel" id="phone" name="phone" placeholder="+257..." required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" placeholder="vous@entreprise.com" required>
+                            <input type="email" id="email" name="email" placeholder="vous@entreprise.com" data-placeholder-fr="vous@entreprise.com" data-placeholder-en="you@company.com" required>
                         </div>
-                        <button type="submit" class="form-submit">R&eacute;server Ma D&eacute;mo Gratuite &rarr;</button>
+                        <button type="submit" class="form-submit" data-fr="R&eacute;server Ma D&eacute;mo Gratuite &rarr;" data-en="Book My Free Demo &rarr;">R&eacute;server Ma D&eacute;mo Gratuite &rarr;</button>
                     </form>
-                    <p class="form-privacy">&#128274; Vos informations sont s&eacute;curis&eacute;es. Nous ne partageons jamais vos donn&eacute;es.</p>
-                    <div class="urgency-badge">Seulement 3 places disponibles pour Avril 2026 &agrave; Bujumbura</div>
+                    <p class="form-privacy" data-fr="&#128274; Vos informations sont s&eacute;curis&eacute;es. Nous ne partageons jamais vos donn&eacute;es." data-en="&#128274; Your information is secure. We never share your data.">&#128274; Vos informations sont s&eacute;curis&eacute;es. Nous ne partageons jamais vos donn&eacute;es.</p>
+                    <div class="urgency-badge" data-fr="Seulement 3 places disponibles pour Avril 2026 &agrave; Bujumbura" data-en="Only 3 spots available for April 2026 in Bujumbura">Seulement 3 places disponibles pour Avril 2026 &agrave; Bujumbura</div>
                 </div>
             </div>
         </div>
@@ -1406,62 +1400,62 @@
     <section class="section">
         <div class="section-inner text-center">
             <div class="section-label">FAQ</div>
-            <h2 class="section-title">Questions Fr&eacute;quentes</h2>
+            <h2 class="section-title" data-fr="Questions Fr&eacute;quentes" data-en="Frequently Asked Questions">Questions Fr&eacute;quentes</h2>
         </div>
         <div class="section-inner">
             <div class="faq-grid">
                 <div class="faq-item active">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Combien de temps pour d&eacute;ployer un agent IA?</h3>
+                        <h3 data-fr="Combien de temps pour d&eacute;ployer un agent IA?" data-en="How fast can an AI agent be deployed?">Combien de temps pour d&eacute;ployer un agent IA?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>La plupart des syst&egrave;mes IA sont d&eacute;ploy&eacute;s en 48-72 heures. Les chatbots simples peuvent &ecirc;tre op&eacute;rationnels en 24 heures. On g&egrave;re tout &mdash; installation, int&eacute;gration, tests.</p>
+                        <p data-fr="La plupart des syst&egrave;mes IA sont d&eacute;ploy&eacute;s en 48-72 heures. Les chatbots simples peuvent &ecirc;tre op&eacute;rationnels en 24 heures. On g&egrave;re tout &mdash; installation, int&eacute;gration, tests." data-en="Most AI systems are deployed within 48-72 hours. Simple chatbots can be live in 24 hours. We handle everything &mdash; setup, integration, testing.">La plupart des syst&egrave;mes IA sont d&eacute;ploy&eacute;s en 48-72 heures. Les chatbots simples peuvent &ecirc;tre op&eacute;rationnels en 24 heures. On g&egrave;re tout &mdash; installation, int&eacute;gration, tests.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Est-ce que &ccedil;a marche avec WhatsApp?</h3>
+                        <h3 data-fr="Est-ce que &ccedil;a marche avec WhatsApp?" data-en="Does it work with WhatsApp?">Est-ce que &ccedil;a marche avec WhatsApp?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Oui. SMS, WhatsApp, appels vocaux, email et chat web &mdash; tout est couvert. Compatible avec Lumitel et Econet.</p>
+                        <p data-fr="Oui. SMS, WhatsApp, appels vocaux, email et chat web &mdash; tout est couvert. Compatible avec Lumitel et Econet." data-en="Yes. SMS, WhatsApp, voice calls, email and web chat &mdash; all covered. Compatible with Lumitel and Econet.">Oui. SMS, WhatsApp, appels vocaux, email et chat web &mdash; tout est couvert. Compatible avec Lumitel et Econet.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>L'agent IA parle-t-il Kirundi?</h3>
+                        <h3 data-fr="L'agent IA parle-t-il Kirundi?" data-en="Does the AI speak Kirundi?">L'agent IA parle-t-il Kirundi?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Oui, nos agents IA communiquent en Fran&ccedil;ais, Anglais et Kirundi. Ils sont enti&egrave;rement adapt&eacute;s au contexte Burundais.</p>
+                        <p data-fr="Oui, nos agents IA communiquent en Fran&ccedil;ais, Anglais et Kirundi. Ils sont enti&egrave;rement adapt&eacute;s au contexte Burundais." data-en="Yes, our AI agents communicate in French, English and Kirundi. They are fully adapted to the Burundian context.">Oui, nos agents IA communiquent en Fran&ccedil;ais, Anglais et Kirundi. Ils sont enti&egrave;rement adapt&eacute;s au contexte Burundais.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Combien &ccedil;a co&ucirc;te?</h3>
+                        <h3 data-fr="Combien &ccedil;a co&ucirc;te?" data-en="How much does it cost?">Combien &ccedil;a co&ucirc;te?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Les plans commencent &agrave; 497$/mois &mdash; moins qu'un employ&eacute; &agrave; temps partiel. La plupart des clients voient un retour sur investissement dans les 2 premi&egrave;res semaines.</p>
+                        <p data-fr="Les plans commencent &agrave; 497$/mois &mdash; moins qu'un employ&eacute; &agrave; temps partiel. La plupart des clients voient un retour sur investissement dans les 2 premi&egrave;res semaines." data-en="Plans start at $497/month &mdash; less than a part-time employee. Most clients see ROI within the first 2 weeks.">Les plans commencent &agrave; 497$/mois &mdash; moins qu'un employ&eacute; &agrave; temps partiel. La plupart des clients voient un retour sur investissement dans les 2 premi&egrave;res semaines.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Ai-je besoin de comp&eacute;tences techniques?</h3>
+                        <h3 data-fr="Ai-je besoin de comp&eacute;tences techniques?" data-en="Do I need technical skills?">Ai-je besoin de comp&eacute;tences techniques?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Aucune. Nous g&eacute;rons tout &mdash; installation, int&eacute;gration, formation. Vous regardez les rendez-vous s'accumuler dans votre agenda.</p>
+                        <p data-fr="Aucune. Nous g&eacute;rons tout &mdash; installation, int&eacute;gration, formation. Vous regardez les rendez-vous s'accumuler dans votre agenda." data-en="None. We handle everything &mdash; setup, integration, training. You just watch appointments fill up your calendar.">Aucune. Nous g&eacute;rons tout &mdash; installation, int&eacute;gration, formation. Vous regardez les rendez-vous s'accumuler dans votre agenda.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Vous avez un bureau &agrave; Bujumbura?</h3>
+                        <h3 data-fr="Vous avez un bureau &agrave; Bujumbura?" data-en="Do you have an office in Bujumbura?">Vous avez un bureau &agrave; Bujumbura?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Oui, nous sommes bas&eacute;s &agrave; Bujumbura au 10 Chauss&eacute;e d'Uvira. Notre &eacute;quipe locale est disponible pour les consultations en personne et le support technique.</p>
+                        <p data-fr="Oui, nous sommes bas&eacute;s &agrave; Bujumbura au 10 Chauss&eacute;e d'Uvira. Notre &eacute;quipe locale est disponible pour les consultations en personne et le support technique." data-en="Yes, we are based in Bujumbura at 10 Chauss&eacute;e d'Uvira. Our local team is available for in-person consultations and technical support.">Oui, nous sommes bas&eacute;s &agrave; Bujumbura au 10 Chauss&eacute;e d'Uvira. Notre &eacute;quipe locale est disponible pour les consultations en personne et le support technique.</p>
                     </div>
                 </div>
             </div>
@@ -1470,15 +1464,15 @@
 
     <!-- ============ FINAL CTA ============ -->
     <section class="final-cta">
-        <h2>Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper?</h2>
-        <p>Chaque jour sans r&eacute;ponse IA, vous perdez 3 &agrave; 5 clients qualifi&eacute;s au profit des entreprises qui r&eacute;pondent plus vite.</p>
-        <a href="#book-demo" class="btn-primary">R&eacute;server Ma D&eacute;mo Maintenant &rarr;</a>
-        <p class="cta-micro">Gratuit &bull; 15 minutes &bull; Sans engagement &bull; Bureau &agrave; Bujumbura</p>
+        <h2 data-fr="Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper?" data-en="Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?">Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper?</h2>
+        <p data-fr="Chaque jour sans r&eacute;ponse IA, vous perdez 3 &agrave; 5 clients qualifi&eacute;s au profit des entreprises qui r&eacute;pondent plus vite." data-en="Every day without AI response, you're losing 3-5 qualified customers to businesses that respond faster.">Chaque jour sans r&eacute;ponse IA, vous perdez 3 &agrave; 5 clients qualifi&eacute;s au profit des entreprises qui r&eacute;pondent plus vite.</p>
+        <a href="#book-demo" class="btn-primary" data-fr="R&eacute;server Ma D&eacute;mo Maintenant &rarr;" data-en="Book My Demo Now &rarr;">R&eacute;server Ma D&eacute;mo Maintenant &rarr;</a>
+        <p class="cta-micro" data-fr="Gratuit &bull; 15 minutes &bull; Sans engagement &bull; Bureau &agrave; Bujumbura" data-en="Free &bull; 15 minutes &bull; No commitment &bull; Office in Bujumbura">Gratuit &bull; 15 minutes &bull; Sans engagement &bull; Bureau &agrave; Bujumbura</p>
     </section>
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
-        <p>&copy; 2026 Top AI Burundi. Tous droits r&eacute;serv&eacute;s. | <a href="https://topaiafrica.com/en/privacy-policy-2/">Confidentialit&eacute;</a> | <a href="https://topaiafrica.com/en/terms-of-service/">Conditions</a> | <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a> | <a href="tel:+25775605858">+257 75 60 58 58</a></p>
+        <p>&copy; 2026 Top AI Burundi. <span data-fr="Tous droits r&eacute;serv&eacute;s." data-en="All rights reserved.">Tous droits r&eacute;serv&eacute;s.</span> | <a href="https://topaiafrica.com/en/privacy-policy-2/" data-fr="Confidentialit&eacute;" data-en="Privacy">Confidentialit&eacute;</a> | <a href="https://topaiafrica.com/en/terms-of-service/" data-fr="Conditions" data-en="Terms">Conditions</a> | <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a> | <a href="tel:+25775605858">+257 75 60 58 58</a></p>
     </footer>
 
     <!-- ============ FLOATING WHATSAPP ============ -->
@@ -1486,10 +1480,32 @@
 
     <!-- ============ STICKY CTA ============ -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#book-demo" class="btn-primary">D&eacute;mo Gratuite &mdash; 3 Places Restantes &rarr;</a>
+        <a href="#book-demo" class="btn-primary" data-fr="D&eacute;mo Gratuite &mdash; 3 Places Restantes &rarr;" data-en="Free Demo &mdash; 3 Spots Left &rarr;">D&eacute;mo Gratuite &mdash; 3 Places Restantes &rarr;</a>
     </div>
 
     <script>
+        let currentLang = 'fr';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+            document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === lang.toUpperCase()) btn.classList.add('active');
+            });
+            if (lang === 'en') {
+                document.title = "AI Automation Burundi — AI Agents, Chatbots & Auto Appointments | Top AI Burundi";
+            } else {
+                document.title = "Automatisation IA Burundi — Agents IA, Chatbots & Rendez-vous Automatiques | Top AI Burundi";
+            }
+        }
+
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
         }
@@ -1523,10 +1539,10 @@
         document.getElementById('demoForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = this.querySelector('.form-submit');
-            btn.textContent = 'Réservation en cours...';
+            btn.textContent = currentLang === 'fr' ? 'Réservation en cours...' : 'Booking Your Demo...';
             btn.disabled = true;
             setTimeout(() => {
-                btn.textContent = 'Démo réservée! On vous contacte bientôt.';
+                btn.textContent = currentLang === 'fr' ? 'Démo réservée ! On vous contacte bientôt.' : "Demo Booked! We'll call you soon.";
                 btn.style.background = '#00a383';
             }, 1500);
         });
