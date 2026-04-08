@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Response & Appointment Booking for African Businesses | Top AI Africa</title>
+    <meta name="description" content="Stop losing leads. Our AI agents respond in 60 seconds by SMS, email, and voice — booking appointments 24/7. 100+ African businesses trust Top AI Africa. Free demo.">
+    <meta property="og:title" content="Stop Losing Leads — AI That Responds in 60 Seconds | Top AI Africa">
+    <meta property="og:description" content="AI agents that respond to every lead by SMS, email, and voice in under 60 seconds. Book more appointments. Never miss a sale. Free demo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://services.topaiafrica.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stop Losing Leads — AI That Responds in 60 Seconds | Top AI Africa">
+    <meta name="twitter:description" content="AI agents that respond to every lead by SMS, email, and voice in under 60 seconds. Book more appointments. Never miss a sale.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How fast can my AI agent be live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need any technical skills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "None. We handle everything — setup, integration, training. You just watch the appointments roll in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I already have a CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AI lead response cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plans start at $497/month — less than one part-time employee. Most clients see ROI within the first 2 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work with WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. SMS, email, voice calls, WhatsApp, and web chat — all covered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the AI speak French and English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Top AI Africa",
+      "description": "AI lead response and appointment booking systems for African and Canadian businesses",
+      "url": "https://services.topaiafrica.com",
+      "telephone": "+15144669402",
+      "email": "info@topaiafrica.com",
+      "areaServed": ["Africa", "Canada"],
+      "serviceType": "AI Automation"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ============ NAV ============ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 30, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            transition: all 0.3s;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: #6c5ce7;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            background: #6c5ce7;
+            color: #fff !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.3s !important;
+        }
+
+        .nav-cta:hover {
+            background: #5a4bd1;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 30, 0.98);
+            padding: 24px;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a1e 0%, #1a1a3e 50%, #0d0d2b 100%);
+            display: flex;
+            align-items: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.15), transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(108, 92, 231, 0.15);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            color: #a29bfe;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 18px;
+            color: #b0b0cc;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #6c5ce7;
+            color: #fff;
+            padding: 16px 36px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #5a4bd1;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #a29bfe;
+            padding: 16px 36px;
+            border: 2px solid rgba(108, 92, 231, 0.4);
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: #6c5ce7;
+            background: rgba(108, 92, 231, 0.1);
+        }
+
+        .trust-bar {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .trust-item .num {
+            color: #6c5ce7;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Hero right - visual */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #00b894;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero-card-header span {
+            color: #00b894;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .chat-message {
+            background: rgba(108, 92, 231, 0.1);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .chat-message.ai {
+            background: rgba(0, 184, 148, 0.1);
+            border-color: rgba(0, 184, 148, 0.2);
+        }
+
+        .chat-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .chat-message .chat-label {
+            color: #a29bfe;
+        }
+
+        .chat-message.ai .chat-label {
+            color: #00b894;
+        }
+
+        .chat-text {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .chat-time {
+            font-size: 11px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .response-badge {
+            display: inline-block;
+            background: rgba(0, 184, 148, 0.15);
+            color: #00b894;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ============ SECTIONS COMMON ============ */
+        .section {
+            padding: 100px 24px;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: #6c5ce7;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 48px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ PROBLEM SECTION ============ */
+        .problem {
+            background: #f8f7ff;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .problem-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .problem-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .problem-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: #ffe0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .stat-callout {
+            background: linear-gradient(135deg, #1a1a3e, #2d2d5e);
+            border-radius: 20px;
+            padding: 48px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .stat-callout .big-stat {
+            font-size: 72px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .stat-callout p {
+            font-size: 18px;
+            color: #b0b0cc;
+            line-height: 1.6;
+        }
+
+        .stat-callout .emphasis {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* ============ SOLUTION ============ */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .solution-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 36px;
+            transition: all 0.3s;
+        }
+
+        .solution-card:hover {
+            border-color: #6c5ce7;
+            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .solution-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .solution-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .solution-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ============ HOW IT WORKS ============ */
+        .how-it-works {
+            background: #f8f7ff;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 auto 24px;
+        }
+
+        .step h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .step-connector {
+            display: none;
+        }
+
+        /* ============ BENEFITS ============ */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .benefit-card {
+            padding: 32px;
+            border-radius: 16px;
+            background: #fff;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .benefit-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ============ SOCIAL PROOF ============ */
+        .social-proof {
+            background: linear-gradient(135deg, #0a0a1e, #1a1a3e);
+            color: #fff;
+        }
+
+        .social-proof .section-label {
+            color: #a29bfe;
+        }
+
+        .social-proof .section-title {
+            color: #fff;
+        }
+
+        .social-proof .section-subtitle {
+            color: #888;
+        }
+
+        .featured-testimonial {
+            background: rgba(108, 92, 231, 0.1);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .featured-testimonial .quote-mark {
+            font-size: 80px;
+            color: rgba(108, 92, 231, 0.3);
+            position: absolute;
+            top: 20px;
+            left: 32px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .featured-testimonial blockquote {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #e0e0f0;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .author-info .name {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .author-info .role {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .testimonial-result {
+            display: inline-block;
+            background: rgba(0, 184, 148, 0.15);
+            color: #00b894;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 16px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card blockquote {
+            color: #ccc;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box .stat-num {
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-box .stat-label {
+            color: #888;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* ============ FORM SECTION ============ */
+        .form-section {
+            background: #f8f7ff;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .form-benefits h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .form-benefits-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .form-benefits-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .check-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: #00b894;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+            margin-top: 2px;
+        }
+
+        .guarantee-box {
+            background: #fff;
+            border: 2px solid #00b894;
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .guarantee-box .shield {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .guarantee-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .guarantee-box strong {
+            color: #1a1a2e;
+        }
+
+        .form-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+        }
+
+        .form-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .form-card .form-sub {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e8e8f0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s;
+            background: #fafafe;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #6c5ce7;
+            background: #fff;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: #6c5ce7;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
+        }
+
+        .form-submit:hover {
+            background: #5a4bd1;
+            transform: translateY(-2px);
+        }
+
+        .form-privacy {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .urgency-badge {
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #e65100;
+        }
+
+        /* ============ FAQ ============ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            gap: 16px;
+        }
+
+        .faq-question h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .faq-toggle {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: #f0efff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c5ce7;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: #6c5ce7;
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding-top: 16px;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ============ FINAL CTA ============ */
+        .final-cta {
+            background: linear-gradient(135deg, #0a0a1e, #1a1a3e);
+            color: #fff;
+            text-align: center;
+            padding: 100px 24px;
+        }
+
+        .final-cta h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta p {
+            color: #888;
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .btn-primary {
+            font-size: 18px;
+            padding: 20px 48px;
+        }
+
+        .cta-micro {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: #0a0a1e;
+            color: #666;
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        /* ============ STICKY CTA ============ */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 30, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 24px;
+            z-index: 998;
+            text-align: center;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+        }
+
+        .sticky-cta.visible {
+            display: block;
+        }
+
+        .sticky-cta .btn-primary {
+            padding: 14px 32px;
+            font-size: 15px;
+        }
+
+        /* ============ TRUST BADGES ============ */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .badge-icon {
+            font-size: 16px;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 968px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-sub {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .trust-bar {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .final-cta h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .featured-testimonial {
+                padding: 32px;
+            }
+
+            .featured-testimonial blockquote {
+                font-size: 18px;
+            }
+
+            .form-card {
+                padding: 28px;
+            }
+
+            .stat-callout .big-stat {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ NAV ============ -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://topaiafrica.com" class="nav-logo">Top AI <span>Africa</span></a>
+            <ul class="nav-links">
+                <li><a href="https://topaiafrica.com">Home</a></li>
+                <li><a href="https://topaiafrica.com/en/about/">About</a></li>
+                <li><a href="https://topaiafrica.com/en/blog/">Blog</a></li>
+                <li><a href="https://topaiafrica.com/en/contact/">Contact</a></li>
+                <li><a href="#book-demo" class="nav-cta">Free Demo</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="https://topaiafrica.com">Home</a>
+            <a href="https://topaiafrica.com/en/about/">About</a>
+            <a href="https://topaiafrica.com/en/blog/">Blog</a>
+            <a href="https://topaiafrica.com/en/contact/">Contact</a>
+            <a href="#book-demo" onclick="toggleMenu()">Book Free Demo</a>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted by 100+ Businesses Across Africa & Canada</div>
+                <h1>Stop Losing Leads.<br>Start Closing Deals.<br>
+                    <span class="highlight">Your AI Responds in 60 Seconds.</span></h1>
+                <p class="hero-sub">We build AI systems that instantly respond to every lead by SMS, email, and voice &mdash; so you book more appointments and never miss a sale again.</p>
+                <div class="hero-ctas">
+                    <a href="#book-demo" class="btn-primary">Book Your Free Demo &rarr;</a>
+                    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+                </div>
+                <div class="trust-bar">
+                    <div class="trust-item"><span class="num">500+</span> Workflows Automated</div>
+                    <div class="trust-item"><span class="num">95%</span> Client Satisfaction</div>
+                    <div class="trust-item"><span class="num">60%</span> Cost Reduction</div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div class="status-dot"></div>
+                        <span>AI Agent Active — Responding Now</span>
+                    </div>
+                    <div class="chat-message">
+                        <div class="chat-label">New Lead</div>
+                        <div class="chat-text">"Hi, I'm interested in your services. Can someone call me back?"</div>
+                        <div class="chat-time">9:47 PM</div>
+                    </div>
+                    <div class="chat-message ai">
+                        <div class="chat-label">AI Agent (47 seconds later)</div>
+                        <div class="chat-text">"Hi! Thanks for reaching out. I'd love to help. I've booked a call for you tomorrow at 10 AM. You'll receive a confirmation SMS shortly."</div>
+                        <div class="chat-time">9:47 PM</div>
+                    </div>
+                    <div class="response-badge">Responded in 47 seconds &bull; Appointment booked</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section problem">
+        <div class="section-inner">
+            <div class="problem-grid">
+                <div>
+                    <div class="section-label">The Problem</div>
+                    <h2 class="section-title">Every Minute You Wait,<br>You Lose Money</h2>
+                    <ul class="problem-list">
+                        <li>
+                            <div class="problem-icon">&times;</div>
+                            <span>A lead that doesn't get a response in <strong>5 minutes</strong> is <strong>21X less likely</strong> to convert. Most businesses take 24-48 hours.</span>
+                        </li>
+                        <li>
+                            <div class="problem-icon">&times;</div>
+                            <span>While you sleep, eat, or meet with one client &mdash; other leads are calling <strong>your competitors</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="problem-icon">&times;</div>
+                            <span>You're spending <strong>$2,000-5,000/month</strong> on marketing to generate leads you <strong>never follow up with</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="problem-icon">&times;</div>
+                            <span>Hiring more staff to answer phones costs <strong>$3,000+/month each</strong>. There's a better way.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="stat-callout">
+                    <div class="big-stat">78%</div>
+                    <p>of customers buy from the company that responds <span class="emphasis">FIRST</span>.</p>
+                    <br>
+                    <p>You're not losing leads because of your service.<br><span class="emphasis">You're losing them because you're too slow.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOLUTION ============ -->
+    <section class="section">
+        <div class="section-inner text-center">
+            <div class="section-label">The Solution</div>
+            <h2 class="section-title">Meet Your AI Employee That Never Sleeps</h2>
+            <p class="section-subtitle">Your AI agent works 24/7/365 &mdash; responding to every lead instantly across every channel.</p>
+        </div>
+        <div class="section-inner">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">&#9993;</div>
+                    <h3>Instant SMS Response</h3>
+                    <p>Every lead gets a personalized text within 60 seconds. Day or night. Weekend or holiday. No lead left behind.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#9742;</div>
+                    <h3>AI Voice Agent</h3>
+                    <p>Your AI calls leads back with a natural human voice. Qualifies them. Answers questions. Books the appointment. Done.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#9993;</div>
+                    <h3>Email + Follow-Up</h3>
+                    <p>Automated email sequences nurture cold leads until they're ready to buy. Nothing falls through the cracks.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">&#128197;</div>
+                    <h3>Appointment Booking</h3>
+                    <p>Leads book directly into your calendar. No back-and-forth. No missed calls. No lost deals. Just booked meetings.</p>
+                </div>
+            </div>
+
+            <div class="trust-badges">
+                <div class="badge"><span class="badge-icon">&#128274;</span> No Contract Required</div>
+                <div class="badge"><span class="badge-icon">&#9201;</span> Setup in 72 Hours</div>
+                <div class="badge"><span class="badge-icon">&#127760;</span> Bilingual: French + English</div>
+                <div class="badge"><span class="badge-icon">&#9989;</span> 100+ Businesses Trust Us</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="section-inner text-center">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">Live in 72 Hours. Not 72 Days.</h2>
+            <p class="section-subtitle">Getting started is simple. No technical skills needed. We handle everything.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Book a Free Demo</h3>
+                    <p>15-minute call. We analyze your current lead response time and show you exactly how many leads you're losing.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>We Build Your AI System</h3>
+                    <p>Custom AI agents for SMS, voice, and email &mdash; integrated with your CRM and calendar. Ready in 48-72 hours.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Start Closing More Deals</h3>
+                    <p>Your AI agent handles every lead instantly. You focus on closing, serving clients, and growing your business.</p>
+                </div>
+            </div>
+            <a href="#book-demo" class="btn-primary">Book Your Free Demo &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="section">
+        <div class="section-inner text-center">
+            <div class="section-label">Benefits</div>
+            <h2 class="section-title">What Changes When AI Handles Your Leads</h2>
+            <p class="section-subtitle">Stop chasing leads. Let them come to you &mdash; and get an instant, professional response every time.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128200;</div>
+                    <h3>3X More Appointments</h3>
+                    <p>AI qualifies and books leads automatically. Your calendar fills up without lifting a finger.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128165;</div>
+                    <h3>Zero Missed Leads</h3>
+                    <p>24/7 response on SMS, email, voice, and WhatsApp. Every single inquiry gets answered.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#128176;</div>
+                    <h3>60% Lower Costs</h3>
+                    <p>Replace 2-3 full-time staff with one AI system that works around the clock.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#9889;</div>
+                    <h3>60-Second Response</h3>
+                    <p>Beat every competitor to the punch. First to respond = first to close.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#127769;</div>
+                    <h3>Works While You Sleep</h3>
+                    <p>Your best employee never takes a day off. Nights, weekends, holidays &mdash; covered.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">&#127758;</div>
+                    <h3>Scales Instantly</h3>
+                    <p>Handle 10 leads or 10,000 &mdash; same speed, same quality, zero extra cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOCIAL PROOF ============ -->
+    <section class="section social-proof">
+        <div class="section-inner">
+            <div class="text-center">
+                <div class="section-label">Results</div>
+                <h2 class="section-title">Real Businesses. Real Results.</h2>
+                <p class="section-subtitle">See what happens when AI handles your lead response.</p>
+            </div>
+
+            <div class="featured-testimonial">
+                <div class="quote-mark">&ldquo;</div>
+                <blockquote>"We went from losing 40% of our leads to booking 3X more appointments in the first month. The AI responds faster than any human could."</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AN</div>
+                    <div class="author-info">
+                        <div class="name">Aisha Nkurunziza</div>
+                        <div class="role">Operations Director, AfriPay &mdash; Bujumbura, Burundi</div>
+                    </div>
+                </div>
+                <div class="testimonial-result">96% customer satisfaction &bull; Response time: 60 seconds</div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Our AI agent saved us $15,000/month and handles 80% of customer inquiries without human intervention."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GN</div>
+                        <div class="author-info">
+                            <div class="name">Grace Nibigira</div>
+                            <div class="role">Founder, TransAfrica Logistics</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">$15,000/month saved &bull; 65% cost reduction</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"We trained our whole team in 2 weeks. Productivity jumped 40% immediately. Best investment we've made."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PH</div>
+                        <div class="author-info">
+                            <div class="name">Patrick Habimana</div>
+                            <div class="role">CTO, KigaliDev Labs</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">12 employees trained &bull; 40% productivity increase</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"The AI books appointments directly into my calendar. I went from 5 listings/month to 14. Game changer."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DM</div>
+                        <div class="author-info">
+                            <div class="name">Diane Mukeshimana</div>
+                            <div class="role">Agent, Buja Real Estate</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">180% more appointments &bull; 67% fewer no-shows</div>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="stat-num">100+</div>
+                    <div class="stat-label">Businesses Served</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">500+</div>
+                    <div class="stat-label">Workflows Automated</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">60%</div>
+                    <div class="stat-label">Avg. Cost Reduction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FORM SECTION ============ -->
+    <section class="section form-section" id="book-demo">
+        <div class="section-inner">
+            <div class="form-grid">
+                <div class="form-benefits">
+                    <div class="section-label">Free Demo</div>
+                    <h2>Your Free AI Demo Includes:</h2>
+                    <ul class="form-benefits-list">
+                        <li><div class="check-icon">&#10003;</div> Live demo of your AI agent responding to a real lead</li>
+                        <li><div class="check-icon">&#10003;</div> Analysis of your current lead response time</li>
+                        <li><div class="check-icon">&#10003;</div> Custom ROI projection for your business</li>
+                        <li><div class="check-icon">&#10003;</div> Full action plan &mdash; yours to keep even if you don't hire us</li>
+                    </ul>
+                    <div class="guarantee-box">
+                        <div class="shield">&#128737;</div>
+                        <p><strong>Our Guarantee:</strong> If we can't show you a clear path to 3X more booked appointments in 15 minutes, we'll personally apologize for wasting your time. No pressure. No hard sell. Ever.</p>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <h3>Book My Free Demo</h3>
+                    <p class="form-sub">15 minutes. No commitment. No credit card.</p>
+                    <form id="demoForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+257 or +1..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                        </div>
+                        <button type="submit" class="form-submit">Book My Free Demo &rarr;</button>
+                    </form>
+                    <p class="form-privacy">&#128274; Your information is secure. We never share your data.</p>
+                    <div class="urgency-badge">Only 3 spots remaining for April 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section">
+        <div class="section-inner text-center">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Questions? We've Got Answers.</h2>
+        </div>
+        <div class="section-inner">
+            <div class="faq-grid">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How fast can my AI agent be live?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours. We handle all setup, integration, and testing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do I need any technical skills?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>None. We handle everything &mdash; setup, integration, training. You just watch the appointments roll in. If you can check your email, you can use our system.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What if I already have a CRM?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools. If you use it, we can connect to it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much does it cost?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Plans start at $497/month &mdash; less than one part-time employee. Most clients see ROI within the first 2 weeks. Book a demo to get a custom quote based on your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Does it work with WhatsApp?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. SMS, email, voice calls, WhatsApp, and web chat &mdash; all covered. Your leads can reach you however they prefer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What industries do you serve?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads. If you get inquiries, we can automate your response.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can the AI speak French and English?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi, Swahili, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta">
+        <h2>Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?</h2>
+        <p>Every day without AI lead response, you're losing 3-5 qualified leads to businesses that respond faster than you.</p>
+        <a href="#book-demo" class="btn-primary">Book My Free Demo Now &rarr;</a>
+        <p class="cta-micro">Free &bull; 15 minutes &bull; No commitment &bull; Join 100+ businesses already using Top AI Africa</p>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <p>&copy; 2026 Top AI Africa. All rights reserved. | <a href="https://topaiafrica.com/en/privacy-policy-2/">Privacy</a> | <a href="https://topaiafrica.com/en/terms-of-service/">Terms</a> | <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a></p>
+    </footer>
+
+    <!-- ============ STICKY CTA (Mobile) ============ -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#book-demo" class="btn-primary">Book Free Demo &mdash; Only 3 Spots Left &rarr;</a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // FAQ accordion
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        }
+
+        // Sticky CTA on scroll
+        window.addEventListener('scroll', function() {
+            const sticky = document.getElementById('stickyCta');
+            const form = document.getElementById('book-demo');
+            const formTop = form.getBoundingClientRect().top;
+
+            if (window.scrollY > 600 && formTop > window.innerHeight) {
+                sticky.classList.add('visible');
+            } else {
+                sticky.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submit
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.form-submit');
+            btn.textContent = 'Booking Your Demo...';
+            btn.disabled = true;
+
+            // Simulate submission - replace with your actual form handler
+            setTimeout(() => {
+                btn.textContent = 'Demo Booked! We\'ll call you soon.';
+                btn.style.background = '#00b894';
+            }, 1500);
+        });
+    </script>
+
+</body>
+</html>
