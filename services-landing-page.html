@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- FAQ Schema -->
+    <!-- FAQ Schema (Bilingual) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -24,64 +24,42 @@
         {
           "@type": "Question",
           "name": "How fast can my AI agent be live?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps pour déployer un agent IA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La plupart des systèmes IA sont déployés en 48-72 heures. Les chatbots simples peuvent être opérationnels en 24 heures." }
         },
         {
           "@type": "Question",
           "name": "Do I need any technical skills?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "None. We handle everything — setup, integration, training. You just watch the appointments roll in."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I already have a CRM?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "None. We handle everything — setup, integration, training. You just watch the appointments roll in." }
         },
         {
           "@type": "Question",
           "name": "How much does AI lead response cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Plans start at $497/month — less than one part-time employee. Most clients see ROI within the first 2 weeks."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Plans start at $497/month — less than one part-time employee. Most clients see ROI within the first 2 weeks." }
         },
         {
           "@type": "Question",
           "name": "Does it work with WhatsApp?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. SMS, email, voice calls, WhatsApp, and web chat — all covered."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. SMS, email, voice calls, WhatsApp, and web chat — all covered." }
         },
         {
           "@type": "Question",
           "name": "Can the AI speak French and English?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi." }
         },
         {
           "@type": "Question",
           "name": "What industries do you serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads." }
         }
       ]
     }
     </script>
 
-    <!-- Service Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -92,1441 +70,474 @@
       "telephone": "+15144669402",
       "email": "info@topaiafrica.com",
       "areaServed": ["Africa", "Canada"],
-      "serviceType": "AI Automation"
+      "serviceType": "AI Automation",
+      "availableLanguage": ["English", "French"]
     }
     </script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1a1a2e;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ============ NAV ============ */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 30, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 16px 0;
-            transition: all 0.3s;
-        }
-
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-size: 20px;
-            font-weight: 800;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .nav-logo span {
-            color: #6c5ce7;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #fff;
-        }
-
-        .nav-cta {
-            background: #6c5ce7;
-            color: #fff !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 600 !important;
-            transition: background 0.3s !important;
-        }
-
-        .nav-cta:hover {
-            background: #5a4bd1;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: #fff;
-            transition: all 0.3s;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 30, 0.98);
-            padding: 24px;
-            flex-direction: column;
-            gap: 16px;
-            z-index: 999;
-        }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .mobile-menu a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* ============ HERO ============ */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0a0a1e 0%, #1a1a3e 50%, #0d0d2b 100%);
-            display: flex;
-            align-items: center;
-            padding: 120px 24px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(108, 92, 231, 0.15), transparent 70%);
-            top: -100px;
-            right: -100px;
-            border-radius: 50%;
-        }
-
-        .hero-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-            width: 100%;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(108, 92, 231, 0.15);
-            border: 1px solid rgba(108, 92, 231, 0.3);
-            color: #a29bfe;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            letter-spacing: 0.5px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.15;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-sub {
-            font-size: 18px;
-            color: #b0b0cc;
-            line-height: 1.7;
-            margin-bottom: 36px;
-            max-width: 540px;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: #6c5ce7;
-            color: #fff;
-            padding: 16px 36px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: #5a4bd1;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.5);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #a29bfe;
-            padding: 16px 36px;
-            border: 2px solid rgba(108, 92, 231, 0.4);
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            border-color: #6c5ce7;
-            background: rgba(108, 92, 231, 0.1);
-        }
-
-        .trust-bar {
-            display: flex;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #888;
-            font-size: 13px;
-        }
-
-        .trust-item .num {
-            color: #6c5ce7;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        /* Hero right - visual */
-        .hero-visual {
-            position: relative;
-        }
-
-        .hero-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 32px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            background: #00b894;
-            border-radius: 50%;
-            animation: pulse-dot 2s infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
-        .hero-card-header span {
-            color: #00b894;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .chat-message {
-            background: rgba(108, 92, 231, 0.1);
-            border: 1px solid rgba(108, 92, 231, 0.2);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            animation: fadeInUp 0.5s ease-out;
-        }
-
-        .chat-message.ai {
-            background: rgba(0, 184, 148, 0.1);
-            border-color: rgba(0, 184, 148, 0.2);
-        }
-
-        .chat-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
-
-        .chat-message .chat-label {
-            color: #a29bfe;
-        }
-
-        .chat-message.ai .chat-label {
-            color: #00b894;
-        }
-
-        .chat-text {
-            color: #ddd;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .chat-time {
-            font-size: 11px;
-            color: #666;
-            margin-top: 6px;
-        }
-
-        .response-badge {
-            display: inline-block;
-            background: rgba(0, 184, 148, 0.15);
-            color: #00b894;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 12px;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ============ SECTIONS COMMON ============ */
-        .section {
-            padding: 100px 24px;
-        }
-
-        .section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            color: #6c5ce7;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 40px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: #666;
-            max-width: 650px;
-            line-height: 1.7;
-            margin-bottom: 48px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .text-center .section-subtitle {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ============ PROBLEM SECTION ============ */
-        .problem {
-            background: #f8f7ff;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .problem-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .problem-list li {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        .problem-icon {
-            flex-shrink: 0;
-            width: 28px;
-            height: 28px;
-            background: #ffe0e0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #e74c3c;
-            font-size: 14px;
-            margin-top: 2px;
-        }
-
-        .stat-callout {
-            background: linear-gradient(135deg, #1a1a3e, #2d2d5e);
-            border-radius: 20px;
-            padding: 48px;
-            color: #fff;
-            text-align: center;
-        }
-
-        .stat-callout .big-stat {
-            font-size: 72px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-
-        .stat-callout p {
-            font-size: 18px;
-            color: #b0b0cc;
-            line-height: 1.6;
-        }
-
-        .stat-callout .emphasis {
-            color: #fff;
-            font-weight: 700;
-        }
-
-        /* ============ SOLUTION ============ */
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .solution-card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 16px;
-            padding: 36px;
-            transition: all 0.3s;
-        }
-
-        .solution-card:hover {
-            border-color: #6c5ce7;
-            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .solution-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .solution-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .solution-card p {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* ============ HOW IT WORKS ============ */
-        .how-it-works {
-            background: #f8f7ff;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 48px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-num {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 800;
-            color: #fff;
-            margin: 0 auto 24px;
-        }
-
-        .step h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .step p {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .step-connector {
-            display: none;
-        }
-
-        /* ============ BENEFITS ============ */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .benefit-card {
-            padding: 32px;
-            border-radius: 16px;
-            background: #fff;
-            border: 1px solid #eee;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-
-        .benefit-icon {
-            font-size: 36px;
-            margin-bottom: 16px;
-        }
-
-        .benefit-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .benefit-card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* ============ SOCIAL PROOF ============ */
-        .social-proof {
-            background: linear-gradient(135deg, #0a0a1e, #1a1a3e);
-            color: #fff;
-        }
-
-        .social-proof .section-label {
-            color: #a29bfe;
-        }
-
-        .social-proof .section-title {
-            color: #fff;
-        }
-
-        .social-proof .section-subtitle {
-            color: #888;
-        }
-
-        .featured-testimonial {
-            background: rgba(108, 92, 231, 0.1);
-            border: 1px solid rgba(108, 92, 231, 0.2);
-            border-radius: 20px;
-            padding: 48px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .featured-testimonial .quote-mark {
-            font-size: 80px;
-            color: rgba(108, 92, 231, 0.3);
-            position: absolute;
-            top: 20px;
-            left: 32px;
-            line-height: 1;
-            font-family: Georgia, serif;
-        }
-
-        .featured-testimonial blockquote {
-            font-size: 22px;
-            line-height: 1.6;
-            color: #e0e0f0;
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        .author-info .name {
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        .author-info .role {
-            color: #888;
-            font-size: 14px;
-        }
-
-        .testimonial-result {
-            display: inline-block;
-            background: rgba(0, 184, 148, 0.15);
-            color: #00b894;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 16px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 32px;
-        }
-
-        .stars {
-            color: #f39c12;
-            font-size: 16px;
-            margin-bottom: 16px;
-            letter-spacing: 2px;
-        }
-
-        .testimonial-card blockquote {
-            color: #ccc;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 60px;
-            padding-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .stat-box {
-            text-align: center;
-        }
-
-        .stat-box .stat-num {
-            font-size: 42px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-box .stat-label {
-            color: #888;
-            font-size: 14px;
-            margin-top: 4px;
-        }
-
-        /* ============ FORM SECTION ============ */
-        .form-section {
-            background: #f8f7ff;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .form-benefits h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .form-benefits-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .form-benefits-list li {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            font-size: 16px;
-            color: #444;
-        }
-
-        .check-icon {
-            flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            background: #00b894;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 13px;
-            margin-top: 2px;
-        }
-
-        .guarantee-box {
-            background: #fff;
-            border: 2px solid #00b894;
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-
-        .guarantee-box .shield {
-            font-size: 32px;
-            flex-shrink: 0;
-        }
-
-        .guarantee-box p {
-            font-size: 14px;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .guarantee-box strong {
-            color: #1a1a2e;
-        }
-
-        .form-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            border: 1px solid #eee;
-        }
-
-        .form-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .form-card .form-sub {
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 32px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e8e8f0;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: 'Inter', sans-serif;
-            transition: border-color 0.3s;
-            background: #fafafe;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #6c5ce7;
-            background: #fff;
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 16px;
-            background: #6c5ce7;
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Inter', sans-serif;
-            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
-        }
-
-        .form-submit:hover {
-            background: #5a4bd1;
-            transform: translateY(-2px);
-        }
-
-        .form-privacy {
-            text-align: center;
-            margin-top: 16px;
-            font-size: 12px;
-            color: #999;
-        }
-
-        .urgency-badge {
-            text-align: center;
-            margin-top: 20px;
-            padding: 12px;
-            background: #fff3e0;
-            border: 1px solid #ffcc80;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #e65100;
-        }
-
-        /* ============ FAQ ============ */
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 24px 0;
-        }
-
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            gap: 16px;
-        }
-
-        .faq-question h3 {
-            font-size: 17px;
-            font-weight: 600;
-            color: #1a1a2e;
-        }
-
-        .faq-toggle {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            background: #f0efff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c5ce7;
-            font-size: 18px;
-            font-weight: 700;
-            transition: all 0.3s;
-        }
-
-        .faq-item.active .faq-toggle {
-            background: #6c5ce7;
-            color: #fff;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-        }
-
-        .faq-answer p {
-            padding-top: 16px;
-            color: #666;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* ============ FINAL CTA ============ */
-        .final-cta {
-            background: linear-gradient(135deg, #0a0a1e, #1a1a3e);
-            color: #fff;
-            text-align: center;
-            padding: 100px 24px;
-        }
-
-        .final-cta h2 {
-            font-size: 40px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .final-cta p {
-            color: #888;
-            font-size: 18px;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .final-cta .btn-primary {
-            font-size: 18px;
-            padding: 20px 48px;
-        }
-
-        .cta-micro {
-            margin-top: 16px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* ============ FOOTER ============ */
-        .footer {
-            background: #0a0a1e;
-            color: #666;
-            text-align: center;
-            padding: 32px 24px;
-            font-size: 14px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .footer a {
-            color: #888;
-            text-decoration: none;
-        }
-
-        /* ============ STICKY CTA ============ */
-        .sticky-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 30, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 16px 24px;
-            z-index: 998;
-            text-align: center;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-        }
-
-        .sticky-cta.visible {
-            display: block;
-        }
-
-        .sticky-cta .btn-primary {
-            padding: 14px 32px;
-            font-size: 15px;
-        }
-
-        /* ============ TRUST BADGES ============ */
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #444;
-        }
-
-        .badge-icon {
-            font-size: 16px;
-        }
-
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 968px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-sub {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-ctas {
-                justify-content: center;
-            }
-
-            .trust-bar {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                max-width: 480px;
-                margin: 0 auto;
-            }
-
-            .problem-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .solution-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-row {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-
-            .final-cta h2 {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero {
-                padding-top: 100px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero-ctas {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .featured-testimonial {
-                padding: 32px;
-            }
-
-            .featured-testimonial blockquote {
-                font-size: 18px;
-            }
-
-            .form-card {
-                padding: 28px;
-            }
-
-            .stat-callout .big-stat {
-                font-size: 48px;
-            }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;color:#1a1a2e;line-height:1.6;overflow-x:hidden}
+
+        /* NAV */
+        .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,30,0.95);backdrop-filter:blur(10px);padding:16px 0}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+        .nav-logo{font-size:20px;font-weight:800;color:#fff;text-decoration:none}
+        .nav-logo span{color:#6c5ce7}
+        .nav-links{display:flex;gap:24px;align-items:center;list-style:none}
+        .nav-links a{color:#ccc;text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s}
+        .nav-links a:hover{color:#fff}
+        .nav-cta{background:#6c5ce7;color:#fff !important;padding:10px 24px;border-radius:8px;font-weight:600 !important}
+        .nav-cta:hover{background:#5a4bd1}
+        .lang-toggle{display:flex;gap:4px;background:rgba(255,255,255,0.1);border-radius:6px;padding:2px}
+        .lang-btn{padding:6px 12px;border:none;background:transparent;color:#888;font-size:13px;font-weight:600;cursor:pointer;border-radius:4px;font-family:'Inter',sans-serif;transition:all 0.3s}
+        .lang-btn.active{background:rgba(108,92,231,0.3);color:#fff}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+        .hamburger span{width:24px;height:2px;background:#fff;transition:all 0.3s}
+        .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,10,30,0.98);padding:24px;flex-direction:column;gap:16px;z-index:999}
+        .mobile-menu.active{display:flex}
+        .mobile-menu a{color:#fff;text-decoration:none;font-size:16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+
+        /* HERO */
+        .hero{min-height:100vh;background:linear-gradient(135deg,#0a0a1e 0%,#1a1a3e 50%,#0d0d2b 100%);display:flex;align-items:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(108,92,231,0.15),transparent 70%);top:-100px;right:-100px;border-radius:50%}
+        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:60px;align-items:center;width:100%}
+        .hero-badge{display:inline-block;background:rgba(108,92,231,0.15);border:1px solid rgba(108,92,231,0.3);color:#a29bfe;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:0.5px}
+        .hero h1{font-size:52px;font-weight:900;color:#fff;line-height:1.15;margin-bottom:24px}
+        .hero h1 .highlight{background:linear-gradient(135deg,#6c5ce7,#a29bfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-sub{font-size:18px;color:#b0b0cc;line-height:1.7;margin-bottom:36px;max-width:540px}
+        .hero-ctas{display:flex;gap:16px;margin-bottom:48px;flex-wrap:wrap}
+        .btn-primary{background:#6c5ce7;color:#fff;padding:16px 36px;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;box-shadow:0 4px 20px rgba(108,92,231,0.4)}
+        .btn-primary:hover{background:#5a4bd1;transform:translateY(-2px);box-shadow:0 8px 30px rgba(108,92,231,0.5)}
+        .btn-secondary{background:transparent;color:#a29bfe;padding:16px 36px;border:2px solid rgba(108,92,231,0.4);border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;transition:all 0.3s}
+        .btn-secondary:hover{border-color:#6c5ce7;background:rgba(108,92,231,0.1)}
+        .trust-bar{display:flex;gap:32px;flex-wrap:wrap}
+        .trust-item{display:flex;align-items:center;gap:8px;color:#888;font-size:13px}
+        .trust-item .num{color:#6c5ce7;font-weight:700;font-size:14px}
+
+        /* Hero Card */
+        .hero-visual{position:relative}
+        .hero-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px;backdrop-filter:blur(10px)}
+        .hero-card-header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+        .status-dot{width:10px;height:10px;background:#00b894;border-radius:50%;animation:pulse-dot 2s infinite}
+        @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.4}}
+        .hero-card-header span{color:#00b894;font-size:14px;font-weight:600}
+        .chat-message{background:rgba(108,92,231,0.1);border:1px solid rgba(108,92,231,0.2);border-radius:12px;padding:16px;margin-bottom:12px}
+        .chat-message.ai{background:rgba(0,184,148,0.1);border-color:rgba(0,184,148,0.2)}
+        .chat-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+        .chat-message .chat-label{color:#a29bfe}
+        .chat-message.ai .chat-label{color:#00b894}
+        .chat-text{color:#ddd;font-size:14px;line-height:1.5}
+        .chat-time{font-size:11px;color:#666;margin-top:6px}
+        .response-badge{display:inline-block;background:rgba(0,184,148,0.15);color:#00b894;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;margin-top:12px}
+
+        /* SECTIONS */
+        .section{padding:100px 24px}
+        .section-inner{max-width:1100px;margin:0 auto}
+        .section-label{color:#6c5ce7;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+        .section-title{font-size:40px;font-weight:800;margin-bottom:20px;line-height:1.2}
+        .section-subtitle{font-size:18px;color:#666;max-width:650px;line-height:1.7;margin-bottom:48px}
+        .text-center{text-align:center}
+        .text-center .section-subtitle{margin-left:auto;margin-right:auto}
+
+        /* PROBLEM */
+        .problem{background:#f8f7ff}
+        .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+        .problem-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+        .problem-list li{display:flex;gap:16px;align-items:flex-start;font-size:16px;line-height:1.6;color:#444}
+        .problem-icon{flex-shrink:0;width:28px;height:28px;background:#ffe0e0;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#e74c3c;font-size:14px;margin-top:2px}
+        .stat-callout{background:linear-gradient(135deg,#1a1a3e,#2d2d5e);border-radius:20px;padding:48px;color:#fff;text-align:center}
+        .stat-callout .big-stat{font-size:72px;font-weight:900;background:linear-gradient(135deg,#6c5ce7,#a29bfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px}
+        .stat-callout p{font-size:18px;color:#b0b0cc;line-height:1.6}
+        .stat-callout .emphasis{color:#fff;font-weight:700}
+
+        /* SOLUTION */
+        .solution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+        .solution-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:36px;transition:all 0.3s}
+        .solution-card:hover{border-color:#6c5ce7;box-shadow:0 8px 30px rgba(108,92,231,0.1);transform:translateY(-4px)}
+        .solution-icon{width:56px;height:56px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+        .solution-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
+        .solution-card p{color:#666;font-size:15px;line-height:1.6}
+
+        /* HOW IT WORKS */
+        .how-it-works{background:#f8f7ff}
+        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px}
+        .step{text-align:center}
+        .step-num{width:64px;height:64px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff;margin:0 auto 24px}
+        .step h3{font-size:20px;font-weight:700;margin-bottom:12px}
+        .step p{color:#666;font-size:15px;line-height:1.6}
+
+        /* BENEFITS */
+        .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .benefit-card{padding:32px;border-radius:16px;background:#fff;border:1px solid #eee;text-align:center;transition:all 0.3s}
+        .benefit-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+        .benefit-icon{font-size:36px;margin-bottom:16px}
+        .benefit-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+        .benefit-card p{color:#666;font-size:14px;line-height:1.6}
+
+        /* SOCIAL PROOF */
+        .social-proof{background:linear-gradient(135deg,#0a0a1e,#1a1a3e);color:#fff}
+        .social-proof .section-label{color:#a29bfe}
+        .social-proof .section-title{color:#fff}
+        .social-proof .section-subtitle{color:#888}
+        .featured-testimonial{background:rgba(108,92,231,0.1);border:1px solid rgba(108,92,231,0.2);border-radius:20px;padding:48px;margin-bottom:40px;position:relative}
+        .featured-testimonial .quote-mark{font-size:80px;color:rgba(108,92,231,0.3);position:absolute;top:20px;left:32px;line-height:1;font-family:Georgia,serif}
+        .featured-testimonial blockquote{font-size:22px;line-height:1.6;color:#e0e0f0;margin-bottom:24px;position:relative;z-index:1}
+        .testimonial-author{display:flex;align-items:center;gap:16px}
+        .author-avatar{width:48px;height:48px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff}
+        .author-info .name{font-weight:700;font-size:16px;color:#fff}
+        .author-info .role{color:#888;font-size:14px}
+        .testimonial-result{display:inline-block;background:rgba(0,184,148,0.15);color:#00b894;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;margin-top:16px}
+        .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .testimonial-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px}
+        .stars{color:#f39c12;font-size:16px;margin-bottom:16px;letter-spacing:2px}
+        .testimonial-card blockquote{color:#ccc;font-size:15px;line-height:1.6;margin-bottom:20px}
+        .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px;padding-top:60px;border-top:1px solid rgba(255,255,255,0.1)}
+        .stat-box{text-align:center}
+        .stat-box .stat-num{font-size:42px;font-weight:900;background:linear-gradient(135deg,#6c5ce7,#a29bfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .stat-box .stat-label{color:#888;font-size:14px;margin-top:4px}
+
+        /* FORM */
+        .form-section{background:#f8f7ff}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .form-benefits h2{font-size:36px;font-weight:800;margin-bottom:24px;line-height:1.2}
+        .form-benefits-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+        .form-benefits-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#444}
+        .check-icon{flex-shrink:0;width:24px;height:24px;background:#00b894;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;margin-top:2px}
+        .guarantee-box{background:#fff;border:2px solid #00b894;border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+        .guarantee-box .shield{font-size:32px;flex-shrink:0}
+        .guarantee-box p{font-size:14px;color:#444;line-height:1.6}
+        .guarantee-box strong{color:#1a1a2e}
+        .form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.08);border:1px solid #eee}
+        .form-card h3{font-size:24px;font-weight:700;margin-bottom:8px;text-align:center}
+        .form-card .form-sub{text-align:center;color:#888;font-size:14px;margin-bottom:32px}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:#333}
+        .form-group input,.form-group select{width:100%;padding:14px 16px;border:2px solid #e8e8f0;border-radius:10px;font-size:15px;font-family:'Inter',sans-serif;transition:border-color 0.3s;background:#fafafe}
+        .form-group input:focus,.form-group select:focus{outline:none;border-color:#6c5ce7;background:#fff}
+        .form-submit{width:100%;padding:16px;background:#6c5ce7;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:all 0.3s;font-family:'Inter',sans-serif;box-shadow:0 4px 20px rgba(108,92,231,0.4)}
+        .form-submit:hover{background:#5a4bd1;transform:translateY(-2px)}
+        .form-privacy{text-align:center;margin-top:16px;font-size:12px;color:#999}
+        .urgency-badge{text-align:center;margin-top:20px;padding:12px;background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;font-size:14px;font-weight:600;color:#e65100}
+
+        /* FAQ */
+        .faq-grid{max-width:800px;margin:0 auto}
+        .faq-item{border-bottom:1px solid #eee;padding:24px 0}
+        .faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px}
+        .faq-question h3{font-size:17px;font-weight:600;color:#1a1a2e}
+        .faq-toggle{flex-shrink:0;width:32px;height:32px;background:#f0efff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6c5ce7;font-size:18px;font-weight:700;transition:all 0.3s}
+        .faq-item.active .faq-toggle{background:#6c5ce7;color:#fff;transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+        .faq-item.active .faq-answer{max-height:200px}
+        .faq-answer p{padding-top:16px;color:#666;font-size:15px;line-height:1.7}
+
+        /* FINAL CTA */
+        .final-cta{background:linear-gradient(135deg,#0a0a1e,#1a1a3e);color:#fff;text-align:center;padding:100px 24px}
+        .final-cta h2{font-size:40px;font-weight:800;margin-bottom:20px;line-height:1.2;max-width:700px;margin-left:auto;margin-right:auto}
+        .final-cta p{color:#888;font-size:18px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+        .final-cta .btn-primary{font-size:18px;padding:20px 48px}
+        .cta-micro{margin-top:16px;font-size:14px;color:#666}
+
+        /* FOOTER */
+        .footer{background:#0a0a1e;color:#666;text-align:center;padding:32px 24px;font-size:14px;border-top:1px solid rgba(255,255,255,0.05)}
+        .footer a{color:#888;text-decoration:none}
+
+        /* STICKY CTA */
+        .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,30,0.95);backdrop-filter:blur(10px);padding:16px 24px;z-index:998;text-align:center;box-shadow:0 -4px 20px rgba(0,0,0,0.3)}
+        .sticky-cta.visible{display:block}
+        .sticky-cta .btn-primary{padding:14px 32px;font-size:15px}
+
+        /* TRUST BADGES */
+        .trust-badges{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:40px}
+        .badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #eee;padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;color:#444}
+        .badge-icon{font-size:16px}
+
+        /* RESPONSIVE */
+        @media(max-width:968px){
+            .hero-inner{grid-template-columns:1fr;text-align:center}
+            .hero h1{font-size:36px}
+            .hero-sub{margin-left:auto;margin-right:auto}
+            .hero-ctas{justify-content:center}
+            .trust-bar{justify-content:center}
+            .hero-visual{max-width:480px;margin:0 auto}
+            .problem-grid,.solution-grid,.form-grid{grid-template-columns:1fr}
+            .steps,.benefits-grid,.testimonial-grid{grid-template-columns:1fr}
+            .stats-row{grid-template-columns:repeat(2,1fr)}
+            .section-title{font-size:30px}
+            .final-cta h2{font-size:30px}
+        }
+        @media(max-width:768px){
+            .nav-links{display:none}
+            .hamburger{display:flex}
+            .hero{padding-top:100px}
+            .hero h1{font-size:30px}
+            .hero-ctas{flex-direction:column;align-items:center}
+            .btn-primary,.btn-secondary{width:100%;text-align:center;justify-content:center}
+            .featured-testimonial{padding:32px}
+            .featured-testimonial blockquote{font-size:18px}
+            .form-card{padding:28px}
+            .stat-callout .big-stat{font-size:48px}
         }
     </style>
 </head>
 <body>
 
-    <!-- ============ NAV ============ -->
+    <!-- NAV -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="https://topaiafrica.com" class="nav-logo">Top AI <span>Africa</span></a>
             <ul class="nav-links">
-                <li><a href="https://topaiafrica.com">Home</a></li>
-                <li><a href="https://topaiafrica.com/en/about/">About</a></li>
+                <li><a href="https://topaiafrica.com" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="https://topaiafrica.com/en/about/" data-en="About" data-fr="&Agrave; Propos">About</a></li>
                 <li><a href="https://topaiafrica.com/en/blog/">Blog</a></li>
                 <li><a href="https://topaiafrica.com/en/contact/">Contact</a></li>
-                <li><a href="#book-demo" class="nav-cta">Free Demo</a></li>
+                <li>
+                    <div class="lang-toggle">
+                        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+                    </div>
+                </li>
+                <li><a href="#book-demo" class="nav-cta" data-en="Free Demo" data-fr="D&eacute;mo Gratuite">Free Demo</a></li>
             </ul>
             <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="https://topaiafrica.com">Home</a>
-            <a href="https://topaiafrica.com/en/about/">About</a>
+            <a href="https://topaiafrica.com" data-en="Home" data-fr="Accueil">Home</a>
+            <a href="https://topaiafrica.com/en/about/" data-en="About" data-fr="&Agrave; Propos">About</a>
             <a href="https://topaiafrica.com/en/blog/">Blog</a>
             <a href="https://topaiafrica.com/en/contact/">Contact</a>
-            <a href="#book-demo" onclick="toggleMenu()">Book Free Demo</a>
+            <div class="lang-toggle" style="padding:8px 0">
+                <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            </div>
+            <a href="#book-demo" onclick="toggleMenu()" data-en="Book Free Demo" data-fr="R&eacute;server D&eacute;mo Gratuite">Book Free Demo</a>
         </div>
     </nav>
 
-    <!-- ============ HERO ============ -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <div class="hero-badge">Trusted by 100+ Businesses Across Africa & Canada</div>
-                <h1>Stop Losing Leads.<br>Start Closing Deals.<br>
-                    <span class="highlight">Your AI Responds in 60 Seconds.</span></h1>
-                <p class="hero-sub">We build AI systems that instantly respond to every lead by SMS, email, and voice &mdash; so you book more appointments and never miss a sale again.</p>
+                <div class="hero-badge" data-en="Trusted by 100+ Businesses Across Africa &amp; Canada" data-fr="Plus de 100 entreprises en Afrique &amp; au Canada nous font confiance">Trusted by 100+ Businesses Across Africa &amp; Canada</div>
+                <h1>
+                    <span data-en="Stop Losing Leads." data-fr="Arr&ecirc;tez de Perdre des Clients.">Stop Losing Leads.</span><br>
+                    <span data-en="Start Closing Deals." data-fr="Commencez &agrave; Conclure.">Start Closing Deals.</span><br>
+                    <span class="highlight" data-en="Your AI Responds in 60 Seconds." data-fr="Votre IA R&eacute;pond en 60 Secondes.">Your AI Responds in 60 Seconds.</span>
+                </h1>
+                <p class="hero-sub" data-en="We build AI systems that instantly respond to every lead by SMS, email, and voice &mdash; so you book more appointments and never miss a sale again." data-fr="Nous construisons des syst&egrave;mes IA qui r&eacute;pondent instantan&eacute;ment &agrave; chaque prospect par SMS, email et voix &mdash; pour que vous r&eacute;serviez plus de rendez-vous et ne perdiez plus jamais une vente.">We build AI systems that instantly respond to every lead by SMS, email, and voice &mdash; so you book more appointments and never miss a sale again.</p>
                 <div class="hero-ctas">
-                    <a href="#book-demo" class="btn-primary">Book Your Free Demo &rarr;</a>
-                    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+                    <a href="#book-demo" class="btn-primary" data-en="Book Your Free Demo &rarr;" data-fr="R&eacute;servez Votre D&eacute;mo Gratuite &rarr;">Book Your Free Demo &rarr;</a>
+                    <a href="#how-it-works" class="btn-secondary" data-en="See How It Works" data-fr="Voir Comment &Ccedil;a Marche">See How It Works</a>
                 </div>
                 <div class="trust-bar">
-                    <div class="trust-item"><span class="num">500+</span> Workflows Automated</div>
-                    <div class="trust-item"><span class="num">95%</span> Client Satisfaction</div>
-                    <div class="trust-item"><span class="num">60%</span> Cost Reduction</div>
+                    <div class="trust-item"><span class="num">500+</span> <span data-en="Workflows Automated" data-fr="Workflows Automatis&eacute;s">Workflows Automated</span></div>
+                    <div class="trust-item"><span class="num">95%</span> <span data-en="Client Satisfaction" data-fr="Satisfaction Client">Client Satisfaction</span></div>
+                    <div class="trust-item"><span class="num">60%</span> <span data-en="Cost Reduction" data-fr="R&eacute;duction des Co&ucirc;ts">Cost Reduction</span></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-card">
                     <div class="hero-card-header">
                         <div class="status-dot"></div>
-                        <span>AI Agent Active — Responding Now</span>
+                        <span data-en="AI Agent Active &mdash; Responding Now" data-fr="Agent IA Actif &mdash; R&eacute;pond Maintenant">AI Agent Active &mdash; Responding Now</span>
                     </div>
                     <div class="chat-message">
-                        <div class="chat-label">New Lead</div>
-                        <div class="chat-text">"Hi, I'm interested in your services. Can someone call me back?"</div>
+                        <div class="chat-label" data-en="New Lead" data-fr="Nouveau Prospect">New Lead</div>
+                        <div class="chat-text" data-en="&ldquo;Hi, I'm interested in your services. Can someone call me back?&rdquo;" data-fr="&ldquo;Bonjour, je suis int&eacute;ress&eacute; par vos services. Quelqu'un peut me rappeler ?&rdquo;">"Hi, I'm interested in your services. Can someone call me back?"</div>
                         <div class="chat-time">9:47 PM</div>
                     </div>
                     <div class="chat-message ai">
-                        <div class="chat-label">AI Agent (47 seconds later)</div>
-                        <div class="chat-text">"Hi! Thanks for reaching out. I'd love to help. I've booked a call for you tomorrow at 10 AM. You'll receive a confirmation SMS shortly."</div>
+                        <div class="chat-label" data-en="AI Agent (47 seconds later)" data-fr="Agent IA (47 secondes plus tard)">AI Agent (47 seconds later)</div>
+                        <div class="chat-text" data-en="&ldquo;Hi! Thanks for reaching out. I'd love to help. I've booked a call for you tomorrow at 10 AM. You'll receive a confirmation SMS shortly.&rdquo;" data-fr="&ldquo;Bonjour ! Merci de nous contacter. Je serais ravi de vous aider. J'ai r&eacute;serv&eacute; un appel pour vous demain &agrave; 10h. Vous recevrez un SMS de confirmation.&rdquo;">"Hi! Thanks for reaching out. I'd love to help. I've booked a call for you tomorrow at 10 AM. You'll receive a confirmation SMS shortly."</div>
                         <div class="chat-time">9:47 PM</div>
                     </div>
-                    <div class="response-badge">Responded in 47 seconds &bull; Appointment booked</div>
+                    <div class="response-badge" data-en="Responded in 47 seconds &bull; Appointment booked" data-fr="R&eacute;pondu en 47 secondes &bull; Rendez-vous r&eacute;serv&eacute;">Responded in 47 seconds &bull; Appointment booked</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ PROBLEM ============ -->
+    <!-- PROBLEM -->
     <section class="section problem">
         <div class="section-inner">
             <div class="problem-grid">
                 <div>
-                    <div class="section-label">The Problem</div>
-                    <h2 class="section-title">Every Minute You Wait,<br>You Lose Money</h2>
+                    <div class="section-label" data-en="The Problem" data-fr="Le Probl&egrave;me">The Problem</div>
+                    <h2 class="section-title" data-en="Every Minute You Wait,<br>You Lose Money" data-fr="Chaque Minute Que Vous Attendez,<br>Vous Perdez de l'Argent">Every Minute You Wait,<br>You Lose Money</h2>
                     <ul class="problem-list">
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>A lead that doesn't get a response in <strong>5 minutes</strong> is <strong>21X less likely</strong> to convert. Most businesses take 24-48 hours.</span>
+                            <span data-en="A lead that doesn't get a response in <strong>5 minutes</strong> is <strong>21X less likely</strong> to convert. Most businesses take 24-48 hours." data-fr="Un prospect qui ne re&ccedil;oit pas de r&eacute;ponse en <strong>5 minutes</strong> a <strong>21X moins de chances</strong> de convertir. La plupart des entreprises prennent 24-48 heures.">A lead that doesn't get a response in <strong>5 minutes</strong> is <strong>21X less likely</strong> to convert. Most businesses take 24-48 hours.</span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>While you sleep, eat, or meet with one client &mdash; other leads are calling <strong>your competitors</strong>.</span>
+                            <span data-en="While you sleep, eat, or meet with one client &mdash; other leads are calling <strong>your competitors</strong>." data-fr="Pendant que vous dormez, mangez ou &ecirc;tes en rendez-vous &mdash; d'autres prospects appellent <strong>vos concurrents</strong>.">While you sleep, eat, or meet with one client &mdash; other leads are calling <strong>your competitors</strong>.</span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>You're spending <strong>$2,000-5,000/month</strong> on marketing to generate leads you <strong>never follow up with</strong>.</span>
+                            <span data-en="You're spending <strong>$2,000-5,000/month</strong> on marketing to generate leads you <strong>never follow up with</strong>." data-fr="Vous d&eacute;pensez <strong>2 000-5 000$/mois</strong> en marketing pour g&eacute;n&eacute;rer des prospects que vous <strong>ne relancez jamais</strong>.">You're spending <strong>$2,000-5,000/month</strong> on marketing to generate leads you <strong>never follow up with</strong>.</span>
                         </li>
                         <li>
                             <div class="problem-icon">&times;</div>
-                            <span>Hiring more staff to answer phones costs <strong>$3,000+/month each</strong>. There's a better way.</span>
+                            <span data-en="Hiring more staff to answer phones costs <strong>$3,000+/month each</strong>. There's a better way." data-fr="Embaucher du personnel pour r&eacute;pondre au t&eacute;l&eacute;phone co&ucirc;te <strong>3 000$+/mois chacun</strong>. Il y a une meilleure solution.">Hiring more staff to answer phones costs <strong>$3,000+/month each</strong>. There's a better way.</span>
                         </li>
                     </ul>
                 </div>
                 <div class="stat-callout">
                     <div class="big-stat">78%</div>
-                    <p>of customers buy from the company that responds <span class="emphasis">FIRST</span>.</p>
+                    <p data-en="of customers buy from the company that responds <span class='emphasis'>FIRST</span>." data-fr="des clients ach&egrave;tent aupr&egrave;s de l'entreprise qui r&eacute;pond <span class='emphasis'>EN PREMIER</span>.">of customers buy from the company that responds <span class="emphasis">FIRST</span>.</p>
                     <br>
-                    <p>You're not losing leads because of your service.<br><span class="emphasis">You're losing them because you're too slow.</span></p>
+                    <p data-en="You're not losing leads because of your service.<br><span class='emphasis'>You're losing them because you're too slow.</span>" data-fr="Vous ne perdez pas des prospects &agrave; cause de vos services.<br><span class='emphasis'>Vous les perdez parce que vous &ecirc;tes trop lent.</span>">You're not losing leads because of your service.<br><span class="emphasis">You're losing them because you're too slow.</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ SOLUTION ============ -->
+    <!-- SOLUTION -->
     <section class="section">
         <div class="section-inner text-center">
-            <div class="section-label">The Solution</div>
-            <h2 class="section-title">Meet Your AI Employee That Never Sleeps</h2>
-            <p class="section-subtitle">Your AI agent works 24/7/365 &mdash; responding to every lead instantly across every channel.</p>
+            <div class="section-label" data-en="The Solution" data-fr="La Solution">The Solution</div>
+            <h2 class="section-title" data-en="Meet Your AI Employee That Never Sleeps" data-fr="Votre Employ&eacute; IA Qui Ne Dort Jamais">Meet Your AI Employee That Never Sleeps</h2>
+            <p class="section-subtitle" data-en="Your AI agent works 24/7/365 &mdash; responding to every lead instantly across every channel." data-fr="Votre agent IA travaille 24h/24, 7j/7 &mdash; r&eacute;pondant &agrave; chaque prospect instantan&eacute;ment sur tous les canaux.">Your AI agent works 24/7/365 &mdash; responding to every lead instantly across every channel.</p>
         </div>
         <div class="section-inner">
             <div class="solution-grid">
                 <div class="solution-card">
                     <div class="solution-icon">&#9993;</div>
-                    <h3>Instant SMS Response</h3>
-                    <p>Every lead gets a personalized text within 60 seconds. Day or night. Weekend or holiday. No lead left behind.</p>
+                    <h3 data-en="Instant SMS Response" data-fr="R&eacute;ponse SMS Instantan&eacute;e">Instant SMS Response</h3>
+                    <p data-en="Every lead gets a personalized text within 60 seconds. Day or night. Weekend or holiday. No lead left behind." data-fr="Chaque prospect re&ccedil;oit un SMS personnalis&eacute; en moins de 60 secondes. Jour et nuit. Week-end ou jour f&eacute;ri&eacute;. Aucun prospect oubli&eacute;.">Every lead gets a personalized text within 60 seconds. Day or night. Weekend or holiday. No lead left behind.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#9742;</div>
-                    <h3>AI Voice Agent</h3>
-                    <p>Your AI calls leads back with a natural human voice. Qualifies them. Answers questions. Books the appointment. Done.</p>
+                    <h3 data-en="AI Voice Agent" data-fr="Agent Vocal IA">AI Voice Agent</h3>
+                    <p data-en="Your AI calls leads back with a natural human voice. Qualifies them. Answers questions. Books the appointment. Done." data-fr="Votre IA rappelle les prospects avec une voix naturelle. Les qualifie. R&eacute;pond aux questions. R&eacute;serve le rendez-vous. Termin&eacute;.">Your AI calls leads back with a natural human voice. Qualifies them. Answers questions. Books the appointment. Done.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#9993;</div>
-                    <h3>Email + Follow-Up</h3>
-                    <p>Automated email sequences nurture cold leads until they're ready to buy. Nothing falls through the cracks.</p>
+                    <h3 data-en="Email + Follow-Up" data-fr="Email + Suivi Automatique">Email + Follow-Up</h3>
+                    <p data-en="Automated email sequences nurture cold leads until they're ready to buy. Nothing falls through the cracks." data-fr="Des s&eacute;quences d'emails automatiques relancent les prospects froids jusqu'&agrave; ce qu'ils soient pr&ecirc;ts &agrave; acheter. Rien n'est oubli&eacute;.">Automated email sequences nurture cold leads until they're ready to buy. Nothing falls through the cracks.</p>
                 </div>
                 <div class="solution-card">
                     <div class="solution-icon">&#128197;</div>
-                    <h3>Appointment Booking</h3>
-                    <p>Leads book directly into your calendar. No back-and-forth. No missed calls. No lost deals. Just booked meetings.</p>
+                    <h3 data-en="Appointment Booking" data-fr="R&eacute;servation de Rendez-vous">Appointment Booking</h3>
+                    <p data-en="Leads book directly into your calendar. No back-and-forth. No missed calls. No lost deals. Just booked meetings." data-fr="Les prospects r&eacute;servent directement dans votre agenda. Plus de va-et-vient. Plus d'appels manqu&eacute;s. Que des rendez-vous.">Leads book directly into your calendar. No back-and-forth. No missed calls. No lost deals. Just booked meetings.</p>
                 </div>
             </div>
-
             <div class="trust-badges">
-                <div class="badge"><span class="badge-icon">&#128274;</span> No Contract Required</div>
-                <div class="badge"><span class="badge-icon">&#9201;</span> Setup in 72 Hours</div>
-                <div class="badge"><span class="badge-icon">&#127760;</span> Bilingual: French + English</div>
-                <div class="badge"><span class="badge-icon">&#9989;</span> 100+ Businesses Trust Us</div>
+                <div class="badge"><span class="badge-icon">&#128274;</span> <span data-en="No Contract Required" data-fr="Sans Contrat">No Contract Required</span></div>
+                <div class="badge"><span class="badge-icon">&#9201;</span> <span data-en="Setup in 72 Hours" data-fr="Install&eacute; en 72 Heures">Setup in 72 Hours</span></div>
+                <div class="badge"><span class="badge-icon">&#127760;</span> <span data-en="Bilingual: French + English" data-fr="Bilingue : Fran&ccedil;ais + Anglais">Bilingual: French + English</span></div>
+                <div class="badge"><span class="badge-icon">&#9989;</span> <span data-en="100+ Businesses Trust Us" data-fr="100+ Entreprises Nous Font Confiance">100+ Businesses Trust Us</span></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
+    <!-- HOW IT WORKS -->
     <section class="section how-it-works" id="how-it-works">
         <div class="section-inner text-center">
-            <div class="section-label">How It Works</div>
-            <h2 class="section-title">Live in 72 Hours. Not 72 Days.</h2>
-            <p class="section-subtitle">Getting started is simple. No technical skills needed. We handle everything.</p>
+            <div class="section-label" data-en="How It Works" data-fr="Comment &Ccedil;a Marche">How It Works</div>
+            <h2 class="section-title" data-en="Live in 72 Hours. Not 72 Days." data-fr="Op&eacute;rationnel en 72 Heures. Pas 72 Jours.">Live in 72 Hours. Not 72 Days.</h2>
+            <p class="section-subtitle" data-en="Getting started is simple. No technical skills needed. We handle everything." data-fr="D&eacute;marrer est simple. Aucune comp&eacute;tence technique requise. On g&egrave;re tout.">Getting started is simple. No technical skills needed. We handle everything.</p>
             <div class="steps">
                 <div class="step">
                     <div class="step-num">1</div>
-                    <h3>Book a Free Demo</h3>
-                    <p>15-minute call. We analyze your current lead response time and show you exactly how many leads you're losing.</p>
+                    <h3 data-en="Book a Free Demo" data-fr="R&eacute;servez une D&eacute;mo Gratuite">Book a Free Demo</h3>
+                    <p data-en="15-minute call. We analyze your current lead response time and show you exactly how many leads you're losing." data-fr="Appel de 15 minutes. On analyse votre temps de r&eacute;ponse actuel et on vous montre combien de prospects vous perdez.">15-minute call. We analyze your current lead response time and show you exactly how many leads you're losing.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
-                    <h3>We Build Your AI System</h3>
-                    <p>Custom AI agents for SMS, voice, and email &mdash; integrated with your CRM and calendar. Ready in 48-72 hours.</p>
+                    <h3 data-en="We Build Your AI System" data-fr="On Construit Votre Syst&egrave;me IA">We Build Your AI System</h3>
+                    <p data-en="Custom AI agents for SMS, voice, and email &mdash; integrated with your CRM and calendar. Ready in 48-72 hours." data-fr="Agents IA personnalis&eacute;s pour SMS, voix et email &mdash; int&eacute;gr&eacute;s &agrave; votre CRM et agenda. Pr&ecirc;t en 48-72 heures.">Custom AI agents for SMS, voice, and email &mdash; integrated with your CRM and calendar. Ready in 48-72 hours.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
-                    <h3>Start Closing More Deals</h3>
-                    <p>Your AI agent handles every lead instantly. You focus on closing, serving clients, and growing your business.</p>
+                    <h3 data-en="Start Closing More Deals" data-fr="Commencez &agrave; Conclure Plus">Start Closing More Deals</h3>
+                    <p data-en="Your AI agent handles every lead instantly. You focus on closing, serving clients, and growing your business." data-fr="Votre agent IA g&egrave;re chaque prospect instantan&eacute;ment. Vous vous concentrez sur la conclusion, le service client et la croissance.">Your AI agent handles every lead instantly. You focus on closing, serving clients, and growing your business.</p>
                 </div>
             </div>
-            <a href="#book-demo" class="btn-primary">Book Your Free Demo &rarr;</a>
+            <a href="#book-demo" class="btn-primary" data-en="Book Your Free Demo &rarr;" data-fr="R&eacute;servez Votre D&eacute;mo Gratuite &rarr;">Book Your Free Demo &rarr;</a>
         </div>
     </section>
 
-    <!-- ============ BENEFITS ============ -->
+    <!-- BENEFITS -->
     <section class="section">
         <div class="section-inner text-center">
-            <div class="section-label">Benefits</div>
-            <h2 class="section-title">What Changes When AI Handles Your Leads</h2>
-            <p class="section-subtitle">Stop chasing leads. Let them come to you &mdash; and get an instant, professional response every time.</p>
+            <div class="section-label" data-en="Benefits" data-fr="Avantages">Benefits</div>
+            <h2 class="section-title" data-en="What Changes When AI Handles Your Leads" data-fr="Ce Qui Change Quand l'IA G&egrave;re Vos Prospects">What Changes When AI Handles Your Leads</h2>
+            <p class="section-subtitle" data-en="Stop chasing leads. Let them come to you &mdash; and get an instant, professional response every time." data-fr="Arr&ecirc;tez de courir apr&egrave;s les prospects. Laissez-les venir &agrave; vous &mdash; avec une r&eacute;ponse instantan&eacute;e et professionnelle &agrave; chaque fois.">Stop chasing leads. Let them come to you &mdash; and get an instant, professional response every time.</p>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128200;</div>
-                    <h3>3X More Appointments</h3>
-                    <p>AI qualifies and books leads automatically. Your calendar fills up without lifting a finger.</p>
+                    <h3 data-en="3X More Appointments" data-fr="3X Plus de Rendez-vous">3X More Appointments</h3>
+                    <p data-en="AI qualifies and books leads automatically. Your calendar fills up without lifting a finger." data-fr="L'IA qualifie et r&eacute;serve les prospects automatiquement. Votre agenda se remplit sans effort.">AI qualifies and books leads automatically. Your calendar fills up without lifting a finger.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128165;</div>
-                    <h3>Zero Missed Leads</h3>
-                    <p>24/7 response on SMS, email, voice, and WhatsApp. Every single inquiry gets answered.</p>
+                    <h3 data-en="Zero Missed Leads" data-fr="Z&eacute;ro Prospect Perdu">Zero Missed Leads</h3>
+                    <p data-en="24/7 response on SMS, email, voice, and WhatsApp. Every single inquiry gets answered." data-fr="R&eacute;ponse 24/7 par SMS, email, voix et WhatsApp. Chaque demande re&ccedil;oit une r&eacute;ponse.">24/7 response on SMS, email, voice, and WhatsApp. Every single inquiry gets answered.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#128176;</div>
-                    <h3>60% Lower Costs</h3>
-                    <p>Replace 2-3 full-time staff with one AI system that works around the clock.</p>
+                    <h3 data-en="60% Lower Costs" data-fr="60% de Co&ucirc;ts en Moins">60% Lower Costs</h3>
+                    <p data-en="Replace 2-3 full-time staff with one AI system that works around the clock." data-fr="Remplacez 2-3 employ&eacute;s &agrave; temps plein par un syst&egrave;me IA qui travaille 24h/24.">Replace 2-3 full-time staff with one AI system that works around the clock.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#9889;</div>
-                    <h3>60-Second Response</h3>
-                    <p>Beat every competitor to the punch. First to respond = first to close.</p>
+                    <h3 data-en="60-Second Response" data-fr="R&eacute;ponse en 60 Secondes">60-Second Response</h3>
+                    <p data-en="Beat every competitor to the punch. First to respond = first to close." data-fr="Devancez tous vos concurrents. Le premier &agrave; r&eacute;pondre = le premier &agrave; conclure.">Beat every competitor to the punch. First to respond = first to close.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#127769;</div>
-                    <h3>Works While You Sleep</h3>
-                    <p>Your best employee never takes a day off. Nights, weekends, holidays &mdash; covered.</p>
+                    <h3 data-en="Works While You Sleep" data-fr="Travaille Pendant Que Vous Dormez">Works While You Sleep</h3>
+                    <p data-en="Your best employee never takes a day off. Nights, weekends, holidays &mdash; covered." data-fr="Votre meilleur employ&eacute; ne prend jamais cong&eacute;. Nuits, week-ends, jours f&eacute;ri&eacute;s &mdash; couvert.">Your best employee never takes a day off. Nights, weekends, holidays &mdash; covered.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">&#127758;</div>
-                    <h3>Scales Instantly</h3>
-                    <p>Handle 10 leads or 10,000 &mdash; same speed, same quality, zero extra cost.</p>
+                    <h3 data-en="Scales Instantly" data-fr="Passe &agrave; l'&Eacute;chelle Instantan&eacute;ment">Scales Instantly</h3>
+                    <p data-en="Handle 10 leads or 10,000 &mdash; same speed, same quality, zero extra cost." data-fr="G&eacute;rez 10 ou 10 000 prospects &mdash; m&ecirc;me vitesse, m&ecirc;me qualit&eacute;, z&eacute;ro co&ucirc;t suppl&eacute;mentaire.">Handle 10 leads or 10,000 &mdash; same speed, same quality, zero extra cost.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ SOCIAL PROOF ============ -->
+    <!-- SOCIAL PROOF -->
     <section class="section social-proof">
         <div class="section-inner">
             <div class="text-center">
-                <div class="section-label">Results</div>
-                <h2 class="section-title">Real Businesses. Real Results.</h2>
-                <p class="section-subtitle">See what happens when AI handles your lead response.</p>
+                <div class="section-label" data-en="Results" data-fr="R&eacute;sultats">Results</div>
+                <h2 class="section-title" data-en="Real Businesses. Real Results." data-fr="De Vraies Entreprises. De Vrais R&eacute;sultats.">Real Businesses. Real Results.</h2>
+                <p class="section-subtitle" data-en="See what happens when AI handles your lead response." data-fr="Voyez ce qui se passe quand l'IA g&egrave;re vos prospects.">See what happens when AI handles your lead response.</p>
             </div>
-
             <div class="featured-testimonial">
                 <div class="quote-mark">&ldquo;</div>
-                <blockquote>"We went from losing 40% of our leads to booking 3X more appointments in the first month. The AI responds faster than any human could."</blockquote>
+                <blockquote data-en="&ldquo;We went from losing 40% of our leads to booking 3X more appointments in the first month. The AI responds faster than any human could.&rdquo;" data-fr="&ldquo;On est pass&eacute; de perdre 40% de nos prospects &agrave; r&eacute;server 3X plus de rendez-vous d&egrave;s le premier mois. L'IA r&eacute;pond plus vite que n'importe quel humain.&rdquo;">"We went from losing 40% of our leads to booking 3X more appointments in the first month. The AI responds faster than any human could."</blockquote>
                 <div class="testimonial-author">
                     <div class="author-avatar">AN</div>
                     <div class="author-info">
                         <div class="name">Aisha Nkurunziza</div>
-                        <div class="role">Operations Director, AfriPay &mdash; Bujumbura, Burundi</div>
+                        <div class="role" data-en="Operations Director, AfriPay &mdash; Bujumbura, Burundi" data-fr="Directrice des Op&eacute;rations, AfriPay &mdash; Bujumbura, Burundi">Operations Director, AfriPay &mdash; Bujumbura, Burundi</div>
                     </div>
                 </div>
-                <div class="testimonial-result">96% customer satisfaction &bull; Response time: 60 seconds</div>
+                <div class="testimonial-result" data-en="96% customer satisfaction &bull; Response time: 60 seconds" data-fr="96% satisfaction client &bull; Temps de r&eacute;ponse : 60 secondes">96% customer satisfaction &bull; Response time: 60 seconds</div>
             </div>
-
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"Our AI agent saved us $15,000/month and handles 80% of customer inquiries without human intervention."</blockquote>
+                    <blockquote data-en="&ldquo;Our AI agent saved us $15,000/month and handles 80% of customer inquiries without human intervention.&rdquo;" data-fr="&ldquo;Notre agent IA nous a fait &eacute;conomiser 15 000$/mois et g&egrave;re 80% des demandes clients sans intervention humaine.&rdquo;">"Our AI agent saved us $15,000/month and handles 80% of customer inquiries without human intervention."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">GN</div>
                         <div class="author-info">
                             <div class="name">Grace Nibigira</div>
-                            <div class="role">Founder, TransAfrica Logistics</div>
+                            <div class="role" data-en="Founder, TransAfrica Logistics" data-fr="Fondatrice, TransAfrica Logistics">Founder, TransAfrica Logistics</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">$15,000/month saved &bull; 65% cost reduction</div>
+                    <div class="testimonial-result" data-en="$15,000/month saved &bull; 65% cost reduction" data-fr="15 000$/mois &eacute;conomis&eacute;s &bull; 65% r&eacute;duction des co&ucirc;ts">$15,000/month saved &bull; 65% cost reduction</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"We trained our whole team in 2 weeks. Productivity jumped 40% immediately. Best investment we've made."</blockquote>
+                    <blockquote data-en="&ldquo;We trained our whole team in 2 weeks. Productivity jumped 40% immediately. Best investment we've made.&rdquo;" data-fr="&ldquo;On a form&eacute; toute l'&eacute;quipe en 2 semaines. La productivit&eacute; a bondi de 40% imm&eacute;diatement. Meilleur investissement jamais fait.&rdquo;">"We trained our whole team in 2 weeks. Productivity jumped 40% immediately. Best investment we've made."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">PH</div>
                         <div class="author-info">
@@ -1534,186 +545,201 @@
                             <div class="role">CTO, KigaliDev Labs</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">12 employees trained &bull; 40% productivity increase</div>
+                    <div class="testimonial-result" data-en="12 employees trained &bull; 40% productivity increase" data-fr="12 employ&eacute;s form&eacute;s &bull; 40% augmentation productivit&eacute;">12 employees trained &bull; 40% productivity increase</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote>"The AI books appointments directly into my calendar. I went from 5 listings/month to 14. Game changer."</blockquote>
+                    <blockquote data-en="&ldquo;The AI books appointments directly into my calendar. I went from 5 listings/month to 14. Game changer.&rdquo;" data-fr="&ldquo;L'IA r&eacute;serve les rendez-vous directement dans mon agenda. Je suis pass&eacute;e de 5 mandats/mois &agrave; 14. R&eacute;volutionnaire.&rdquo;">"The AI books appointments directly into my calendar. I went from 5 listings/month to 14. Game changer."</blockquote>
                     <div class="testimonial-author">
                         <div class="author-avatar">DM</div>
                         <div class="author-info">
                             <div class="name">Diane Mukeshimana</div>
-                            <div class="role">Agent, Buja Real Estate</div>
+                            <div class="role" data-en="Agent, Buja Real Estate" data-fr="Agent, Buja Real Estate">Agent, Buja Real Estate</div>
                         </div>
                     </div>
-                    <div class="testimonial-result">180% more appointments &bull; 67% fewer no-shows</div>
+                    <div class="testimonial-result" data-en="180% more appointments &bull; 67% fewer no-shows" data-fr="180% plus de rendez-vous &bull; 67% moins de no-shows">180% more appointments &bull; 67% fewer no-shows</div>
                 </div>
             </div>
-
             <div class="stats-row">
-                <div class="stat-box">
-                    <div class="stat-num">100+</div>
-                    <div class="stat-label">Businesses Served</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">500+</div>
-                    <div class="stat-label">Workflows Automated</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">95%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">60%</div>
-                    <div class="stat-label">Avg. Cost Reduction</div>
-                </div>
+                <div class="stat-box"><div class="stat-num">100+</div><div class="stat-label" data-en="Businesses Served" data-fr="Entreprises Servies">Businesses Served</div></div>
+                <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label" data-en="Workflows Automated" data-fr="Workflows Automatis&eacute;s">Workflows Automated</div></div>
+                <div class="stat-box"><div class="stat-num">95%</div><div class="stat-label" data-en="Client Satisfaction" data-fr="Satisfaction Client">Client Satisfaction</div></div>
+                <div class="stat-box"><div class="stat-num">60%</div><div class="stat-label" data-en="Avg. Cost Reduction" data-fr="R&eacute;duction Moy. des Co&ucirc;ts">Avg. Cost Reduction</div></div>
             </div>
         </div>
     </section>
 
-    <!-- ============ FORM SECTION ============ -->
+    <!-- FORM -->
     <section class="section form-section" id="book-demo">
         <div class="section-inner">
             <div class="form-grid">
                 <div class="form-benefits">
-                    <div class="section-label">Free Demo</div>
-                    <h2>Your Free AI Demo Includes:</h2>
+                    <div class="section-label" data-en="Free Demo" data-fr="D&eacute;mo Gratuite">Free Demo</div>
+                    <h2 data-en="Your Free AI Demo Includes:" data-fr="Votre D&eacute;mo IA Gratuite Inclut :">Your Free AI Demo Includes:</h2>
                     <ul class="form-benefits-list">
-                        <li><div class="check-icon">&#10003;</div> Live demo of your AI agent responding to a real lead</li>
-                        <li><div class="check-icon">&#10003;</div> Analysis of your current lead response time</li>
-                        <li><div class="check-icon">&#10003;</div> Custom ROI projection for your business</li>
-                        <li><div class="check-icon">&#10003;</div> Full action plan &mdash; yours to keep even if you don't hire us</li>
+                        <li><div class="check-icon">&#10003;</div> <span data-en="Live demo of your AI agent responding to a real lead" data-fr="D&eacute;mo en direct de votre agent IA r&eacute;pondant &agrave; un vrai prospect">Live demo of your AI agent responding to a real lead</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-en="Analysis of your current lead response time" data-fr="Analyse de votre temps de r&eacute;ponse actuel">Analysis of your current lead response time</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-en="Custom ROI projection for your business" data-fr="Projection ROI personnalis&eacute;e pour votre entreprise">Custom ROI projection for your business</span></li>
+                        <li><div class="check-icon">&#10003;</div> <span data-en="Full action plan &mdash; yours to keep even if you don't hire us" data-fr="Plan d'action complet &mdash; &agrave; garder m&ecirc;me si vous ne nous choisissez pas">Full action plan &mdash; yours to keep even if you don't hire us</span></li>
                     </ul>
                     <div class="guarantee-box">
                         <div class="shield">&#128737;</div>
-                        <p><strong>Our Guarantee:</strong> If we can't show you a clear path to 3X more booked appointments in 15 minutes, we'll personally apologize for wasting your time. No pressure. No hard sell. Ever.</p>
+                        <p data-en="<strong>Our Guarantee:</strong> If we can't show you a clear path to 3X more booked appointments in 15 minutes, we'll personally apologize for wasting your time. No pressure. No hard sell. Ever." data-fr="<strong>Notre Garantie :</strong> Si nous ne pouvons pas vous montrer un chemin clair vers 3X plus de rendez-vous en 15 minutes, nous nous excuserons personnellement. Aucune pression. Jamais."><strong>Our Guarantee:</strong> If we can't show you a clear path to 3X more booked appointments in 15 minutes, we'll personally apologize for wasting your time. No pressure. No hard sell. Ever.</p>
                     </div>
                 </div>
                 <div class="form-card">
-                    <h3>Book My Free Demo</h3>
-                    <p class="form-sub">15 minutes. No commitment. No credit card.</p>
+                    <h3 data-en="Book My Free Demo" data-fr="R&eacute;server Ma D&eacute;mo Gratuite">Book My Free Demo</h3>
+                    <p class="form-sub" data-en="15 minutes. No commitment. No credit card." data-fr="15 minutes. Sans engagement. Sans carte bancaire.">15 minutes. No commitment. No credit card.</p>
                     <form id="demoForm">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            <label for="name" data-en="Full Name *" data-fr="Nom Complet *">Full Name *</label>
+                            <input type="text" id="name" name="name" data-placeholder-en="Your full name" data-placeholder-fr="Votre nom complet" placeholder="Your full name" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone / WhatsApp *</label>
+                            <label for="phone" data-en="Phone / WhatsApp *" data-fr="T&eacute;l&eacute;phone / WhatsApp *">Phone / WhatsApp *</label>
                             <input type="tel" id="phone" name="phone" placeholder="+257 or +1..." required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                            <input type="email" id="email" name="email" data-placeholder-en="you@company.com" data-placeholder-fr="vous@entreprise.com" placeholder="you@company.com" required>
                         </div>
-                        <button type="submit" class="form-submit">Book My Free Demo &rarr;</button>
+                        <button type="submit" class="form-submit" data-en="Book My Free Demo &rarr;" data-fr="R&eacute;server Ma D&eacute;mo Gratuite &rarr;">Book My Free Demo &rarr;</button>
                     </form>
-                    <p class="form-privacy">&#128274; Your information is secure. We never share your data.</p>
-                    <div class="urgency-badge">Only 3 spots remaining for April 2026</div>
+                    <p class="form-privacy" data-en="&#128274; Your information is secure. We never share your data." data-fr="&#128274; Vos informations sont s&eacute;curis&eacute;es. Nous ne partageons jamais vos donn&eacute;es.">&#128274; Your information is secure. We never share your data.</p>
+                    <div class="urgency-badge" data-en="Only 3 spots remaining for April 2026" data-fr="Seulement 3 places restantes pour Avril 2026">Only 3 spots remaining for April 2026</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
+    <!-- FAQ -->
     <section class="section">
         <div class="section-inner text-center">
             <div class="section-label">FAQ</div>
-            <h2 class="section-title">Questions? We've Got Answers.</h2>
+            <h2 class="section-title" data-en="Questions? We've Got Answers." data-fr="Des Questions ? On A les R&eacute;ponses.">Questions? We've Got Answers.</h2>
         </div>
         <div class="section-inner">
             <div class="faq-grid">
                 <div class="faq-item active">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>How fast can my AI agent be live?</h3>
+                        <h3 data-en="How fast can my AI agent be live?" data-fr="En combien de temps mon agent IA est-il op&eacute;rationnel ?">How fast can my AI agent be live?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours. We handle all setup, integration, and testing.</p>
+                        <p data-en="Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours. We handle all setup, integration, and testing." data-fr="La plupart des syst&egrave;mes IA sont d&eacute;ploy&eacute;s en 48-72 heures. Les chatbots simples peuvent &ecirc;tre op&eacute;rationnels en 24 heures. On g&egrave;re tout : installation, int&eacute;gration et tests.">Most AI systems are fully deployed within 48-72 hours. Simple chatbots can be live in 24 hours. We handle all setup, integration, and testing.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Do I need any technical skills?</h3>
+                        <h3 data-en="Do I need any technical skills?" data-fr="Ai-je besoin de comp&eacute;tences techniques ?">Do I need any technical skills?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>None. We handle everything &mdash; setup, integration, training. You just watch the appointments roll in. If you can check your email, you can use our system.</p>
+                        <p data-en="None. We handle everything &mdash; setup, integration, training. You just watch the appointments roll in." data-fr="Aucune. Nous g&eacute;rons tout &mdash; installation, int&eacute;gration, formation. Vous regardez les rendez-vous s'accumuler.">None. We handle everything &mdash; setup, integration, training. You just watch the appointments roll in.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>What if I already have a CRM?</h3>
+                        <h3 data-en="What if I already have a CRM?" data-fr="Et si j'ai d&eacute;j&agrave; un CRM ?">What if I already have a CRM?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools. If you use it, we can connect to it.</p>
+                        <p data-en="Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools." data-fr="Nos agents IA s'int&egrave;grent avec GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar et plus de 50 autres outils.">Our AI agents integrate with GoHighLevel, HubSpot, Salesforce, Calendly, Google Calendar, and 50+ other tools.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>How much does it cost?</h3>
+                        <h3 data-en="How much does it cost?" data-fr="Combien &ccedil;a co&ucirc;te ?">How much does it cost?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Plans start at $497/month &mdash; less than one part-time employee. Most clients see ROI within the first 2 weeks. Book a demo to get a custom quote based on your needs.</p>
+                        <p data-en="Plans start at $497/month &mdash; less than one part-time employee. Most clients see ROI within the first 2 weeks. Book a demo to get a custom quote." data-fr="Les plans commencent &agrave; 497$/mois &mdash; moins qu'un employ&eacute; &agrave; temps partiel. La plupart des clients voient un ROI dans les 2 premi&egrave;res semaines. R&eacute;servez une d&eacute;mo pour un devis personnalis&eacute;.">Plans start at $497/month &mdash; less than one part-time employee. Most clients see ROI within the first 2 weeks. Book a demo to get a custom quote.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Does it work with WhatsApp?</h3>
+                        <h3 data-en="Does it work with WhatsApp?" data-fr="Est-ce que &ccedil;a marche avec WhatsApp ?">Does it work with WhatsApp?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes. SMS, email, voice calls, WhatsApp, and web chat &mdash; all covered. Your leads can reach you however they prefer.</p>
+                        <p data-en="Yes. SMS, email, voice calls, WhatsApp, and web chat &mdash; all covered." data-fr="Oui. SMS, email, appels vocaux, WhatsApp et chat web &mdash; tout est couvert.">Yes. SMS, email, voice calls, WhatsApp, and web chat &mdash; all covered.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>What industries do you serve?</h3>
+                        <h3 data-en="What industries do you serve?" data-fr="Quels secteurs servez-vous ?">What industries do you serve?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads. If you get inquiries, we can automate your response.</p>
+                        <p data-en="Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads." data-fr="Immobilier, sant&eacute;, fintech, e-commerce, logistique, &eacute;ducation et toute entreprise qui g&eacute;n&egrave;re des prospects.">Real estate, healthcare, fintech, e-commerce, logistics, education, and any business that generates leads.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>Can the AI speak French and English?</h3>
+                        <h3 data-en="Can the AI speak French and English?" data-fr="L'IA parle-t-elle fran&ccedil;ais et anglais ?">Can the AI speak French and English?</h3>
                         <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi, Swahili, and more.</p>
+                        <p data-en="Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi, Swahili, and more." data-fr="Oui. Nos agents IA sont enti&egrave;rement bilingues (fran&ccedil;ais/anglais) et peuvent &ecirc;tre form&eacute;s dans d'autres langues, dont le Kirundi et le Swahili.">Yes. Our AI agents are fully bilingual (French/English) and can be trained in additional languages including Kirundi, Swahili, and more.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
+    <!-- FINAL CTA -->
     <section class="final-cta">
-        <h2>Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?</h2>
-        <p>Every day without AI lead response, you're losing 3-5 qualified leads to businesses that respond faster than you.</p>
-        <a href="#book-demo" class="btn-primary">Book My Free Demo Now &rarr;</a>
-        <p class="cta-micro">Free &bull; 15 minutes &bull; No commitment &bull; Join 100+ businesses already using Top AI Africa</p>
+        <h2 data-en="Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?" data-fr="Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper ?">Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?</h2>
+        <p data-en="Every day without AI lead response, you're losing 3-5 qualified leads to businesses that respond faster than you." data-fr="Chaque jour sans r&eacute;ponse IA, vous perdez 3 &agrave; 5 prospects qualifi&eacute;s au profit des entreprises qui r&eacute;pondent plus vite.">Every day without AI lead response, you're losing 3-5 qualified leads to businesses that respond faster than you.</p>
+        <a href="#book-demo" class="btn-primary" data-en="Book My Free Demo Now &rarr;" data-fr="R&eacute;server Ma D&eacute;mo Maintenant &rarr;">Book My Free Demo Now &rarr;</a>
+        <p class="cta-micro" data-en="Free &bull; 15 minutes &bull; No commitment &bull; Join 100+ businesses already using Top AI Africa" data-fr="Gratuit &bull; 15 minutes &bull; Sans engagement &bull; Rejoignez 100+ entreprises qui utilisent d&eacute;j&agrave; Top AI Africa">Free &bull; 15 minutes &bull; No commitment &bull; Join 100+ businesses already using Top AI Africa</p>
     </section>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026 Top AI Africa. All rights reserved. | <a href="https://topaiafrica.com/en/privacy-policy-2/">Privacy</a> | <a href="https://topaiafrica.com/en/terms-of-service/">Terms</a> | <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a></p>
+        <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span> | <a href="https://topaiafrica.com/en/privacy-policy-2/" data-en="Privacy" data-fr="Confidentialit&eacute;">Privacy</a> | <a href="https://topaiafrica.com/en/terms-of-service/" data-en="Terms" data-fr="Conditions">Terms</a> | <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a></p>
     </footer>
 
-    <!-- ============ STICKY CTA (Mobile) ============ -->
+    <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#book-demo" class="btn-primary">Book Free Demo &mdash; Only 3 Spots Left &rarr;</a>
+        <a href="#book-demo" class="btn-primary" data-en="Book Free Demo &mdash; Only 3 Spots Left &rarr;" data-fr="D&eacute;mo Gratuite &mdash; 3 Places Restantes &rarr;">Book Free Demo &mdash; Only 3 Spots Left &rarr;</a>
     </div>
 
     <script>
-        // Mobile menu toggle
+        let currentLang = 'en';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-en / data-fr
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+
+            // Update lang toggle buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === lang.toUpperCase()) btn.classList.add('active');
+            });
+
+            // Update page title
+            if (lang === 'fr') {
+                document.title = "R\u00e9ponse IA aux Prospects & Rendez-vous Automatiques | Top AI Africa";
+            } else {
+                document.title = "AI Lead Response & Appointment Booking for African Businesses | Top AI Africa";
+            }
+        }
+
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
         }
 
-        // FAQ accordion
         function toggleFaq(el) {
             const item = el.parentElement;
             const wasActive = item.classList.contains('active');
@@ -1721,12 +747,10 @@
             if (!wasActive) item.classList.add('active');
         }
 
-        // Sticky CTA on scroll
         window.addEventListener('scroll', function() {
             const sticky = document.getElementById('stickyCta');
             const form = document.getElementById('book-demo');
             const formTop = form.getBoundingClientRect().top;
-
             if (window.scrollY > 600 && formTop > window.innerHeight) {
                 sticky.classList.add('visible');
             } else {
@@ -1734,30 +758,29 @@
             }
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Form submit
         document.getElementById('demoForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = this.querySelector('.form-submit');
-            btn.textContent = 'Booking Your Demo...';
+            btn.textContent = currentLang === 'fr' ? 'R\u00e9servation en cours...' : 'Booking Your Demo...';
             btn.disabled = true;
-
-            // Simulate submission - replace with your actual form handler
             setTimeout(() => {
-                btn.textContent = 'Demo Booked! We\'ll call you soon.';
+                btn.textContent = currentLang === 'fr' ? 'D\u00e9mo r\u00e9serv\u00e9e ! On vous contacte bient\u00f4t.' : "Demo Booked! We'll call you soon.";
                 btn.style.background = '#00b894';
             }, 1500);
         });
+
+        // Auto-detect browser language
+        if (navigator.language && navigator.language.startsWith('fr')) {
+            switchLang('fr');
+        }
     </script>
 
 </body>
