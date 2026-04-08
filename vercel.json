@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/services", "destination": "/services-landing-page.html" },
+    { "source": "/burundi", "destination": "/burundi-landing-page.html" }
+  ]
+}
