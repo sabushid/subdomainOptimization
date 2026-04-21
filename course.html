@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp AI Agent Mastery — Free Course | Top AI Africa</title>
+<meta name="description" content="Free bilingual course on building WhatsApp AI agents for African businesses. Module 1: Why WhatsApp AI wins. Lessons 1.1 and 1.2 now live, more weekly.">
+<meta name="keywords" content="WhatsApp AI course, AI agents Africa, free AI course, African business AI, Top AI Africa course, agent IA WhatsApp">
+<link rel="canonical" href="https://topaiafrica.com/course">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WhatsApp AI Agent Mastery — Free Course">
+<meta property="og:description" content="Free bilingual course on building WhatsApp AI agents for African businesses. New lessons weekly.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module1-Lesson2-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "WhatsApp AI Agent Mastery",
+  "description": "A free bilingual (EN/FR) course teaching African businesses how to build, deploy, and scale AI agents on WhatsApp, SMS, voice, and email. Covers fundamentals, architecture, deployment, integrations, case studies, and ROI.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "url": "https://topaiafrica.com"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "Online",
+    "inLanguage": ["en", "fr"]
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --dark-2:#11112a;
+    --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --green:#2ecc71; --red:#ff0000;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 50px; max-width:1200px; margin:0 auto; text-align:center; }
+  .course-badge { display:inline-block; background:linear-gradient(135deg,var(--gold),#e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .hero h1 { font-size:clamp(34px,6vw,64px); line-height:1.05; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--purple) 55%,var(--gold) 110%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-sub { color:var(--muted); font-size:18px; max-width:760px; margin:0 auto 30px; }
+  .hero-stats { display:flex; justify-content:center; gap:36px; flex-wrap:wrap; margin-bottom:36px; }
+  .hero-stats .s { text-align:center; }
+  .hero-stats .n { font-size:32px; font-weight:900; color:var(--gold); display:block; }
+  .hero-stats .l { font-size:12px; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; }
+  .hero-cta { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg,var(--purple-deep),var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg,#ff0000,#c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .module { max-width:1200px; margin:60px auto 0; padding:0 24px; }
+  .module-head { display:flex; align-items:baseline; gap:16px; margin-bottom:28px; flex-wrap:wrap; }
+  .module-tag { font-size:13px; font-weight:800; letter-spacing:2px; color:var(--gold); text-transform:uppercase; padding:4px 12px; background:rgba(241,196,15,0.12); border-radius:6px; }
+  .module-head h2 { font-size:clamp(26px,4vw,38px); font-weight:900; }
+  .module-sub { color:var(--muted); font-size:15px; width:100%; margin-top:4px; }
+
+  .lessons { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px; }
+  .lesson { background:linear-gradient(180deg, rgba(161,155,253,0.06), rgba(161,155,253,0.02)); border:1px solid rgba(161,155,253,0.18); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:transform 0.2s, border-color 0.2s; }
+  .lesson:hover { transform:translateY(-4px); border-color:rgba(241,196,15,0.35); }
+  .lesson.locked { opacity:0.55; cursor:default; pointer-events:none; }
+  .thumb { position:relative; aspect-ratio:16/9; background:#000; overflow:hidden; }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  .thumb-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  .thumb-play div { width:58px; height:58px; border-radius:50%; background:linear-gradient(135deg,#ff0000,#c00); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(255,0,0,0.5); }
+  .thumb-play svg { margin-left:3px; }
+  .lesson-body { padding:22px; flex:1; display:flex; flex-direction:column; }
+  .lesson-num { font-size:12px; font-weight:800; letter-spacing:1.5px; color:var(--purple); margin-bottom:6px; }
+  .lesson-body h3 { font-size:20px; font-weight:900; margin-bottom:8px; line-height:1.2; }
+  .lesson-body p { color:var(--muted); font-size:14.5px; flex:1; }
+  .lesson-meta { display:flex; justify-content:space-between; align-items:center; margin-top:14px; padding-top:12px; border-top:1px solid rgba(161,155,253,0.1); font-size:12px; color:var(--muted); }
+  .lesson-meta .live { color:var(--green); font-weight:800; letter-spacing:1.5px; text-transform:uppercase; }
+  .lesson-meta .soon { color:var(--gold); font-weight:800; letter-spacing:1.5px; text-transform:uppercase; }
+
+  .upcoming { margin:80px auto 0; max-width:1200px; padding:0 24px; }
+  .upcoming h2 { text-align:center; font-size:clamp(24px,3.5vw,32px); font-weight:900; margin-bottom:10px; }
+  .upcoming .sub { text-align:center; color:var(--muted); margin-bottom:36px; }
+  .modules-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .mod-card { padding:24px; background:rgba(161,155,253,0.04); border:1px dashed rgba(161,155,253,0.25); border-radius:14px; }
+  .mod-card .num { font-size:12px; color:var(--gold); font-weight:800; letter-spacing:2px; }
+  .mod-card h4 { font-size:18px; font-weight:900; margin:4px 0 8px; }
+  .mod-card p { color:var(--muted); font-size:14px; }
+
+  .cta-strip { max-width:980px; margin:80px auto 0; padding:40px 28px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; margin-top:80px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 30px; }
+    .hero-stats { gap:22px; }
+    .nav-links a:not(.lang-toggle) { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com">
+    <span class="dot"></span>
+    <span>Top AI Africa</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://topaiafrica.com" data-en="Home" data-fr="Accueil">Home</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="course-badge" data-en="FREE COURSE &middot; NEW LESSONS WEEKLY" data-fr="COURS GRATUIT &middot; NOUVELLES LE&Ccedil;ONS CHAQUE SEMAINE">FREE COURSE &middot; NEW LESSONS WEEKLY</div>
+  <h1 data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</h1>
+  <p class="hero-sub" data-en="Everything we've learned deploying 100+ WhatsApp AI agents across Africa. Bilingual (EN/FR). Free. No fluff — just what's working right now in Lagos, Nairobi, Kigali, Bujumbura, and beyond." data-fr="Tout ce que nous avons appris en d&eacute;ployant plus de 100 agents IA WhatsApp &agrave; travers l'Afrique. Bilingue (EN/FR). Gratuit. Pas de remplissage — juste ce qui fonctionne &agrave; Lagos, Nairobi, Kigali, Bujumbura, et au-del&agrave;.">Everything we've learned deploying 100+ WhatsApp AI agents across Africa. Bilingual (EN/FR). Free. No fluff — just what's working right now in Lagos, Nairobi, Kigali, Bujumbura, and beyond.</p>
+  <div class="hero-stats">
+    <div class="s"><span class="n">6</span><span class="l" data-en="Modules" data-fr="Modules">Modules</span></div>
+    <div class="s"><span class="n">24+</span><span class="l" data-en="Lessons" data-fr="Le&ccedil;ons">Lessons</span></div>
+    <div class="s"><span class="n">2</span><span class="l" data-en="Languages" data-fr="Langues">Languages</span></div>
+    <div class="s"><span class="n">$0</span><span class="l" data-en="Price" data-fr="Prix">Price</span></div>
+  </div>
+  <div class="hero-cta">
+    <a href="#module-1" class="btn btn-primary" data-en="Start the Course &rarr;" data-fr="Commencer le Cours &rarr;">Start the Course &rarr;</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+      <span>&#9654;</span>
+      <span data-en="Subscribe" data-fr="S'abonner">Subscribe</span>
+    </a>
+  </div>
+</section>
+
+<section id="module-1" class="module">
+  <div class="module-head">
+    <span class="module-tag" data-en="MODULE 1" data-fr="MODULE 1">MODULE 1</span>
+    <h2 data-en="Why WhatsApp AI Wins in Africa" data-fr="Pourquoi l'IA WhatsApp Gagne en Afrique">Why WhatsApp AI Wins in Africa</h2>
+    <p class="module-sub" data-en="The fundamentals: customer expectations, the cost &amp; ROI math, real case studies, and the blueprint for Module 2." data-fr="Les fondamentaux : attentes clients, calcul co&ucirc;t et ROI, &eacute;tudes de cas r&eacute;elles, et le plan pour le Module 2.">The fundamentals: customer expectations, the cost &amp; ROI math, real case studies, and the blueprint for Module 2.</p>
+  </div>
+
+  <div class="lessons">
+    <!-- Lesson 1.1 -->
+    <a href="/course-module1-lesson1.html" class="lesson">
+      <div class="thumb">
+        <img src="/Thumbnail-Module1-Lesson1-EN.png" alt="Lesson 1.1 thumbnail" data-src-en="/Thumbnail-Module1-Lesson1-EN.png" data-src-fr="/Thumbnail-Module1-Lesson1-FR.png">
+        <div class="thumb-play"><div><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><polygon points="6 3 20 12 6 21 6 3"/></svg></div></div>
+      </div>
+      <div class="lesson-body">
+        <div class="lesson-num" data-en="MODULE 1 &middot; LESSON 1.1" data-fr="MODULE 1 &middot; LE&Ccedil;ON 1.1">MODULE 1 &middot; LESSON 1.1</div>
+        <h3 data-en="AI Agents Winning in Africa" data-fr="L'IA WhatsApp Gagne en Afrique">AI Agents Winning in Africa</h3>
+        <p data-en="The 3 customer expectations of 2026 — speed, WhatsApp, and language. Why African businesses that respond in 60 seconds on WhatsApp close 21&times; more deals." data-fr="Les 3 attentes clients de 2026 — vitesse, WhatsApp et langue. Pourquoi les entreprises africaines qui r&eacute;pondent en 60 secondes sur WhatsApp concluent 21&times; plus de ventes.">The 3 customer expectations of 2026 — speed, WhatsApp, and language. Why African businesses that respond in 60 seconds on WhatsApp close 21&times; more deals.</p>
+        <div class="lesson-meta">
+          <span data-en="3:30 &middot; 8 slides" data-fr="3:30 &middot; 8 diapos">3:30 &middot; 8 slides</span>
+          <span class="live">&#9679; <span data-en="LIVE" data-fr="EN LIGNE">LIVE</span></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Lesson 1.2 -->
+    <a href="/course-module1-lesson2.html" class="lesson">
+      <div class="thumb">
+        <img src="/Thumbnail-Module1-Lesson2-EN.png" alt="Lesson 1.2 thumbnail" data-src-en="/Thumbnail-Module1-Lesson2-EN.png" data-src-fr="/Thumbnail-Module1-Lesson2-FR.png">
+        <div class="thumb-play"><div><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><polygon points="6 3 20 12 6 21 6 3"/></svg></div></div>
+      </div>
+      <div class="lesson-body">
+        <div class="lesson-num" data-en="MODULE 1 &middot; LESSON 1.2" data-fr="MODULE 1 &middot; LE&Ccedil;ON 1.2">MODULE 1 &middot; LESSON 1.2</div>
+        <h3 data-en="The Brutal Math" data-fr="Les Chiffres Bruts">The Brutal Math</h3>
+        <p data-en="WhatsApp AI vs Human Support — the real numbers. 15&times; cheaper, 2,000&times; faster, 10&times; ROI. Plus a real Bujumbura fintech case study." data-fr="IA WhatsApp vs Support Humain — les vrais chiffres. 15&times; moins cher, 2 000&times; plus vite, 10&times; ROI. Plus un cas r&eacute;el d'une fintech de Bujumbura.">WhatsApp AI vs Human Support — the real numbers. 15&times; cheaper, 2,000&times; faster, 10&times; ROI. Plus a real Bujumbura fintech case study.</p>
+        <div class="lesson-meta">
+          <span data-en="5:24 &middot; 11 slides" data-fr="5:24 &middot; 11 diapos">5:24 &middot; 11 slides</span>
+          <span class="live">&#9679; <span data-en="LIVE" data-fr="EN LIGNE">LIVE</span></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Lesson 1.3 -->
+    <div class="lesson locked">
+      <div class="thumb" style="background:linear-gradient(135deg,#1a1a3e,#0a0a1e); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:20px;">
+          <div style="font-size:40px; color:var(--gold); font-weight:900;">1.3</div>
+          <div style="color:var(--muted); font-size:12px; letter-spacing:2px; text-transform:uppercase;" data-en="Coming Soon" data-fr="Bient&ocirc;t">Coming Soon</div>
+        </div>
+      </div>
+      <div class="lesson-body">
+        <div class="lesson-num" data-en="MODULE 1 &middot; LESSON 1.3" data-fr="MODULE 1 &middot; LE&Ccedil;ON 1.3">MODULE 1 &middot; LESSON 1.3</div>
+        <h3 data-en="Real Case Studies" data-fr="&Eacute;tudes de Cas R&eacute;elles">Real Case Studies</h3>
+        <p data-en="Three deep dives: AfriPay, MediLink, and a retail client. What we built, what broke, what scaled." data-fr="Trois cas approfondis : AfriPay, MediLink, et un client e-commerce. Ce que nous avons construit, ce qui a cass&eacute;, ce qui a mis &agrave; l'&eacute;chelle.">Three deep dives: AfriPay, MediLink, and a retail client. What we built, what broke, what scaled.</p>
+        <div class="lesson-meta">
+          <span data-en="~15 min" data-fr="~15 min">~15 min</span>
+          <span class="soon" data-en="SOON" data-fr="BIENT&Ocirc;T">SOON</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson 1.4 -->
+    <div class="lesson locked">
+      <div class="thumb" style="background:linear-gradient(135deg,#1a1a3e,#0a0a1e); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:20px;">
+          <div style="font-size:40px; color:var(--gold); font-weight:900;">1.4</div>
+          <div style="color:var(--muted); font-size:12px; letter-spacing:2px; text-transform:uppercase;" data-en="Coming Soon" data-fr="Bient&ocirc;t">Coming Soon</div>
+        </div>
+      </div>
+      <div class="lesson-body">
+        <div class="lesson-num" data-en="MODULE 1 &middot; LESSON 1.4" data-fr="MODULE 1 &middot; LE&Ccedil;ON 1.4">MODULE 1 &middot; LESSON 1.4</div>
+        <h3 data-en="Module 1 Recap &amp; Module 2 Preview" data-fr="R&eacute;cap du Module 1 et Aper&ccedil;u du Module 2">Module 1 Recap &amp; Module 2 Preview</h3>
+        <p data-en="Tie the fundamentals together and set up the architecture module that follows." data-fr="Relier les fondamentaux entre eux et pr&eacute;parer le module architecture qui suit.">Tie the fundamentals together and set up the architecture module that follows.</p>
+        <div class="lesson-meta">
+          <span data-en="~8 min" data-fr="~8 min">~8 min</span>
+          <span class="soon" data-en="SOON" data-fr="BIENT&Ocirc;T">SOON</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="upcoming">
+  <h2 data-en="Coming Modules" data-fr="Modules &agrave; venir">Coming Modules</h2>
+  <p class="sub" data-en="New modules shipping weekly. Subscribe on YouTube to be notified." data-fr="Nouveaux modules chaque semaine. Abonnez-vous sur YouTube pour &ecirc;tre averti.">New modules shipping weekly. Subscribe on YouTube to be notified.</p>
+  <div class="modules-grid">
+    <div class="mod-card">
+      <div class="num">MODULE 2</div>
+      <h4 data-en="Agent Architecture" data-fr="Architecture de l'Agent">Agent Architecture</h4>
+      <p data-en="The 5 components of a high-converting WhatsApp AI agent: brain, memory, tools, voice, and guardrails." data-fr="Les 5 composants d'un agent IA WhatsApp performant : cerveau, m&eacute;moire, outils, voix, et garde-fous.">The 5 components of a high-converting WhatsApp AI agent: brain, memory, tools, voice, and guardrails.</p>
+    </div>
+    <div class="mod-card">
+      <div class="num">MODULE 3</div>
+      <h4 data-en="Building Your First Agent" data-fr="Construire Votre Premier Agent">Building Your First Agent</h4>
+      <p data-en="Hands-on: WhatsApp Business API setup, Claude/GPT-4 integration, CRM sync, and your first live conversation." data-fr="Pratique : configuration de l'API WhatsApp Business, int&eacute;gration Claude/GPT-4, synchronisation CRM, et votre premi&egrave;re conversation en direct.">Hands-on: WhatsApp Business API setup, Claude/GPT-4 integration, CRM sync, and your first live conversation.</p>
+    </div>
+    <div class="mod-card">
+      <div class="num">MODULE 4</div>
+      <h4 data-en="Multilingual &amp; Localization" data-fr="Multilingue et Localisation">Multilingual &amp; Localization</h4>
+      <p data-en="French, English, Swahili, Kirundi, Arabic — how to ship an agent that sounds native in every market." data-fr="Fran&ccedil;ais, anglais, swahili, kirundi, arabe — comment livrer un agent qui semble natif sur chaque march&eacute;.">French, English, Swahili, Kirundi, Arabic — how to ship an agent that sounds native in every market.</p>
+    </div>
+    <div class="mod-card">
+      <div class="num">MODULE 5</div>
+      <h4 data-en="Integrations &amp; Workflows" data-fr="Int&eacute;grations et Flux de Travail">Integrations &amp; Workflows</h4>
+      <p data-en="CRM, payments, booking, voice calls, and handoff to human agents — the end-to-end operational picture." data-fr="CRM, paiements, r&eacute;servation, appels vocaux, et passage aux agents humains — la vue op&eacute;rationnelle compl&egrave;te.">CRM, payments, booking, voice calls, and handoff to human agents — the end-to-end operational picture.</p>
+    </div>
+    <div class="mod-card">
+      <div class="num">MODULE 6</div>
+      <h4 data-en="Scaling &amp; Monetization" data-fr="Mise &agrave; l'&eacute;chelle et Mon&eacute;tisation">Scaling &amp; Monetization</h4>
+      <p data-en="From first deployment to a repeatable business: pricing, SLAs, monitoring, and growing from 1 client to 100." data-fr="Du premier d&eacute;ploiement &agrave; une entreprise reproductible : tarification, SLA, surveillance, et croissance de 1 &agrave; 100 clients.">From first deployment to a repeatable business: pricing, SLAs, monitoring, and growing from 1 client to 100.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-strip">
+    <h3 data-en="Want a live walkthrough on your own business?" data-fr="Vous voulez une d&eacute;monstration en direct sur votre entreprise ?">Want a live walkthrough on your own business?</h3>
+    <p data-en="Book a free 15-minute strategy call and we'll show you exactly what a WhatsApp AI agent would do for your traffic, leads, and close rate." data-fr="R&eacute;servez un appel strat&eacute;gie gratuit de 15 minutes et nous vous montrerons exactement ce qu'un agent IA WhatsApp ferait pour votre trafic, vos prospects et votre taux de conversion.">Book a free 15-minute strategy call and we'll show you exactly what a WhatsApp AI agent would do for your traffic, leads, and close rate.</p>
+    <div class="cta-buttons">
+      <a href="https://topaiafrica.com/en/contact/" class="btn btn-primary" data-en="Book Free Strategy Call &rarr;" data-fr="R&eacute;server Appel Gratuit &rarr;">Book Free Strategy Call &rarr;</a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe on YouTube" data-fr="S'abonner sur YouTube">Subscribe on YouTube</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    // Swap thumbnails
+    document.querySelectorAll('img[data-src-en]').forEach(img => {
+      const src = lang === 'fr' ? img.getAttribute('data-src-fr') : img.getAttribute('data-src-en');
+      if (src && img.src !== src) img.src = src;
+    });
+    document.title = lang === 'fr'
+      ? "Maîtrise de l'Agent IA WhatsApp — Cours Gratuit | Top AI Africa"
+      : "WhatsApp AI Agent Mastery — Free Course | Top AI Africa";
+  }
+
+  if (navigator.language && navigator.language.startsWith('fr')) {
+    switchLang('fr');
+  }
+</script>
+
+</body>
+</html>
