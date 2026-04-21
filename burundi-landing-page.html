@@ -1592,6 +1592,21 @@
         </div>
     </section>
 
+    <!-- ============ FREE COURSE ============ -->
+    <section style="padding:72px 24px;background:linear-gradient(135deg,#0a0a1e 0%,#0a1e1a 100%);">
+        <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+            <div>
+                <div style="display:inline-block;background:linear-gradient(135deg,#f1c40f,#e67e22);color:#0a0a1e;padding:6px 16px;border-radius:20px;font-weight:800;font-size:11px;letter-spacing:1.2px;margin-bottom:16px;" data-fr="COURS GRATUIT &middot; NOUVEAU" data-en="FREE COURSE &middot; NEW">COURS GRATUIT &middot; NOUVEAU</div>
+                <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900;line-height:1.15;margin-bottom:14px;color:#fff;" data-fr="Apprenez comment l'IA gagne en Afrique &mdash; gratuitement" data-en="Learn how AI agents are winning in Africa &mdash; free">Apprenez comment l'IA gagne en Afrique &mdash; gratuitement</h2>
+                <p style="color:#9aa0b4;font-size:17px;margin-bottom:22px;" data-fr="Module 1, Le&ccedil;on 1 de notre cours gratuit Ma&icirc;trise de l'Agent IA WhatsApp. Les 3 attentes clients de 2026, la r&egrave;gle des 60 secondes, et pourquoi les entreprises rapides sur WhatsApp concluent 21X plus de ventes." data-en="Module 1, Lesson 1 of our free WhatsApp AI Agent Mastery course. The 3 customer expectations of 2026, the 60-second rule, and why businesses that respond fast on WhatsApp close 21X more deals.">Module 1, Le&ccedil;on 1 de notre cours gratuit Ma&icirc;trise de l'Agent IA WhatsApp. Les 3 attentes clients de 2026, la r&egrave;gle des 60 secondes, et pourquoi les entreprises rapides sur WhatsApp concluent 21X plus de ventes.</p>
+                <a href="/course-module1-lesson1.html" class="btn-primary" data-fr="Regarder la Le&ccedil;on 1 Gratuite &rarr;" data-en="Watch Lesson 1 Free &rarr;">Regarder la Le&ccedil;on 1 Gratuite &rarr;</a>
+            </div>
+            <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(241,196,15,0.2);">
+                <iframe id="courseFrame" src="https://www.youtube.com/embed/ATyE-qZdi2Y" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen title="Module 1 Le&ccedil;on 1 &mdash; L'IA WhatsApp Gagne en Afrique"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ FINAL CTA ============ -->
     <section class="final-cta">
         <h2 data-fr="Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper?" data-en="Your Competitors Are Already Using AI.<br>Are You Ready to Catch Up?">Vos Concurrents Utilisent D&eacute;j&agrave; l'IA.<br>&Ecirc;tes-Vous Pr&ecirc;t &agrave; Les Rattraper?</h2>
@@ -1679,6 +1694,14 @@
             if (trailer) {
                 const videoId = lang === 'en' ? 'RdsX3bN7Cio' : 'w3RdNpEfyvE';
                 trailer.src = 'https://www.youtube.com/embed/' + videoId;
+            }
+            // Swap course video based on language
+            const courseFrame = document.getElementById('courseFrame');
+            if (courseFrame) {
+                const courseId = lang === 'en' ? 'owDlArPM3ck' : 'ATyE-qZdi2Y';
+                if (!courseFrame.src.includes(courseId)) {
+                    courseFrame.src = 'https://www.youtube.com/embed/' + courseId;
+                }
             }
         }
 

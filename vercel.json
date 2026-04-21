@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/services", "destination": "/services-landing-page.html" },
-    { "source": "/burundi", "destination": "/burundi-landing-page.html" }
+    { "source": "/burundi", "destination": "/burundi-landing-page.html" },
+    { "source": "/course", "destination": "/course-module1-lesson1.html" },
+    { "source": "/course/module-1/lesson-1", "destination": "/course-module1-lesson1.html" }
   ]
 }
