@@ -5,6 +5,7 @@
     { "source": "/course", "destination": "/course.html" },
     { "source": "/course/module-1", "destination": "/course.html" },
     { "source": "/course/module-1/lesson-1", "destination": "/course-module1-lesson1.html" },
-    { "source": "/course/module-1/lesson-2", "destination": "/course-module1-lesson2.html" }
+    { "source": "/course/module-1/lesson-2", "destination": "/course-module1-lesson2.html" },
+    { "source": "/course/module-1/lesson-4", "destination": "/course-module1-lesson4.html" }
   ]
 }
