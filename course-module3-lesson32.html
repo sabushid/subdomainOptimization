@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3 &middot; Lesson 3.2 — WhatsApp Cloud API + Your First Webhook | Top AI Africa</title>
+<meta name="description" content="Free lesson: set up Meta Business Account, WhatsApp Cloud API, and your first webhook in 90 minutes. Build Layers 1 + 2 of the 5-layer stack. Under $20 / month.">
+<meta name="keywords" content="WhatsApp Cloud API tutorial, WhatsApp webhook setup, Meta Business API, build WhatsApp AI agent, Node.js webhook, FastAPI webhook, Top AI Africa Module 3, Vercel deploy">
+<link rel="canonical" href="https://topaiafrica.com/course/module-3/lesson-2">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Module 3 · Lesson 3.2 — WhatsApp Cloud API + Your First Webhook">
+<meta property="og:description" content="Hands-on: 5 steps, 90 minutes, under $20/month. Build Layers 1 + 2.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module3-Lesson32-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course/module-3/lesson-2">
+<meta property="og:video" content="https://www.youtube.com/embed/5kkJgebQO7Q">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Set Up WhatsApp Cloud API + Your First Webhook — Module 3 Lesson 3.2">
+<meta name="twitter:description" content="Free hands-on lesson from Top AI Africa. From zero to a working WhatsApp number in 90 minutes.">
+<meta name="twitter:image" content="https://topaiafrica.com/Thumbnail-Module3-Lesson32-EN.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Set Up WhatsApp Cloud API + Your First Webhook in 90 Minutes (Module 3, Lesson 3.2)",
+  "description": "Module 3 Lesson 3.2 of the free WhatsApp AI Agent Mastery course by Top AI Africa. The 5 practical steps to build Layers 1 + 2 of the 5-layer stack: Meta Business Account, WhatsApp Cloud API setup, write the webhook, connect to Meta, send a real test. Total cost: under $20/month. Total time: 90 minutes.",
+  "thumbnailUrl": "https://topaiafrica.com/Thumbnail-Module3-Lesson32-EN.png",
+  "uploadDate": "2026-05-19",
+  "contentUrl": "https://www.youtube.com/watch?v=5kkJgebQO7Q",
+  "embedUrl": "https://www.youtube.com/embed/5kkJgebQO7Q",
+  "duration": "PT3M56S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "logo": { "@type": "ImageObject", "url": "https://topaiafrica.com/wp-content/uploads/2025/10/top-ai-africa-logo-v5.png" }
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --red:#ff0000; --green:#2ecc71; --whatsapp:#25D366; --blue:#3498db;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 60px; max-width:1200px; margin:0 auto; text-align:center; }
+  .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:20px; letter-spacing:1px; }
+  .breadcrumb a { color:var(--purple); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--white); }
+  .course-badge { display:inline-block; background:linear-gradient(135deg, var(--gold), #e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .m3-badge { display:inline-flex; gap:6px; align-items:center; background:rgba(37,211,102,0.18); color:var(--whatsapp); border:1px solid var(--whatsapp); padding:6px 14px; border-radius:20px; font-weight:800; font-size:11px; letter-spacing:1.2px; margin-bottom:20px; margin-left:12px; }
+  .hero h1 { font-size:clamp(32px,6vw,58px); line-height:1.1; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--purple) 60%,var(--gold) 120%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .lesson-label { color:var(--purple); font-weight:700; margin-bottom:10px; letter-spacing:1px; font-size:13px; text-transform:uppercase; }
+  .hero .hero-sub { color:var(--muted); font-size:18px; max-width:780px; margin:0 auto 36px; }
+  .stat-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:24px 0 40px; }
+  .stat { text-align:center; min-width:140px; }
+  .stat-num { font-size:44px; font-weight:900; display:block; line-height:1; }
+  .stat-num.gold { color:var(--gold); }
+  .stat-num.green { color:var(--green); }
+  .stat-num.wa { color:var(--whatsapp); }
+  .stat-label { color:var(--muted); font-size:13px; letter-spacing:0.5px; margin-top:4px; display:block; }
+  .video-wrap { max-width:980px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 30px 80px rgba(108,92,231,0.35); border:1px solid rgba(161,155,253,0.2); }
+  .video-ratio { position:relative; padding-bottom:56.25%; height:0; background:#000; }
+  .video-ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  .section { padding:72px 24px; max-width:1200px; margin:0 auto; }
+  .section h2 { font-size:clamp(28px,4.4vw,42px); font-weight:900; text-align:center; margin-bottom:16px; }
+  .section .lead { color:var(--muted); text-align:center; max-width:760px; margin:0 auto 48px; font-size:17px; }
+
+  /* 5 steps stack */
+  .steps { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .step { display:grid; grid-template-columns:90px 1fr; gap:22px; align-items:center; padding:22px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:14px; }
+  .step.s1 { border-color:var(--whatsapp); background:linear-gradient(90deg, rgba(37,211,102,0.18), rgba(37,211,102,0.04)); }
+  .step.s2 { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .step.s3 { border-color:var(--purple); background:linear-gradient(90deg, rgba(161,155,253,0.18), rgba(161,155,253,0.04)); }
+  .step.s4 { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .step.s5 { border-color:var(--green); background:linear-gradient(90deg, rgba(46,204,113,0.18), rgba(46,204,113,0.04)); }
+  .step .num { width:72px; height:72px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:"Arial Black",sans-serif; font-size:42px; font-weight:900; color:var(--dark); }
+  .step.s1 .num { background:var(--whatsapp); }
+  .step.s2 .num { background:var(--blue); }
+  .step.s3 .num { background:var(--purple); }
+  .step.s4 .num { background:var(--gold); }
+  .step.s5 .num { background:var(--green); }
+  .step .body h3 { font-size:22px; font-weight:900; margin-bottom:6px; letter-spacing:0.5px; }
+  .step .body p { color:rgba(255,255,255,0.78); font-size:14.5px; line-height:1.5; }
+
+  /* Cost recap */
+  .cost-recap { max-width:980px; margin:48px auto 0; padding:36px; background:linear-gradient(135deg, rgba(46,204,113,0.10), rgba(241,196,15,0.06)); border:2px solid rgba(46,204,113,0.4); border-radius:20px; text-align:center; }
+  .cost-recap .tc-tag { font-size:13px; font-weight:800; color:var(--green); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+  .cost-recap .tc-amount { font-family:"Arial Black",sans-serif; font-size:56px; font-weight:900; color:var(--white); line-height:1; }
+  .cost-recap .tc-amount .gold { color:var(--gold); }
+  .cost-recap .tc-sub { color:var(--muted); font-size:15px; margin-top:14px; }
+
+  /* CTA */
+  .cta-strip { margin:48px auto; max-width:980px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; padding:40px 28px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg, var(--purple-deep), var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg, #ff0000, #c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+  .btn-green { background:linear-gradient(135deg, #25D366, #128C7E); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .lesson-nav { max-width:980px; margin:32px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .lesson-nav a { text-decoration:none; color:inherit; padding:22px 26px; background:rgba(161,155,253,0.06); border:1px dashed rgba(161,155,253,0.3); border-radius:14px; transition:transform 0.2s, background 0.2s; display:block; }
+  .lesson-nav a:hover { transform:translateY(-3px); background:rgba(161,155,253,0.12); }
+  .lesson-nav .dir { color:var(--purple); font-size:12px; font-weight:800; letter-spacing:1.2px; }
+  .lesson-nav h4 { font-size:20px; font-weight:900; margin:6px 0; }
+  .lesson-nav p { color:var(--muted); font-size:14px; }
+  .lesson-nav .prev { text-align:left; }
+  .lesson-nav .next { text-align:right; }
+  .lesson-nav .next.coming-soon { border-style:solid; opacity:0.85; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 36px; }
+    .section { padding:48px 18px; }
+    .stat-row { gap:22px; }
+    .lesson-nav { grid-template-columns:1fr; }
+    .lesson-nav .next { text-align:left; }
+    .nav-links a:not(.lang-toggle):not(.cta-nav) { display:none; }
+    .step { grid-template-columns:54px 1fr; gap:14px; padding:18px; }
+    .step .num { width:50px; height:50px; font-size:28px; border-radius:10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com"><span class="dot"></span><span>Top AI Africa</span></a>
+  <div class="nav-links">
+    <a href="/course" data-en="Course" data-fr="Cours">Course</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/course" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</a>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Module 3" data-fr="Module 3">Module 3</span>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Lesson 3.2" data-fr="Le&ccedil;on 3.2">Lesson 3.2</span>
+  </div>
+  <div>
+    <span class="course-badge" data-en="FREE COURSE &middot; MODULE 3 &middot; LESSON 3.2" data-fr="COURS GRATUIT &middot; MODULE 3 &middot; LE&Ccedil;ON 3.2">FREE COURSE &middot; MODULE 3 &middot; LESSON 3.2</span>
+    <span class="m3-badge"><span>🛠️</span><span data-en="HANDS-ON SETUP" data-fr="CONFIG PRATIQUE">HANDS-ON SETUP</span></span>
+  </div>
+  <div class="lesson-label" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</div>
+  <h1><span data-en="WhatsApp Cloud API + Your First Webhook" data-fr="API WhatsApp Cloud + Votre Premier Webhook">WhatsApp Cloud API + Your First Webhook</span></h1>
+  <p class="hero-sub" data-en="Build Layers 1 + 2 of the 5-layer stack. After this lesson, a customer can text your real WhatsApp number — and your server replies. Real text in, real reply out. 5 steps, 90 minutes, under $20/month." data-fr="Construire les Couches 1 + 2 du stack &agrave; 5 couches. Apr&egrave;s cette le&ccedil;on, un client peut texter votre vrai num&eacute;ro WhatsApp &mdash; et votre serveur r&eacute;pond. Texte entrant, r&eacute;ponse sortante. 5 &eacute;tapes, 90 minutes, moins de 20 $/mois.">Build Layers 1 + 2 of the 5-layer stack. After this lesson, a customer can text your real WhatsApp number — and your server replies. Real text in, real reply out. 5 steps, 90 minutes, under $20/month.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num wa">5</span><span class="stat-label" data-en="Steps to execute" data-fr="&Eacute;tapes &agrave; ex&eacute;cuter">Steps to execute</span></div>
+    <div class="stat"><span class="stat-num gold">90 min</span><span class="stat-label" data-en="Total time" data-fr="Temps total">Total time</span></div>
+    <div class="stat"><span class="stat-num green">&lt; $20</span><span class="stat-label" data-en="Per month total" data-fr="Total mensuel">Per month total</span></div>
+  </div>
+
+  <div class="video-wrap">
+    <div class="video-ratio">
+      <iframe id="lessonVideo" src="https://www.youtube.com/embed/5kkJgebQO7Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Module 3 Lesson 3.2 — WhatsApp Cloud API + Your First Webhook"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- The 5 Steps -->
+<section class="section">
+  <h2 data-en="The 5 Steps You'll Execute" data-fr="Les 5 &Eacute;tapes &agrave; Ex&eacute;cuter">The 5 Steps You'll Execute</h2>
+  <p class="lead" data-en="Each step is concrete, with verifiable outputs. By the end, customer text in → your server replies → loop is live." data-fr="Chaque &eacute;tape est concr&egrave;te, avec des sorties v&eacute;rifiables. &Agrave; la fin&nbsp;: texte client entrant &rarr; votre serveur r&eacute;pond &rarr; la boucle est en ligne.">Each step is concrete, with verifiable outputs. By the end, customer text in → your server replies → loop is live.</p>
+
+  <div class="steps">
+    <div class="step s1">
+      <div class="num">1</div>
+      <div class="body">
+        <h3 data-en="Meta Business Account" data-fr="Compte Meta Business">Meta Business Account</h3>
+        <p data-en="Create + verify your business identity with Meta. business.facebook.com → fill business info → submit for verification (2-5 days). Foundation for everything else." data-fr="Cr&eacute;er + v&eacute;rifier votre identit&eacute; d'entreprise chez Meta. business.facebook.com &rarr; remplir infos &rarr; soumettre pour v&eacute;rification (2-5 jours). Fondation de tout le reste.">Create + verify your business identity with Meta. business.facebook.com → fill business info → submit for verification (2-5 days). Foundation for everything else.</p>
+      </div>
+    </div>
+    <div class="step s2">
+      <div class="num">2</div>
+      <div class="body">
+        <h3 data-en="WhatsApp Cloud API Setup" data-fr="Configuration API WhatsApp Cloud">WhatsApp Cloud API Setup</h3>
+        <p data-en="Inside Meta Business → All Tools → WhatsApp → Getting Started. Add a phone number (free test number provided). Generate access token. Save 3 values: token + phone number ID + WhatsApp Business Account ID." data-fr="Dans Meta Business &rarr; Tous outils &rarr; WhatsApp &rarr; D&eacute;marrer. Ajoutez un num&eacute;ro (num&eacute;ro test gratuit fourni). G&eacute;n&eacute;rez le jeton d'acc&egrave;s. Enregistrez 3 valeurs&nbsp;: jeton + ID num&eacute;ro + ID compte WhatsApp Business.">Inside Meta Business → All Tools → WhatsApp → Getting Started. Add a phone number (free test number provided). Generate access token. Save 3 values: token + phone number ID + WhatsApp Business Account ID.</p>
+      </div>
+    </div>
+    <div class="step s3">
+      <div class="num">3</div>
+      <div class="body">
+        <h3 data-en="Write the Webhook" data-fr="&Eacute;crire le Webhook">Write the Webhook</h3>
+        <p data-en="An endpoint Meta POSTs to whenever a customer messages you. Node: 6 lines of Express. Python: 8 lines of FastAPI. Verify Meta's signature + parse the message JSON. For now, just print it." data-fr="Un point d'acc&egrave;s auquel Meta envoie un POST &agrave; chaque message client. Node&nbsp;: 6 lignes d'Express. Python&nbsp;: 8 lignes de FastAPI. V&eacute;rifier la signature de Meta + analyser le JSON du message. Pour l'instant, l'afficher.">An endpoint Meta POSTs to whenever a customer messages you. Node: 6 lines of Express. Python: 8 lines of FastAPI. Verify Meta's signature + parse the message JSON. For now, just print it.</p>
+      </div>
+    </div>
+    <div class="step s4">
+      <div class="num">4</div>
+      <div class="body">
+        <h3 data-en="Connect Webhook to Meta" data-fr="Connecter Webhook &agrave; Meta">Connect Webhook to Meta</h3>
+        <p data-en="Deploy your code to a public URL (Vercel: 30 sec). In Meta Business, paste your webhook URL + a verify token. Click 'Verify'. Green check = Meta and your server are talking. Subscribe to the 'messages' field." data-fr="D&eacute;ployez votre code &agrave; une URL publique (Vercel&nbsp;: 30 sec). Dans Meta Business, collez votre URL webhook + un jeton de v&eacute;rification. Cliquez 'V&eacute;rifier'. Coche verte = Meta et votre serveur se parlent. Abonnez-vous au champ 'messages'.">Deploy your code to a public URL (Vercel: 30 sec). In Meta Business, paste your webhook URL + a verify token. Click 'Verify'. Green check = Meta and your server are talking. Subscribe to the 'messages' field.</p>
+      </div>
+    </div>
+    <div class="step s5">
+      <div class="num">5</div>
+      <div class="body">
+        <h3 data-en="Send a Real Test" data-fr="Envoyer un Vrai Test">Send a Real Test</h3>
+        <p data-en="From any phone, text your business WhatsApp number. Server logs show the message in &lt;1 sec. Your code POSTs back to Meta's /messages endpoint with your access token. The customer's phone buzzes. The full loop is live." data-fr="Depuis n'importe quel t&eacute;l&eacute;phone, textez votre num&eacute;ro WhatsApp. Les logs serveur affichent le message en &lt;1 sec. Votre code envoie un POST vers /messages de Meta avec votre jeton. Le t&eacute;l&eacute;phone client vibre. La boucle compl&egrave;te est en ligne.">From any phone, text your business WhatsApp number. Server logs show the message in &lt;1 sec. Your code POSTs back to Meta's /messages endpoint with your access token. The customer's phone buzzes. The full loop is live.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost recap -->
+  <div class="cost-recap">
+    <div class="tc-tag" data-en="Total cost &mdash; small business agent" data-fr="Co&ucirc;t total &mdash; agent PME">Total cost — small business agent</div>
+    <div class="tc-amount"><span class="gold">&lt; $20</span> <span style="font-size:24px; color:var(--muted); font-weight:600;" data-en="/month" data-fr="/mois">/month</span></div>
+    <div class="tc-sub" data-en="WhatsApp API free for 1,000 convos/mo · Vercel free tier · 90 min setup if Meta is already verified." data-fr="API WhatsApp gratuite 1 000 conv/mois &middot; Offre Vercel gratuite &middot; 90 min de mise en place si Meta d&eacute;j&agrave; v&eacute;rifi&eacute;.">WhatsApp API free for 1,000 convos/mo · Vercel free tier · 90 min setup if Meta is already verified.</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="cta-strip">
+    <h3 data-en="Want this stack built for your business in 30 days?" data-fr="Vous voulez ce stack construit pour votre entreprise en 30 jours ?">Want this stack built for your business in 30 days?</h3>
+    <p data-en="Top AI Africa deploys the full 5-layer stack for African businesses. WhatsApp Cloud API + webhook setup, Claude integration, Knowledge Base on your real product data, monitoring dashboard. Free 15-min strategy call to see if your business is a fit." data-fr="Top AI Africa d&eacute;ploie le stack complet pour les entreprises africaines. Configuration API WhatsApp Cloud + webhook, int&eacute;gration Claude, Base de Connaissances sur vos donn&eacute;es r&eacute;elles, supervision. Appel strat&eacute;gie gratuit de 15 min.">Top AI Africa deploys the full 5-layer stack for African businesses. WhatsApp Cloud API + webhook setup, Claude integration, Knowledge Base on your real product data, monitoring dashboard. Free 15-min strategy call to see if your business is a fit.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/15144669402?text=Hello%20Top%20AI%20Africa%2C%20I%27d%20like%20to%20build%20the%20WhatsApp%20Cloud%20API%20stack%20for%20my%20business" class="btn btn-green">
+        <span>&#128172;</span>
+        <span data-en="Build with us &mdash; WhatsApp" data-fr="Construire avec nous &mdash; WhatsApp">Build with us — WhatsApp</span>
+      </a>
+      <a href="https://topaiafrica.com/en/contact/" class="btn btn-primary" data-en="Book Free Strategy Call &rarr;" data-fr="R&eacute;server un Appel Gratuit &rarr;">Book Free Strategy Call &rarr;</a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe for Lesson 3.3" data-fr="S'abonner pour la Le&ccedil;on 3.3">Subscribe for Lesson 3.3</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="lesson-nav" aria-label="Lesson navigation">
+    <a href="/course-module3-lesson31.html" class="prev">
+      <div class="dir" data-en="&larr; PREVIOUS" data-fr="&larr; PR&Eacute;C&Eacute;DENT">&larr; PREVIOUS</div>
+      <h4 data-en="Lesson 3.1 &mdash; Anatomy of a WhatsApp AI Agent" data-fr="Le&ccedil;on 3.1 &mdash; Anatomie d'un Agent IA WhatsApp">Lesson 3.1 — Anatomy of a WhatsApp AI Agent</h4>
+      <p data-en="The 5-layer stack &mdash; the parts list before assembly." data-fr="Le stack &agrave; 5 couches &mdash; la liste des pi&egrave;ces avant assemblage.">The 5-layer stack — the parts list before assembly.</p>
+    </a>
+    <a href="/course-module3-lesson33.html" class="next">
+      <div class="dir" data-en="NEXT &rarr;" data-fr="SUIVANT &rarr;">NEXT &rarr;</div>
+      <h4 data-en="Lesson 3.3 &mdash; AI Brain + Knowledge Base" data-fr="Le&ccedil;on 3.3 &mdash; Cerveau IA + Base de Connaissances">Lesson 3.3 — AI Brain + Knowledge Base</h4>
+      <p data-en="Layers 3 + 4. The agent stops echoing. It starts thinking." data-fr="Couches 3 + 4. L'agent arr&ecirc;te d'&eacute;cho. Il commence &agrave; penser.">Layers 3 + 4. The agent stops echoing. It starts thinking.</p>
+    </a>
+  </nav>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="/course" data-en="All lessons" data-fr="Toutes les le&ccedil;ons">All lessons</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  const VIDEO_EN = '5kkJgebQO7Q';
+  const VIDEO_FR = 'YGbS0lIWTKQ';
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    const frame = document.getElementById('lessonVideo');
+    const videoId = lang === 'fr' ? VIDEO_FR : VIDEO_EN;
+    if (frame && !frame.src.includes(videoId)) {
+      frame.src = 'https://www.youtube.com/embed/' + videoId;
+    }
+    document.title = lang === 'fr'
+      ? "Module 3 · Leçon 3.2 — API WhatsApp Cloud + Votre Premier Webhook | Top AI Africa"
+      : "Module 3 · Lesson 3.2 — WhatsApp Cloud API + Your First Webhook | Top AI Africa";
+  }
+
+  if (navigator.language && navigator.language.startsWith('fr')) {
+    switchLang('fr');
+  }
+</script>
+
+</body>
+</html>

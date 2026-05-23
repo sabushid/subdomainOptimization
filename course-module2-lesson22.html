@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2 &middot; Lesson 2.2 — Breaking Down A&middot;G&middot;E&middot;N&middot;T | Top AI Africa</title>
+<meta name="description" content="Free lesson: each of the 5 properties of the A·G·E·N·T framework decoded with real examples from AfriPay, MediLink, and Lagos Fashion. Module 2, Lesson 2.2.">
+<meta name="keywords" content="A·G·E·N·T framework, AI agent framework Africa, autonomous AI, grounded AI, edge-ready AI, native language AI, transparent AI, AI vendor checklist, AfriPay MediLink Lagos AI, Top AI Africa Module 2">
+<link rel="canonical" href="https://topaiafrica.com/course/module-2/lesson-2">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Module 2 · Lesson 2.2 — Breaking Down A·G·E·N·T">
+<meta property="og:description" content="Each letter explained with real examples from AfriPay, MediLink, and Lagos Fashion.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module2-Lesson22-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course/module-2/lesson-2">
+<meta property="og:video" content="https://www.youtube.com/embed/AeZPIkCwSjE">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Breaking Down A·G·E·N·T — The 5-Property Framework">
+<meta name="twitter:description" content="Free lesson from Top AI Africa. The framework that scores any AI deployment in Africa.">
+<meta name="twitter:image" content="https://topaiafrica.com/Thumbnail-Module2-Lesson22-EN.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Breaking Down A·G·E·N·T: The 5-Property Framework for AI That Works in Africa",
+  "description": "Module 2 Lesson 2.2 of the free WhatsApp AI Agent Mastery course by Top AI Africa. Each of the 5 properties — Autonomous, Grounded, Edge-Ready, Native-language, Transparent — explained with real examples from AfriPay, MediLink, and Lagos Fashion. Plus the integration principle: miss one letter and the stack fails.",
+  "thumbnailUrl": "https://topaiafrica.com/Thumbnail-Module2-Lesson22-EN.png",
+  "uploadDate": "2026-05-03",
+  "contentUrl": "https://www.youtube.com/watch?v=AeZPIkCwSjE",
+  "embedUrl": "https://www.youtube.com/embed/AeZPIkCwSjE",
+  "duration": "PT6M13S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "logo": { "@type": "ImageObject", "url": "https://topaiafrica.com/wp-content/uploads/2025/10/top-ai-africa-logo-v5.png" }
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --red:#ff0000; --green:#2ecc71; --red-accent:#e74c3c; --blue:#3498db; --orange:#e67e22; --teal:#1abc9c;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 60px; max-width:1200px; margin:0 auto; text-align:center; }
+  .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:20px; letter-spacing:1px; }
+  .breadcrumb a { color:var(--purple); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--white); }
+  .course-badge { display:inline-block; background:linear-gradient(135deg, var(--gold), #e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .m2-badge { display:inline-flex; gap:6px; align-items:center; background:rgba(108,92,231,0.2); color:var(--purple); border:1px solid var(--purple-deep); padding:6px 14px; border-radius:20px; font-weight:800; font-size:11px; letter-spacing:1.2px; margin-bottom:20px; margin-left:12px; }
+  .hero h1 { font-size:clamp(32px,6vw,58px); line-height:1.1; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--purple) 60%,var(--gold) 120%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .lesson-label { color:var(--purple); font-weight:700; margin-bottom:10px; letter-spacing:1px; font-size:13px; text-transform:uppercase; }
+  .hero .hero-sub { color:var(--muted); font-size:18px; max-width:780px; margin:0 auto 36px; }
+  .stat-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:24px 0 40px; }
+  .stat { text-align:center; min-width:140px; }
+  .stat-num { font-size:44px; font-weight:900; display:block; line-height:1; }
+  .stat-num.gold { color:var(--gold); }
+  .stat-num.green { color:var(--green); }
+  .stat-num.purple { color:var(--purple); }
+  .stat-label { color:var(--muted); font-size:13px; letter-spacing:0.5px; margin-top:4px; display:block; }
+  .video-wrap { max-width:980px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 30px 80px rgba(108,92,231,0.35); border:1px solid rgba(161,155,253,0.2); }
+  .video-ratio { position:relative; padding-bottom:56.25%; height:0; background:#000; }
+  .video-ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  .section { padding:72px 24px; max-width:1200px; margin:0 auto; }
+  .section h2 { font-size:clamp(28px,4.4vw,42px); font-weight:900; text-align:center; margin-bottom:16px; }
+  .section .lead { color:var(--muted); text-align:center; max-width:760px; margin:0 auto 48px; font-size:17px; }
+
+  /* A·G·E·N·T cards */
+  .agent-stack { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .letter-card { display:grid; grid-template-columns:120px 1fr 200px; gap:22px; align-items:center; padding:24px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:16px; }
+  .letter-card.A { border-color:var(--purple-deep); background:linear-gradient(90deg, rgba(108,92,231,0.18), rgba(108,92,231,0.04)); }
+  .letter-card.G { border-color:var(--teal); background:linear-gradient(90deg, rgba(26,188,156,0.18), rgba(26,188,156,0.04)); }
+  .letter-card.E { border-color:var(--orange); background:linear-gradient(90deg, rgba(230,126,34,0.18), rgba(230,126,34,0.04)); }
+  .letter-card.N { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .letter-card.T { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .letter-card .big-letter { width:96px; height:96px; border-radius:18px; display:flex; align-items:center; justify-content:center; font-family:"Arial Black",sans-serif; font-size:62px; font-weight:900; color:var(--dark); line-height:1; }
+  .letter-card.A .big-letter { background:var(--purple-deep); }
+  .letter-card.G .big-letter { background:var(--teal); }
+  .letter-card.E .big-letter { background:var(--orange); }
+  .letter-card.N .big-letter { background:var(--blue); }
+  .letter-card.T .big-letter { background:var(--gold); }
+  .letter-card .body h3 { font-size:22px; font-weight:900; margin-bottom:6px; letter-spacing:0.5px; }
+  .letter-card .body p { color:rgba(255,255,255,0.78); font-size:14.5px; line-height:1.5; }
+  .letter-card .example { padding:14px 16px; background:rgba(0,0,0,0.25); border-radius:10px; }
+  .letter-card .example .ex-tag { font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+  .letter-card.A .example .ex-tag { color:var(--purple); }
+  .letter-card.G .example .ex-tag { color:var(--teal); }
+  .letter-card.E .example .ex-tag { color:var(--orange); }
+  .letter-card.N .example .ex-tag { color:var(--blue); }
+  .letter-card.T .example .ex-tag { color:var(--gold); }
+  .letter-card .example .ex-name { font-weight:900; font-size:16px; }
+  .letter-card .example .ex-desc { font-size:12px; color:var(--muted); margin-top:2px; line-height:1.4; }
+  @media (max-width:760px) {
+    .letter-card { grid-template-columns:64px 1fr; gap:14px; padding:18px; }
+    .letter-card .big-letter { width:54px; height:54px; font-size:36px; border-radius:12px; }
+    .letter-card .example { grid-column:1 / -1; padding-top:10px; border-top:1px dashed rgba(255,255,255,0.15); border-radius:0; background:transparent; padding:10px 0 0; }
+  }
+
+  /* Integration callout */
+  .integration { max-width:1000px; margin:48px auto 0; padding:36px; background:linear-gradient(135deg, rgba(231,76,60,0.10), rgba(241,196,15,0.06)); border:2px solid rgba(231,76,60,0.4); border-radius:20px; text-align:center; }
+  .integration h3 { font-size:24px; font-weight:900; color:var(--red-accent); margin-bottom:10px; letter-spacing:0.5px; }
+  .integration p { color:var(--white); font-size:16px; max-width:760px; margin:0 auto; line-height:1.55; }
+  .integration p strong { color:var(--gold); }
+
+  /* CTA */
+  .cta-strip { margin:48px auto; max-width:980px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; padding:40px 28px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg, var(--purple-deep), var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg, #ff0000, #c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+  .btn-green { background:linear-gradient(135deg, #25D366, #128C7E); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .lesson-nav { max-width:980px; margin:32px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .lesson-nav a { text-decoration:none; color:inherit; padding:22px 26px; background:rgba(161,155,253,0.06); border:1px dashed rgba(161,155,253,0.3); border-radius:14px; transition:transform 0.2s, background 0.2s; display:block; }
+  .lesson-nav a:hover { transform:translateY(-3px); background:rgba(161,155,253,0.12); }
+  .lesson-nav .dir { color:var(--purple); font-size:12px; font-weight:800; letter-spacing:1.2px; }
+  .lesson-nav h4 { font-size:20px; font-weight:900; margin:6px 0; }
+  .lesson-nav p { color:var(--muted); font-size:14px; }
+  .lesson-nav .prev { text-align:left; }
+  .lesson-nav .next { text-align:right; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 36px; }
+    .section { padding:48px 18px; }
+    .stat-row { gap:22px; }
+    .lesson-nav { grid-template-columns:1fr; }
+    .lesson-nav .next { text-align:left; }
+    .nav-links a:not(.lang-toggle):not(.cta-nav) { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com"><span class="dot"></span><span>Top AI Africa</span></a>
+  <div class="nav-links">
+    <a href="/course" data-en="Course" data-fr="Cours">Course</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/course" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</a>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Module 2" data-fr="Module 2">Module 2</span>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Lesson 2.2" data-fr="Le&ccedil;on 2.2">Lesson 2.2</span>
+  </div>
+  <div>
+    <span class="course-badge" data-en="FREE COURSE &middot; MODULE 2 &middot; LESSON 2.2" data-fr="COURS GRATUIT &middot; MODULE 2 &middot; LE&Ccedil;ON 2.2">FREE COURSE &middot; MODULE 2 &middot; LESSON 2.2</span>
+    <span class="m2-badge"><span>&#9881;</span><span data-en="THE FRAMEWORK CORE" data-fr="LE C&OElig;UR DU CADRE">THE FRAMEWORK CORE</span></span>
+  </div>
+  <div class="lesson-label" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</div>
+  <h1><span data-en="Breaking Down A&middot;G&middot;E&middot;N&middot;T" data-fr="D&eacute;composer A&middot;G&middot;E&middot;N&middot;T">Breaking Down A·G·E·N·T</span></h1>
+  <p class="hero-sub" data-en="Each of the 5 properties decoded with real examples from AfriPay, MediLink, and Lagos Fashion. The framework that scores any AI deployment in Africa &mdash; and shows you exactly which letter is broken." data-fr="Chacune des 5 propri&eacute;t&eacute;s d&eacute;cod&eacute;e avec des exemples r&eacute;els d'AfriPay, MediLink et Lagos Mode. Le cadre qui note tout d&eacute;ploiement IA en Afrique &mdash; et qui vous montre exactement quelle lettre est cass&eacute;e.">Each of the 5 properties decoded with real examples from AfriPay, MediLink, and Lagos Fashion. The framework that scores any AI deployment in Africa — and shows you exactly which letter is broken.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num gold">5</span><span class="stat-label" data-en="Properties (letters)" data-fr="Propri&eacute;t&eacute;s (lettres)">Properties (letters)</span></div>
+    <div class="stat"><span class="stat-num purple">3</span><span class="stat-label" data-en="Real-world examples" data-fr="Exemples r&eacute;els">Real-world examples</span></div>
+    <div class="stat"><span class="stat-num green">1</span><span class="stat-label" data-en="Self-audit framework" data-fr="Cadre d'auto-&eacute;valuation">Self-audit framework</span></div>
+  </div>
+
+  <div class="video-wrap">
+    <div class="video-ratio">
+      <iframe id="lessonVideo" src="https://www.youtube.com/embed/AeZPIkCwSjE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Module 2 Lesson 2.2 — Breaking Down A·G·E·N·T"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- The 5 Letters -->
+<section class="section">
+  <h2 data-en="The 5 Properties, Decoded" data-fr="Les 5 Propri&eacute;t&eacute;s, D&eacute;cod&eacute;es">The 5 Properties, Decoded</h2>
+  <p class="lead" data-en="One letter at a time. Each property paired with a real African deployment that nailed it &mdash; or failed it." data-fr="Une lettre &agrave; la fois. Chaque propri&eacute;t&eacute; associ&eacute;e &agrave; un d&eacute;ploiement africain r&eacute;el qui l'a r&eacute;ussi &mdash; ou rat&eacute;.">One letter at a time. Each property paired with a real African deployment that nailed it — or failed it.</p>
+
+  <div class="agent-stack">
+    <!-- A -->
+    <div class="letter-card A">
+      <div class="big-letter">A</div>
+      <div class="body">
+        <h3 data-en="Autonomous" data-fr="Autonome">Autonomous</h3>
+        <p data-en="The agent acts independently within a defined scope. No human in the loop for routine queries. Escalates only what humans need to handle." data-fr="L'agent agit ind&eacute;pendamment dans un p&eacute;rim&egrave;tre d&eacute;fini. Pas d'humain dans la boucle pour les requ&ecirc;tes routini&egrave;res. Escalade seulement ce qui n&eacute;cessite un humain.">The agent acts independently within a defined scope. No human in the loop for routine queries. Escalates only what humans need to handle.</p>
+      </div>
+      <div class="example">
+        <div class="ex-tag">EXAMPLE</div>
+        <div class="ex-name">AfriPay</div>
+        <div class="ex-desc" data-en="Resolves 78% of payment queries with no human handoff." data-fr="R&eacute;sout 78 % des requ&ecirc;tes paiement sans transfert humain.">Resolves 78% of payment queries with no human handoff.</div>
+      </div>
+    </div>
+    <!-- G -->
+    <div class="letter-card G">
+      <div class="big-letter">G</div>
+      <div class="body">
+        <h3 data-en="Grounded" data-fr="Ancr&eacute;">Grounded</h3>
+        <p data-en="Anchored to your actual business data &mdash; products, prices, hours, policies. Cannot hallucinate beyond what's in the knowledge base. Sources every claim." data-fr="Ancr&eacute; &agrave; vos vraies donn&eacute;es m&eacute;tier &mdash; produits, prix, horaires, politiques. Ne peut pas halluciner au-del&agrave; de la base. Source chaque affirmation.">Anchored to your actual business data — products, prices, hours, policies. Cannot hallucinate beyond what's in the knowledge base. Sources every claim.</p>
+      </div>
+      <div class="example">
+        <div class="ex-tag">EXAMPLE</div>
+        <div class="ex-name">MediLink</div>
+        <div class="ex-desc" data-en="Cites the exact pharmacy bulletin for every drug interaction answer." data-fr="Cite le bulletin pharmacie exact pour chaque interaction m&eacute;dicamenteuse.">Cites the exact pharmacy bulletin for every drug interaction answer.</div>
+      </div>
+    </div>
+    <!-- E -->
+    <div class="letter-card E">
+      <div class="big-letter">E</div>
+      <div class="body">
+        <h3 data-en="Edge-Ready" data-fr="Edge-Ready">Edge-Ready</h3>
+        <p data-en="Works on 2G. Works on a $40 Android. Works when the network drops mid-message. Degrades gracefully &mdash; never fails silently." data-fr="Fonctionne en 2G. Fonctionne sur un Android &agrave; 40 $. Fonctionne quand le r&eacute;seau coupe en plein message. Se d&eacute;grade gracieusement &mdash; n'&eacute;choue jamais en silence.">Works on 2G. Works on a $40 Android. Works when the network drops mid-message. Degrades gracefully — never fails silently.</p>
+      </div>
+      <div class="example">
+        <div class="ex-tag">EXAMPLE</div>
+        <div class="ex-name">Lagos Fashion</div>
+        <div class="ex-desc" data-en="Compresses image-heavy catalogs to 30 KB for 2G shoppers." data-fr="Compresse les catalogues images en 30 Ko pour les acheteurs 2G.">Compresses image-heavy catalogs to 30 KB for 2G shoppers.</div>
+      </div>
+    </div>
+    <!-- N -->
+    <div class="letter-card N">
+      <div class="big-letter">N</div>
+      <div class="body">
+        <h3 data-en="Native Language" data-fr="Langue Native">Native Language</h3>
+        <p data-en="Speaks the customer's actual language &mdash; Kirundi, Swahili, Wolof, Pidgin &mdash; with cultural fluency, not Google-Translate output. Native means trained, not translated." data-fr="Parle la vraie langue du client &mdash; kirundi, swahili, wolof, pidgin &mdash; avec maitrise culturelle, pas la sortie de Google Traduction. Native = entra&icirc;n&eacute;, pas traduit.">Speaks the customer's actual language — Kirundi, Swahili, Wolof, Pidgin — with cultural fluency, not Google-Translate output. Native means trained, not translated.</p>
+      </div>
+      <div class="example">
+        <div class="ex-tag" data-en="WHY IT MATTERS" data-fr="POURQUOI &Ccedil;A COMPTE">WHY IT MATTERS</div>
+        <div class="ex-name" data-en="Trust = currency" data-fr="Confiance = monnaie">Trust = currency</div>
+        <div class="ex-desc" data-en="78% of urban Africans have WhatsApp. Native Kirundi unlocks them." data-fr="78 % des urbains africains ont WhatsApp. Le kirundi natif les d&eacute;bloque.">78% of urban Africans have WhatsApp. Native Kirundi unlocks them.</div>
+      </div>
+    </div>
+    <!-- T -->
+    <div class="letter-card T">
+      <div class="big-letter">T</div>
+      <div class="body">
+        <h3 data-en="Transparent" data-fr="Transparent">Transparent</h3>
+        <p data-en="The customer understands the decision &mdash; in their language, in plain words. Not stack traces, not engineering logs. Real transparency = the user knows why." data-fr="Le client comprend la d&eacute;cision &mdash; dans sa langue, en mots simples. Pas de stack traces, pas de logs ing&eacute;nieurs. La vraie transparence = l'utilisateur sait pourquoi.">The customer understands the decision — in their language, in plain words. Not stack traces, not engineering logs. Real transparency = the user knows why.</p>
+      </div>
+      <div class="example">
+        <div class="ex-tag" data-en="THE TEST" data-fr="LE TEST">THE TEST</div>
+        <div class="ex-name" data-en="Can a grandmother explain it?" data-fr="Une grand-m&egrave;re peut-elle l'expliquer ?">Can a grandmother explain it?</div>
+        <div class="ex-desc" data-en="If yes, you've got T. If no, you have logs &mdash; not transparency." data-fr="Si oui, vous avez T. Si non, vous avez des logs &mdash; pas de transparence.">If yes, you've got T. If no, you have logs — not transparency.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Integration -->
+  <div class="integration">
+    <h3 data-en="THE INTEGRATION RULE &mdash; Drop one, the stack fails" data-fr="LA R&Egrave;GLE D'INT&Eacute;GRATION &mdash; Une qui manque, tout casse">THE INTEGRATION RULE — Drop one, the stack fails</h3>
+    <p data-en="A·G·E·N·T is not a checklist of nice-to-haves. It is a <strong>system</strong>. An autonomous bot that's not grounded hallucinates. A grounded bot that's not edge-ready dies on 2G. A native-speaking bot that's not transparent loses trust on the first ambiguous answer. Score on <strong>all five</strong> &mdash; or don't ship." data-fr="A&middot;G&middot;E&middot;N&middot;T n'est pas une liste de propri&eacute;t&eacute;s souhaitables. C'est un <strong>syst&egrave;me</strong>. Un bot autonome non ancr&eacute; hallucine. Un bot ancr&eacute; non edge-ready meurt en 2G. Un bot natif non transparent perd la confiance d&egrave;s la premi&egrave;re r&eacute;ponse ambigu&euml;. Notez sur <strong>les cinq</strong> &mdash; ou ne livrez pas.">A·G·E·N·T is not a checklist of nice-to-haves. It is a <strong>system</strong>. An autonomous bot that's not grounded hallucinates. A grounded bot that's not edge-ready dies on 2G. A native-speaking bot that's not transparent loses trust on the first ambiguous answer. Score on <strong>all five</strong> — or don't ship.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="cta-strip">
+    <h3 data-en="Want to score your own AI on A&middot;G&middot;E&middot;N&middot;T?" data-fr="Vous voulez noter votre IA sur A&middot;G&middot;E&middot;N&middot;T ?">Want to score your own AI on A·G·E·N·T?</h3>
+    <p data-en="Lesson 2.3 is the hands-on application: a 5-column, 12-cell worksheet that scores your deployment letter by letter and tells you exactly what to do next: ship, fix, or redesign." data-fr="La Le&ccedil;on 2.3 est l'application pratique : un exercice &agrave; 5 colonnes et 12 cases qui note votre d&eacute;ploiement lettre par lettre et vous dit exactement quoi faire ensuite : lancer, r&eacute;parer ou reconcevoir.">Lesson 2.3 is the hands-on application: a 5-column, 12-cell worksheet that scores your deployment letter by letter and tells you exactly what to do next: ship, fix, or redesign.</p>
+    <div class="cta-buttons">
+      <a href="/course-module2-lesson23.html" class="btn btn-primary" data-en="Watch Lesson 2.3 (Worksheet) &rarr;" data-fr="Voir Le&ccedil;on 2.3 (Exercice) &rarr;">Watch Lesson 2.3 (Worksheet) &rarr;</a>
+      <a href="https://wa.me/15144669402?text=Hello%20Top%20AI%20Africa%2C%20I%27d%20like%20to%20score%20my%20AI%20on%20A.G.E.N.T" class="btn btn-green">
+        <span>&#128172;</span>
+        <span data-en="Score with us &mdash; WhatsApp" data-fr="Notez avec nous &mdash; WhatsApp">Score with us — WhatsApp</span>
+      </a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe" data-fr="S'abonner">Subscribe</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="lesson-nav" aria-label="Lesson navigation">
+    <a href="/course-module2-lesson21.html" class="prev">
+      <div class="dir" data-en="&larr; PREVIOUS" data-fr="&larr; PR&Eacute;C&Eacute;DENT">&larr; PREVIOUS</div>
+      <h4 data-en="Lesson 2.1 &mdash; Why Generic AI Fails" data-fr="Le&ccedil;on 2.1 &mdash; Pourquoi l'IA G&eacute;n&eacute;rique &Eacute;choue">Lesson 2.1 — Why Generic AI Fails</h4>
+      <p data-en="The 5 blind spots that set up the framework." data-fr="Les 5 angles morts qui pr&eacute;parent le cadre.">The 5 blind spots that set up the framework.</p>
+    </a>
+    <a href="/course-module2-lesson23.html" class="next">
+      <div class="dir" data-en="NEXT &rarr;" data-fr="SUIVANT &rarr;">NEXT &rarr;</div>
+      <h4 data-en="Lesson 2.3 &mdash; Apply A&middot;G&middot;E&middot;N&middot;T to Your Business" data-fr="Le&ccedil;on 2.3 &mdash; Appliquez A&middot;G&middot;E&middot;N&middot;T &agrave; Votre Entreprise">Lesson 2.3 — Apply A·G·E·N·T to Your Business</h4>
+      <p data-en="The 5-column worksheet. Score yourself, decide your next move." data-fr="L'exercice &agrave; 5 colonnes. Notez-vous, d&eacute;cidez votre prochain coup.">The 5-column worksheet. Score yourself, decide your next move.</p>
+    </a>
+  </nav>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="/course" data-en="All lessons" data-fr="Toutes les le&ccedil;ons">All lessons</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  const VIDEO_EN = 'AeZPIkCwSjE';
+  const VIDEO_FR = '9hm4ADXq0AY';
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    const frame = document.getElementById('lessonVideo');
+    const videoId = lang === 'fr' ? VIDEO_FR : VIDEO_EN;
+    if (frame && !frame.src.includes(videoId)) {
+      frame.src = 'https://www.youtube.com/embed/' + videoId;
+    }
+    document.title = lang === 'fr'
+      ? "Module 2 · Leçon 2.2 — Décomposer A·G·E·N·T | Top AI Africa"
+      : "Module 2 · Lesson 2.2 — Breaking Down A·G·E·N·T | Top AI Africa";
+  }
+
+  if (navigator.language && navigator.language.startsWith('fr')) {
+    switchLang('fr');
+  }
+</script>
+
+</body>
+</html>

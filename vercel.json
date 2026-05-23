@@ -9,6 +9,18 @@
     { "source": "/course/module-1/lesson-3", "destination": "/course-module1-lesson3.html" },
     { "source": "/course/module-1/lesson-4", "destination": "/course-module1-lesson4.html" },
     { "source": "/course/module-2", "destination": "/course.html" },
-    { "source": "/course/module-2/lesson-1", "destination": "/course-module2-lesson21.html" }
+    { "source": "/course/module-2/lesson-1", "destination": "/course-module2-lesson21.html" },
+    { "source": "/course/module-2/lesson-2", "destination": "/course-module2-lesson22.html" },
+    { "source": "/course/module-2/lesson-3", "destination": "/course-module2-lesson23.html" },
+    { "source": "/course/module-3", "destination": "/course.html" },
+    { "source": "/course/module-3/lesson-1", "destination": "/course-module3-lesson31.html" },
+    { "source": "/course/module-3/lesson-2", "destination": "/course-module3-lesson32.html" },
+    { "source": "/course/module-3/lesson-3", "destination": "/course-module3-lesson33.html" },
+    { "source": "/course/module-3/lesson-4", "destination": "/course-module3-lesson34.html" },
+    { "source": "/course/module-4", "destination": "/course.html" },
+    { "source": "/course/module-4/lesson-1", "destination": "/course-module4-lesson41.html" },
+    { "source": "/course/module-4/lesson-2", "destination": "/course-module4-lesson42.html" },
+    { "source": "/course/module-4/lesson-3", "destination": "/course-module4-lesson43.html" },
+    { "source": "/course/module-4/lesson-4", "destination": "/course-module4-lesson44.html" }
   ]
 }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4 &middot; Lesson 4.2 — The Language Detector at the Gate (Claude + fastText) | Top AI Africa</title>
+<meta name="description" content="Build the language detector that runs before every other layer. Claude classifier + fastText fallback. Average latency under 50ms. Under 20¢/day per 1,000 messages. Routes every WhatsApp message to the right language pipeline.">
+<meta name="keywords" content="language detection, fastText, Claude classifier, multilingual whatsapp agent, AI for african languages, lid.176, code-switching, Top AI Africa Module 4">
+<link rel="canonical" href="https://topaiafrica.com/course/module-4/lesson-2">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Module 4 · Lesson 4.2 — The Language Detector at the Gate">
+<meta property="og:description" content="Build the gate: Claude + fastText, under 50ms, routes every message to 1 of 5 language pipelines.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson42-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course/module-4/lesson-2">
+<meta property="og:video" content="https://www.youtube.com/embed/0wgdHvpOUCU">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Build the Language Detector — Claude + fastText Under 50ms (Lesson 4.2)">
+<meta name="twitter:description" content="Free Module 4 hands-on lesson from Top AI Africa. Pillar 1 becomes live code today.">
+<meta name="twitter:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson42-EN.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Build the Language Detector at the Gate — Claude + fastText Under 50ms (Module 4, Lesson 4.2)",
+  "description": "Module 4 hands-on lesson from Top AI Africa. Build the language detector that runs before every other layer of your WhatsApp AI stack. Claude classifier with JSON output + fastText fallback running locally. Confidence threshold for hybrid logic, routing to 5 language pipelines (French, English, Swahili, Arabic, Kirundi), and edge cases (code-switching, ultra-short messages, profile override). Average latency under 50ms. Total daily cost under 20 cents per 1,000 messages.",
+  "thumbnailUrl": "https://topaiafrica.com/Thumbnail-Module4-Lesson42-EN.png",
+  "uploadDate": "2026-05-22",
+  "contentUrl": "https://www.youtube.com/watch?v=0wgdHvpOUCU",
+  "embedUrl": "https://www.youtube.com/embed/0wgdHvpOUCU",
+  "duration": "PT5M9S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "logo": { "@type": "ImageObject", "url": "https://topaiafrica.com/wp-content/uploads/2025/10/top-ai-africa-logo-v5.png" }
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --red:#e74c3c; --green:#2ecc71; --whatsapp:#25D366; --blue:#3498db;
+    --terra:#d4a574; --teal:#16a085;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 60px; max-width:1200px; margin:0 auto; text-align:center; }
+  .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:20px; letter-spacing:1px; }
+  .breadcrumb a { color:var(--purple); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--white); }
+  .course-badge { display:inline-block; background:linear-gradient(135deg, var(--gold), #e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .m4-badge { display:inline-flex; gap:6px; align-items:center; background:rgba(52,152,219,0.18); color:var(--blue); border:1px solid var(--blue); padding:6px 14px; border-radius:20px; font-weight:800; font-size:11px; letter-spacing:1.2px; margin-bottom:20px; margin-left:12px; }
+  .hero h1 { font-size:clamp(32px,6vw,58px); line-height:1.1; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--blue) 60%,var(--gold) 120%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .lesson-label { color:var(--purple); font-weight:700; margin-bottom:10px; letter-spacing:1px; font-size:13px; text-transform:uppercase; }
+  .hero .hero-sub { color:var(--muted); font-size:18px; max-width:780px; margin:0 auto 36px; }
+  .stat-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:24px 0 40px; }
+  .stat { text-align:center; min-width:140px; }
+  .stat-num { font-size:44px; font-weight:900; display:block; line-height:1; }
+  .stat-num.gold { color:var(--gold); }
+  .stat-num.blue { color:var(--blue); }
+  .stat-num.green { color:var(--green); }
+  .stat-label { color:var(--muted); font-size:13px; letter-spacing:0.5px; margin-top:4px; display:block; }
+  .video-wrap { max-width:980px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 30px 80px rgba(52,152,219,0.30); border:1px solid rgba(161,155,253,0.2); }
+  .video-ratio { position:relative; padding-bottom:56.25%; height:0; background:#000; }
+  .video-ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  .section { padding:72px 24px; max-width:1200px; margin:0 auto; }
+  .section h2 { font-size:clamp(28px,4.4vw,42px); font-weight:900; text-align:center; margin-bottom:16px; }
+  .section .lead { color:var(--muted); text-align:center; max-width:760px; margin:0 auto 48px; font-size:17px; }
+
+  /* Steps stack */
+  .steps { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .step { display:grid; grid-template-columns:90px 1fr; gap:22px; align-items:center; padding:22px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:14px; }
+  .step.s1 { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .step.s2 { border-color:var(--teal); background:linear-gradient(90deg, rgba(22,160,133,0.18), rgba(22,160,133,0.04)); }
+  .step.s3 { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .step.s4 { border-color:var(--terra); background:linear-gradient(90deg, rgba(212,165,116,0.18), rgba(212,165,116,0.04)); }
+  .step.s5 { border-color:var(--red); background:linear-gradient(90deg, rgba(231,76,60,0.18), rgba(231,76,60,0.04)); }
+  .step .num { width:72px; height:72px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:"Arial Black",sans-serif; font-size:42px; font-weight:900; color:var(--dark); }
+  .step.s1 .num { background:var(--blue); }
+  .step.s2 .num { background:var(--teal); }
+  .step.s3 .num { background:var(--gold); }
+  .step.s4 .num { background:var(--terra); }
+  .step.s5 .num { background:var(--red); }
+  .step .body h3 { font-size:22px; font-weight:900; margin-bottom:6px; letter-spacing:0.5px; }
+  .step .body p { color:rgba(255,255,255,0.78); font-size:14.5px; line-height:1.5; }
+
+  /* Cost recap */
+  .cost-recap { max-width:980px; margin:48px auto 0; padding:36px; background:linear-gradient(135deg, rgba(46,204,113,0.10), rgba(241,196,15,0.06)); border:2px solid rgba(46,204,113,0.4); border-radius:20px; text-align:center; }
+  .cost-recap .tc-tag { font-size:13px; font-weight:800; color:var(--green); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+  .cost-recap .tc-amount { font-family:"Arial Black",sans-serif; font-size:50px; font-weight:900; color:var(--white); line-height:1; }
+  .cost-recap .tc-amount .gold { color:var(--gold); }
+  .cost-recap .tc-amount .blue { color:var(--blue); }
+  .cost-recap .tc-sub { color:var(--muted); font-size:15px; margin-top:14px; }
+
+  /* CTA */
+  .cta-strip { margin:48px auto; max-width:980px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; padding:40px 28px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg, var(--purple-deep), var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg, #ff0000, #c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+  .btn-green { background:linear-gradient(135deg, #25D366, #128C7E); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .lesson-nav { max-width:980px; margin:32px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .lesson-nav a { text-decoration:none; color:inherit; padding:22px 26px; background:rgba(161,155,253,0.06); border:1px dashed rgba(161,155,253,0.3); border-radius:14px; transition:transform 0.2s, background 0.2s; display:block; }
+  .lesson-nav a:hover { transform:translateY(-3px); background:rgba(161,155,253,0.12); }
+  .lesson-nav .dir { color:var(--purple); font-size:12px; font-weight:800; letter-spacing:1.2px; }
+  .lesson-nav h4 { font-size:20px; font-weight:900; margin:6px 0; }
+  .lesson-nav p { color:var(--muted); font-size:14px; }
+  .lesson-nav .prev { text-align:left; }
+  .lesson-nav .next { text-align:right; }
+  .lesson-nav .next.coming-soon { border-style:solid; opacity:0.85; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 36px; }
+    .section { padding:48px 18px; }
+    .stat-row { gap:22px; }
+    .lesson-nav { grid-template-columns:1fr; }
+    .lesson-nav .next { text-align:left; }
+    .nav-links a:not(.lang-toggle):not(.cta-nav) { display:none; }
+    .step { grid-template-columns:54px 1fr; gap:14px; padding:18px; }
+    .step .num { width:50px; height:50px; font-size:28px; border-radius:10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com"><span class="dot"></span><span>Top AI Africa</span></a>
+  <div class="nav-links">
+    <a href="/course" data-en="Course" data-fr="Cours">Course</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/course" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</a>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Module 4" data-fr="Module 4">Module 4</span>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Lesson 4.2" data-fr="Le&ccedil;on 4.2">Lesson 4.2</span>
+  </div>
+  <div>
+    <span class="course-badge" data-en="FREE COURSE &middot; MODULE 4 &middot; LESSON 4.2" data-fr="COURS GRATUIT &middot; MODULE 4 &middot; LE&Ccedil;ON 4.2">FREE COURSE &middot; MODULE 4 &middot; LESSON 4.2</span>
+    <span class="m4-badge"><span>🚪</span><span data-en="HANDS-ON CODE" data-fr="CODE EN DIRECT">HANDS-ON CODE</span></span>
+  </div>
+  <div class="lesson-label" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</div>
+  <h1><span data-en="The Language Detector at the Gate" data-fr="Le D&eacute;tecteur de Langue &agrave; la Porte">The Language Detector at the Gate</span></h1>
+  <p class="hero-sub" data-en="Pillar 1 becomes live code today. Build the detector that runs before every other layer — looks at the incoming message, decides which of 5 language pipelines should handle it, routes the request. Average latency under 50ms. Under 20¢/day per 1,000 messages." data-fr="Le Pilier 1 devient du code aujourd'hui. Construire le d&eacute;tecteur qui tourne avant toutes les autres couches &mdash; regarde le message entrant, d&eacute;cide lequel des 5 pipelines de langue doit le g&eacute;rer, route la requ&ecirc;te. Latence moyenne sous 50ms. Moins de 20 centimes par jour pour 1 000 messages.">Pillar 1 becomes live code today. Build the detector that runs before every other layer — looks at the incoming message, decides which of 5 language pipelines should handle it, routes the request. Average latency under 50ms. Under 20¢/day per 1,000 messages.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num blue">&lt;50ms</span><span class="stat-label" data-en="Avg latency" data-fr="Latence moy.">Avg latency</span></div>
+    <div class="stat"><span class="stat-num gold">&lt; $0.20</span><span class="stat-label" data-en="Per 1k msgs/day" data-fr="Pour 1k msgs/jour">Per 1k msgs/day</span></div>
+    <div class="stat"><span class="stat-num green">5</span><span class="stat-label" data-en="Language routes" data-fr="Routes de langue">Language routes</span></div>
+  </div>
+
+  <div class="video-wrap">
+    <div class="video-ratio">
+      <iframe id="lessonVideo" src="https://www.youtube.com/embed/0wgdHvpOUCU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Module 4 Lesson 4.2 — The Language Detector at the Gate"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- The Steps -->
+<section class="section">
+  <h2 data-en="The 5 Steps You'll Execute" data-fr="Les 5 &Eacute;tapes &agrave; Ex&eacute;cuter">The 5 Steps You'll Execute</h2>
+  <p class="lead" data-en="Every WhatsApp message hitting your webhook is classified in under 50ms and routed to the matching language pipeline." data-fr="Chaque message WhatsApp qui touche votre webhook est classifi&eacute; en moins de 50ms et rout&eacute; vers le pipeline de langue correspondant.">Every WhatsApp message hitting your webhook is classified in under 50ms and routed to the matching language pipeline.</p>
+
+  <div class="steps">
+    <div class="step s1">
+      <div class="num">1</div>
+      <div class="body">
+        <h3 data-en="Claude Classifier" data-fr="Classifieur Claude">Claude Classifier</h3>
+        <p data-en="6 lines of Python. System prompt: 'classify text into fr, en, sw, ar, rn. Return JSON only.' anthropic.messages.create() → {'lang': 'fr', 'confidence': 0.97}. ~300ms latency, ~$0.001/call. Accurate on long + code-switched messages." data-fr="6 lignes de Python. Prompt syst&egrave;me&nbsp;: &laquo;&nbsp;classifie en fr, en, sw, ar, rn. Retourne JSON seulement.&nbsp;&raquo; anthropic.messages.create() &rarr; {'lang': 'fr', 'confidence': 0.97}. ~300ms latence, ~0,001 $/appel. Pr&eacute;cis sur messages longs + code-switch&eacute;s.">6 lines of Python. System prompt: 'classify text into fr, en, sw, ar, rn. Return JSON only.' anthropic.messages.create() → {'lang': 'fr', 'confidence': 0.97}. ~300ms latency, ~$0.001/call. Accurate on long + code-switched messages.</p>
+      </div>
+    </div>
+    <div class="step s2">
+      <div class="num">2</div>
+      <div class="body">
+        <h3 data-en="fastText Fallback" data-fr="Fallback fastText">fastText Fallback</h3>
+        <p data-en="Facebook's pretrained lid.176.bin (130 MB, free). Load once at server boot. model.predict(text) → ('__label__fr', 0.94). Sub-5ms latency, zero cost, zero network call. Runs offline. Accuracy drops on very short + heavily code-switched text." data-fr="Mod&egrave;le pr&eacute;-entra&icirc;n&eacute; lid.176.bin de Facebook (130 Mo, gratuit). Charg&eacute; une fois au boot. model.predict(text) &rarr; ('__label__fr', 0.94). Latence sous 5ms, z&eacute;ro co&ucirc;t, z&eacute;ro appel r&eacute;seau. Tourne offline. Pr&eacute;cision baisse sur tr&egrave;s courts + lourdement code-switch&eacute;s.">Facebook's pretrained lid.176.bin (130 MB, free). Load once at server boot. model.predict(text) → ('__label__fr', 0.94). Sub-5ms latency, zero cost, zero network call. Runs offline. Accuracy drops on very short + heavily code-switched text.</p>
+      </div>
+    </div>
+    <div class="step s3">
+      <div class="num">3</div>
+      <div class="body">
+        <h3 data-en="Confidence Threshold" data-fr="Seuil de Confiance">Confidence Threshold</h3>
+        <p data-en="Hybrid logic. Run fastText first (free + fast). If confidence > 0.85 → trust it, route immediately. If confidence < 0.85 → ambiguous, escalate to Claude. ~80% of messages clear fastText directly; only 20% pay the Claude latency." data-fr="Logique hybride. Tournez fastText d'abord (gratuit + rapide). Si confiance > 0.85 &rarr; faites-lui confiance. Si < 0.85 &rarr; ambigu, escaladez &agrave; Claude. ~80% des messages passent fastText directement&nbsp;; seuls 20% paient la latence Claude.">Hybrid logic. Run fastText first (free + fast). If confidence &gt; 0.85 → trust it, route immediately. If confidence &lt; 0.85 → ambiguous, escalate to Claude. ~80% of messages clear fastText directly; only 20% pay the Claude latency.</p>
+      </div>
+    </div>
+    <div class="step s4">
+      <div class="num">4</div>
+      <div class="body">
+        <h3 data-en="Route the Detected Language" data-fr="Router la Langue D&eacute;tect&eacute;e">Route the Detected Language</h3>
+        <p data-en="Simple switch statement → 5 language-specific pipelines (built in Lesson 4.3). 'fr' → French prompt + French KB shard. 'sw' → Swahili pipeline. And so on. The detector is the traffic cop; the pipelines do the work." data-fr="Simple switch &rarr; 5 pipelines sp&eacute;cifiques (construits Le&ccedil;on 4.3). 'fr' &rarr; prompt fran&ccedil;ais + shard KB fran&ccedil;ais. 'sw' &rarr; pipeline swahili. Etc. Le d&eacute;tecteur est le policier de circulation&nbsp;; les pipelines font le travail.">Simple switch statement → 5 language-specific pipelines (built in Lesson 4.3). 'fr' → French prompt + French KB shard. 'sw' → Swahili pipeline. And so on. The detector is the traffic cop; the pipelines do the work.</p>
+      </div>
+    </div>
+    <div class="step s5">
+      <div class="num">5</div>
+      <div class="body">
+        <h3 data-en="Edge Cases" data-fr="Cas Limites">Edge Cases</h3>
+        <p data-en="Code-switching: pick dominant, add 'also speaks X' note to prompt. Ultra-short ('hi', 'merci'): default to customer profile language, fallback English. Profile override: customer-set language ALWAYS beats auto-detect. Log every detection decision." data-fr="Code-switching&nbsp;: choisir la dominante, ajouter note &laquo;&nbsp;parle aussi X&nbsp;&raquo; au prompt. Ultra-courts (&laquo;&nbsp;salut&nbsp;&raquo;, &laquo;&nbsp;merci&nbsp;&raquo;)&nbsp;: d&eacute;faut langue profil client, sinon anglais. Override profil&nbsp;: langue client d&eacute;finie BAT TOUJOURS l'auto-d&eacute;tection. Loggez chaque d&eacute;cision.">Code-switching: pick dominant, add 'also speaks X' note to prompt. Ultra-short ('hi', 'merci'): default to customer profile language, fallback English. Profile override: customer-set language ALWAYS beats auto-detect. Log every detection decision.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost recap -->
+  <div class="cost-recap">
+    <div class="tc-tag" data-en="Cost &amp; latency &mdash; detection layer" data-fr="Co&ucirc;t &amp; latence &mdash; couche de d&eacute;tection">Cost &amp; latency — detection layer</div>
+    <div class="tc-amount">
+      <span class="gold">&lt; $0.20</span>/day
+      <span style="font-size:24px; color:var(--muted); font-weight:600;" data-en="&middot;" data-fr="&middot;">·</span>
+      <span class="blue">&lt;50ms</span>
+    </div>
+    <div class="tc-sub" data-en="fastText (80% of traffic): free, local, 5ms · Claude classifier (20% escalation): $0.001/call, 300ms · Customer never notices." data-fr="fastText (80% du trafic)&nbsp;: gratuit, local, 5ms &middot; Classifieur Claude (20% escalade)&nbsp;: 0,001 $/appel, 300ms &middot; Le client ne remarque jamais.">fastText (80% of traffic): free, local, 5ms · Claude classifier (20% escalation): $0.001/call, 300ms · Customer never notices.</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="cta-strip">
+    <h3 data-en="Want a multilingual AI agent shipped for your business?" data-fr="Vous voulez un agent IA multilingue livr&eacute; pour votre entreprise ?">Want a multilingual AI agent shipped for your business?</h3>
+    <p data-en="Top AI Africa deploys the full stack &mdash; language detection, multilingual prompts, native KB per language. WhatsApp agents that sound native in French, English, Swahili, Arabic, and Kirundi. Free 15-min strategy call." data-fr="Top AI Africa d&eacute;ploie le stack complet &mdash; d&eacute;tection de langue, prompts multilingues, KB native par langue. Agents WhatsApp qui sonnent natifs en fran&ccedil;ais, anglais, swahili, arabe, et kirundi. Appel strat&eacute;gie gratuit de 15 min.">Top AI Africa deploys the full stack — language detection, multilingual prompts, native KB per language. WhatsApp agents that sound native in French, English, Swahili, Arabic, and Kirundi. Free 15-min strategy call.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/15144669402?text=Hello%20Top%20AI%20Africa%2C%20I%27d%20like%20a%20multilingual%20WhatsApp%20AI%20agent%20for%20my%20business" class="btn btn-green">
+        <span>&#128172;</span>
+        <span data-en="Build with us &mdash; WhatsApp" data-fr="Construire avec nous &mdash; WhatsApp">Build with us — WhatsApp</span>
+      </a>
+      <a href="https://topaiafrica.com/en/contact/" class="btn btn-primary" data-en="Book Free Strategy Call &rarr;" data-fr="R&eacute;server un Appel Gratuit &rarr;">Book Free Strategy Call &rarr;</a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe for Lesson 4.3" data-fr="S'abonner pour la Le&ccedil;on 4.3">Subscribe for Lesson 4.3</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="lesson-nav" aria-label="Lesson navigation">
+    <a href="/course-module4-lesson41.html" class="prev">
+      <div class="dir" data-en="&larr; PREVIOUS" data-fr="&larr; PR&Eacute;C&Eacute;DENT">&larr; PREVIOUS</div>
+      <h4 data-en="Lesson 4.1 &mdash; Multilingual Reality + The 5 Pillars" data-fr="Le&ccedil;on 4.1 &mdash; R&eacute;alit&eacute; Multilingue + Les 5 Piliers">Lesson 4.1 — Multilingual Reality + The 5 Pillars</h4>
+      <p data-en="Module 4 foundation. 5 African languages + 5 pillars to native." data-fr="Fondation Module 4. 5 langues africaines + 5 piliers vers le natif.">Module 4 foundation. 5 African languages + 5 pillars to native.</p>
+    </a>
+    <a href="/course-module4-lesson43.html" class="next">
+      <div class="dir" data-en="NEXT &rarr;" data-fr="SUIVANT &rarr;">NEXT &rarr;</div>
+      <h4 data-en="Lesson 4.3 &mdash; Multilingual Prompts + Knowledge Base" data-fr="Le&ccedil;on 4.3 &mdash; Prompts Multilingues + Base de Connaissances">Lesson 4.3 — Multilingual Prompts + Knowledge Base</h4>
+      <p data-en="5 native prompts + 5 KB shards. Scoped RAG. Native answers from native data." data-fr="5 prompts natifs + 5 shards KB. RAG limit&eacute;. R&eacute;ponses natives depuis donn&eacute;es natives.">5 native prompts + 5 KB shards. Scoped RAG. Native answers from native data.</p>
+    </a>
+  </nav>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="/course" data-en="All lessons" data-fr="Toutes les le&ccedil;ons">All lessons</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  const VIDEO_EN = '0wgdHvpOUCU';
+  const VIDEO_FR = 'EKDioLpM3Yw';
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    const frame = document.getElementById('lessonVideo');
+    const videoId = lang === 'fr' ? VIDEO_FR : VIDEO_EN;
+    if (frame && !frame.src.includes(videoId)) {
+      frame.src = 'https://www.youtube.com/embed/' + videoId;
+    }
+    try { localStorage.setItem('topai_lang', lang); } catch (e) {}
+  }
+
+  (function() {
+    let lang = 'en';
+    try { lang = localStorage.getItem('topai_lang') || (navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en'; } catch (e) {}
+    if (lang === 'fr') switchLang('fr');
+  })();
+</script>
+
+</body>
+</html>

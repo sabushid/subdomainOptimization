@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4 &middot; Lesson 4.1 — Multilingual Reality + The 5 Pillars | Top AI Africa</title>
+<meta name="description" content="Why single-language AI agents fail in Africa. The 5 languages of African business (French 280M, English 230M, Swahili 200M, Arabic 100M+, Kirundi 25M) + the 5 pillars (Detect, Greet, Reply, Knowledge, Tone) of a native-sounding agent.">
+<meta name="keywords" content="multilingual AI agent, ai for african languages, swahili AI, kirundi AI, french AI africa, arabic AI, language detection, Top AI Africa Module 4, multilingual RAG">
+<link rel="canonical" href="https://topaiafrica.com/course/module-4/lesson-1">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Module 4 · Lesson 4.1 — Multilingual Reality + The 5 Pillars">
+<meta property="og:description" content="Why single-language AI agents fail in Africa. 5 languages, 5 pillars, native-sounding agent.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson41-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course/module-4/lesson-1">
+<meta property="og:video" content="https://www.youtube.com/embed/tDukRQNzADs">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Why Single-Language AI Agents Fail in Africa — The 5 Pillars (Module 4 Lesson 4.1)">
+<meta name="twitter:description" content="Free Module 4 foundation from Top AI Africa. 5 African languages + 5 pillars of native-sounding AI.">
+<meta name="twitter:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson41-EN.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Why Single-Language AI Agents Fail in Africa — The 5 Pillars (Module 4, Lesson 4.1)",
+  "description": "Module 4 foundation of the free WhatsApp AI Agent Mastery course by Top AI Africa. The 5 languages of African business (French 280M, English 230M, Swahili 200M, Arabic 100M+, Kirundi 25M speakers) and the 5 pillars (Detect, Greet, Reply, Knowledge, Tone) that turn a monolingual agent into one that sounds native in every market.",
+  "thumbnailUrl": "https://topaiafrica.com/Thumbnail-Module4-Lesson41-EN.png",
+  "uploadDate": "2026-05-20",
+  "contentUrl": "https://www.youtube.com/watch?v=tDukRQNzADs",
+  "embedUrl": "https://www.youtube.com/embed/tDukRQNzADs",
+  "duration": "PT5M11S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "logo": { "@type": "ImageObject", "url": "https://topaiafrica.com/wp-content/uploads/2025/10/top-ai-africa-logo-v5.png" }
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --red:#e74c3c; --green:#2ecc71; --whatsapp:#25D366; --blue:#3498db;
+    --terra:#d4a574; --teal:#16a085;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 60px; max-width:1200px; margin:0 auto; text-align:center; }
+  .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:20px; letter-spacing:1px; }
+  .breadcrumb a { color:var(--purple); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--white); }
+  .course-badge { display:inline-block; background:linear-gradient(135deg, var(--gold), #e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .m4-badge { display:inline-flex; gap:6px; align-items:center; background:rgba(212,165,116,0.18); color:var(--terra); border:1px solid var(--terra); padding:6px 14px; border-radius:20px; font-weight:800; font-size:11px; letter-spacing:1.2px; margin-bottom:20px; margin-left:12px; }
+  .hero h1 { font-size:clamp(32px,6vw,58px); line-height:1.1; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--terra) 60%,var(--gold) 120%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .lesson-label { color:var(--purple); font-weight:700; margin-bottom:10px; letter-spacing:1px; font-size:13px; text-transform:uppercase; }
+  .hero .hero-sub { color:var(--muted); font-size:18px; max-width:780px; margin:0 auto 36px; }
+  .stat-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:24px 0 40px; }
+  .stat { text-align:center; min-width:140px; }
+  .stat-num { font-size:44px; font-weight:900; display:block; line-height:1; }
+  .stat-num.gold { color:var(--gold); }
+  .stat-num.terra { color:var(--terra); }
+  .stat-num.teal { color:var(--teal); }
+  .stat-label { color:var(--muted); font-size:13px; letter-spacing:0.5px; margin-top:4px; display:block; }
+  .video-wrap { max-width:980px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 30px 80px rgba(212,165,116,0.30); border:1px solid rgba(161,155,253,0.2); }
+  .video-ratio { position:relative; padding-bottom:56.25%; height:0; background:#000; }
+  .video-ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  .section { padding:72px 24px; max-width:1200px; margin:0 auto; }
+  .section h2 { font-size:clamp(28px,4.4vw,42px); font-weight:900; text-align:center; margin-bottom:16px; }
+  .section .lead { color:var(--muted); text-align:center; max-width:760px; margin:0 auto 48px; font-size:17px; }
+
+  /* Languages grid */
+  .langs { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .lang-row { display:grid; grid-template-columns:140px 1fr; gap:22px; align-items:center; padding:18px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:14px; }
+  .lang-row.l1 { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .lang-row.l2 { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .lang-row.l3 { border-color:var(--teal); background:linear-gradient(90deg, rgba(22,160,133,0.18), rgba(22,160,133,0.04)); }
+  .lang-row.l4 { border-color:var(--terra); background:linear-gradient(90deg, rgba(212,165,116,0.18), rgba(212,165,116,0.04)); }
+  .lang-row.l5 { border-color:var(--red); background:linear-gradient(90deg, rgba(231,76,60,0.18), rgba(231,76,60,0.04)); }
+  .lang-row .n { font-family:"Arial Black",sans-serif; font-size:38px; font-weight:900; }
+  .lang-row.l1 .n { color:var(--blue); }
+  .lang-row.l2 .n { color:var(--gold); }
+  .lang-row.l3 .n { color:var(--teal); }
+  .lang-row.l4 .n { color:var(--terra); }
+  .lang-row.l5 .n { color:var(--red); }
+  .lang-row h3 { font-size:22px; font-weight:900; margin-bottom:4px; letter-spacing:1px; }
+  .lang-row p { color:rgba(255,255,255,0.78); font-size:15px; }
+
+  /* Pillars stack */
+  .pillars { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .pillar { display:grid; grid-template-columns:90px 1fr; gap:22px; align-items:center; padding:22px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:14px; }
+  .pillar.p1 { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .pillar.p2 { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .pillar.p3 { border-color:var(--teal); background:linear-gradient(90deg, rgba(22,160,133,0.18), rgba(22,160,133,0.04)); }
+  .pillar.p4 { border-color:var(--purple); background:linear-gradient(90deg, rgba(161,155,253,0.18), rgba(161,155,253,0.04)); }
+  .pillar.p5 { border-color:var(--terra); background:linear-gradient(90deg, rgba(212,165,116,0.18), rgba(212,165,116,0.04)); }
+  .pillar .num { width:72px; height:72px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:"Arial Black",sans-serif; font-size:42px; font-weight:900; color:var(--dark); }
+  .pillar.p1 .num { background:var(--blue); }
+  .pillar.p2 .num { background:var(--gold); }
+  .pillar.p3 .num { background:var(--teal); }
+  .pillar.p4 .num { background:var(--purple); }
+  .pillar.p5 .num { background:var(--terra); }
+  .pillar .body h3 { font-size:22px; font-weight:900; margin-bottom:6px; letter-spacing:0.5px; }
+  .pillar .body p { color:rgba(255,255,255,0.78); font-size:14.5px; line-height:1.5; }
+
+  /* CTA */
+  .cta-strip { margin:48px auto; max-width:980px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; padding:40px 28px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg, var(--purple-deep), var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg, #ff0000, #c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+  .btn-green { background:linear-gradient(135deg, #25D366, #128C7E); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .lesson-nav { max-width:980px; margin:32px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .lesson-nav a { text-decoration:none; color:inherit; padding:22px 26px; background:rgba(161,155,253,0.06); border:1px dashed rgba(161,155,253,0.3); border-radius:14px; transition:transform 0.2s, background 0.2s; display:block; }
+  .lesson-nav a:hover { transform:translateY(-3px); background:rgba(161,155,253,0.12); }
+  .lesson-nav .dir { color:var(--purple); font-size:12px; font-weight:800; letter-spacing:1.2px; }
+  .lesson-nav h4 { font-size:20px; font-weight:900; margin:6px 0; }
+  .lesson-nav p { color:var(--muted); font-size:14px; }
+  .lesson-nav .prev { text-align:left; }
+  .lesson-nav .next { text-align:right; }
+  .lesson-nav .next.coming-soon { border-style:solid; opacity:0.85; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 36px; }
+    .section { padding:48px 18px; }
+    .stat-row { gap:22px; }
+    .lesson-nav { grid-template-columns:1fr; }
+    .lesson-nav .next { text-align:left; }
+    .nav-links a:not(.lang-toggle):not(.cta-nav) { display:none; }
+    .pillar, .lang-row { grid-template-columns:54px 1fr; gap:14px; padding:18px; }
+    .pillar .num { width:50px; height:50px; font-size:28px; border-radius:10px; }
+    .lang-row .n { font-size:28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com"><span class="dot"></span><span>Top AI Africa</span></a>
+  <div class="nav-links">
+    <a href="/course" data-en="Course" data-fr="Cours">Course</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/course" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</a>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Module 4" data-fr="Module 4">Module 4</span>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Lesson 4.1" data-fr="Le&ccedil;on 4.1">Lesson 4.1</span>
+  </div>
+  <div>
+    <span class="course-badge" data-en="FREE COURSE &middot; MODULE 4 &middot; LESSON 4.1" data-fr="COURS GRATUIT &middot; MODULE 4 &middot; LE&Ccedil;ON 4.1">FREE COURSE &middot; MODULE 4 &middot; LESSON 4.1</span>
+    <span class="m4-badge"><span>🌍</span><span data-en="MULTILINGUAL FOUNDATION" data-fr="FONDATION MULTILINGUE">MULTILINGUAL FOUNDATION</span></span>
+  </div>
+  <div class="lesson-label" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</div>
+  <h1><span data-en="Multilingual Reality + The 5 Pillars" data-fr="R&eacute;alit&eacute; Multilingue + Les 5 Piliers">Multilingual Reality + The 5 Pillars</span></h1>
+  <p class="hero-sub" data-en="Module 4 foundation. Why single-language AI agents fail in Africa — and the 5 pillars that turn a monolingual agent into one that sounds native in every market your business serves." data-fr="Fondation du Module 4. Pourquoi les agents IA monolingues &eacute;chouent en Afrique &mdash; et les 5 piliers qui transforment un agent monolingue en un agent qui sonne natif dans chaque march&eacute; que votre entreprise sert.">Module 4 foundation. Why single-language AI agents fail in Africa — and the 5 pillars that turn a monolingual agent into one that sounds native in every market your business serves.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num terra">5</span><span class="stat-label" data-en="African languages" data-fr="Langues africaines">African languages</span></div>
+    <div class="stat"><span class="stat-num gold">5</span><span class="stat-label" data-en="Pillars to native" data-fr="Piliers vers natif">Pillars to native</span></div>
+    <div class="stat"><span class="stat-num teal">835M+</span><span class="stat-label" data-en="Speakers reachable" data-fr="Locuteurs atteignables">Speakers reachable</span></div>
+  </div>
+
+  <div class="video-wrap">
+    <div class="video-ratio">
+      <iframe id="lessonVideo" src="https://www.youtube.com/embed/tDukRQNzADs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Module 4 Lesson 4.1 — Multilingual Reality + The 5 Pillars"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- The 5 Languages -->
+<section class="section">
+  <h2 data-en="The 5 Languages of African Business" data-fr="Les 5 Langues du Business Africain">The 5 Languages of African Business</h2>
+  <p class="lead" data-en="If your agent only speaks one of these, you're locked out of the rest." data-fr="Si votre agent ne parle qu'une de celles-ci, vous &ecirc;tes verrouill&eacute; hors des autres.">If your agent only speaks one of these, you're locked out of the rest.</p>
+
+  <div class="langs">
+    <div class="lang-row l1">
+      <div class="n">280M</div>
+      <div>
+        <h3 data-en="FRENCH" data-fr="FRAN&Ccedil;AIS">FRENCH</h3>
+        <p data-en="West, Central, and North Africa &mdash; the largest francophone region in the world." data-fr="Afrique de l'Ouest, Centrale, et du Nord &mdash; la plus grande r&eacute;gion francophone au monde.">West, Central, and North Africa — the largest francophone region in the world.</p>
+      </div>
+    </div>
+    <div class="lang-row l2">
+      <div class="n">230M</div>
+      <div>
+        <h3 data-en="ENGLISH" data-fr="ANGLAIS">ENGLISH</h3>
+        <p data-en="East, West, and Southern Africa &mdash; Nigeria, Kenya, South Africa, Ghana, Uganda." data-fr="Afrique de l'Est, de l'Ouest, et Australe &mdash; Nigeria, Kenya, Afrique du Sud, Ghana, Ouganda.">East, West, and Southern Africa — Nigeria, Kenya, South Africa, Ghana, Uganda.</p>
+      </div>
+    </div>
+    <div class="lang-row l3">
+      <div class="n">200M</div>
+      <div>
+        <h3 data-en="SWAHILI" data-fr="SWAHILI">SWAHILI</h3>
+        <p data-en="East Africa &mdash; Kenya, Tanzania, DRC, Uganda. Fastest growing African business language." data-fr="Afrique de l'Est &mdash; Kenya, Tanzanie, RDC, Ouganda. Langue business africaine en plus forte croissance.">East Africa — Kenya, Tanzania, DRC, Uganda. Fastest growing African business language.</p>
+      </div>
+    </div>
+    <div class="lang-row l4">
+      <div class="n">100M+</div>
+      <div>
+        <h3 data-en="ARABIC" data-fr="ARABE">ARABIC</h3>
+        <p data-en="North Africa &mdash; Egypt, Morocco, Algeria, Tunisia. Distinct dialects per country." data-fr="Afrique du Nord &mdash; &Eacute;gypte, Maroc, Alg&eacute;rie, Tunisie. Dialectes distincts par pays.">North Africa — Egypt, Morocco, Algeria, Tunisia. Distinct dialects per country.</p>
+      </div>
+    </div>
+    <div class="lang-row l5">
+      <div class="n">25M</div>
+      <div>
+        <h3 data-en="KIRUNDI / KINYARWANDA" data-fr="KIRUNDI / KINYARWANDA">KIRUNDI / KINYARWANDA</h3>
+        <p data-en="Great Lakes region &mdash; Burundi, Rwanda, eastern DRC. Critical for regional commerce." data-fr="R&eacute;gion des Grands Lacs &mdash; Burundi, Rwanda, est de la RDC. Critique pour le commerce r&eacute;gional.">Great Lakes region — Burundi, Rwanda, eastern DRC. Critical for regional commerce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The 5 Pillars -->
+<section class="section" style="padding-top:0;">
+  <h2 data-en="The 5 Pillars of a Native-Sounding Agent" data-fr="Les 5 Piliers d'un Agent qui Sonne Natif">The 5 Pillars of a Native-Sounding Agent</h2>
+  <p class="lead" data-en="Each pillar is concrete, testable, and shippable in subsequent lessons." data-fr="Chaque pilier est concret, testable, et livrable dans les le&ccedil;ons suivantes.">Each pillar is concrete, testable, and shippable in subsequent lessons.</p>
+
+  <div class="pillars">
+    <div class="pillar p1">
+      <div class="num">1</div>
+      <div class="body">
+        <h3 data-en="DETECT" data-fr="D&Eacute;TECTER">DETECT</h3>
+        <p data-en="Before the agent speaks, it must know which language the customer is using. Tactics: fastText or Claude classifier on the first message, respect customer profile language, handle code-switching (many African customers mix two languages)." data-fr="Avant que l'agent parle, il doit savoir quelle langue le client utilise. Tactiques&nbsp;: fastText ou classifieur Claude au premier message, respecter la langue du profil, g&eacute;rer le code-switching (beaucoup de clients africains m&eacute;langent deux langues).">Before the agent speaks, it must know which language the customer is using. Tactics: fastText or Claude classifier on the first message, respect customer profile language, handle code-switching (many African customers mix two languages).</p>
+      </div>
+    </div>
+    <div class="pillar p2">
+      <div class="num">2</div>
+      <div class="body">
+        <h3 data-en="GREET" data-fr="SALUER">GREET</h3>
+        <p data-en="Native greeting, not translation. Kirundi: different greeting morning vs afternoon. Swahili: greeting opens a small conversation before the question. Arabic: formality level matters. A hardcoded 'hello' kills the warmth." data-fr="Salutation native, pas traduction. Kirundi&nbsp;: salutation diff&eacute;rente matin vs apr&egrave;s-midi. Swahili&nbsp;: la salutation ouvre une petite conversation avant la question. Arabe&nbsp;: niveau de formalit&eacute; compte. Un &laquo;&nbsp;bonjour&nbsp;&raquo; cod&eacute; en dur tue la chaleur.">Native greeting, not translation. Kirundi: different greeting morning vs afternoon. Swahili: greeting opens a small conversation before the question. Arabic: formality level matters. A hardcoded 'hello' kills the warmth.</p>
+      </div>
+    </div>
+    <div class="pillar p3">
+      <div class="num">3</div>
+      <div class="body">
+        <h3 data-en="REPLY" data-fr="R&Eacute;PONDRE">REPLY</h3>
+        <p data-en="One system prompt per language &mdash; not one prompt translated by Claude on the fly. Each system prompt encodes local business norms, local pricing format, local complaint handling. Claude Sonnet 4.6 handles FR + Swahili natively; Kirundi needs more in-context examples." data-fr="Un prompt syst&egrave;me par langue &mdash; pas un prompt traduit par Claude &agrave; la vol&eacute;e. Chaque prompt encode les normes business locales, le format des prix, la gestion des plaintes. Claude Sonnet 4.6 g&egrave;re FR + swahili nativement&nbsp;; le kirundi n&eacute;cessite plus d'exemples.">One system prompt per language — not one prompt translated by Claude on the fly. Each system prompt encodes local business norms, local pricing format, local complaint handling. Claude Sonnet 4.6 handles FR + Swahili natively; Kirundi needs more in-context examples.</p>
+      </div>
+    </div>
+    <div class="pillar p4">
+      <div class="num">4</div>
+      <div class="body">
+        <h3 data-en="KNOWLEDGE" data-fr="CONNAISSANCE">KNOWLEDGE</h3>
+        <p data-en="Do NOT auto-translate your French FAQ into Swahili and call it done. Auto-translation loses nuance, prices in wrong format, cultural references that don't transfer. Create ONE KB shard per language, written/reviewed by a native speaker. Vector DB indexes them separately, retrieve from matching language." data-fr="Ne traduisez PAS automatiquement votre FAQ fran&ccedil;aise en swahili. La traduction auto perd les nuances, les prix au mauvais format, les r&eacute;f&eacute;rences culturelles. Cr&eacute;ez UN shard de KB par langue, &eacute;crit/r&eacute;vis&eacute; par un natif. La base vectorielle les indexe s&eacute;par&eacute;ment, r&eacute;cup&eacute;rez de la langue correspondante.">Do NOT auto-translate your French FAQ into Swahili and call it done. Auto-translation loses nuance, prices in wrong format, cultural references that don't transfer. Create ONE KB shard per language, written/reviewed by a native speaker. Vector DB indexes them separately, retrieve from matching language.</p>
+      </div>
+    </div>
+    <div class="pillar p5">
+      <div class="num">5</div>
+      <div class="body">
+        <h3 data-en="TONE" data-fr="TON">TONE</h3>
+        <p data-en="Native idiom, not literal translation. In French Africa, 'on se voit' is warmer than 'à bientôt'. In Swahili, 'karibu sana' welcomes more than 'welcome'. In Kirundi, addressing elders requires honorifics. Test with native speakers, not just bilingual ones." data-fr="Idiome natif, pas traduction litt&eacute;rale. En Afrique francophone, &laquo;&nbsp;on se voit&nbsp;&raquo; est plus chaud que &laquo;&nbsp;&agrave; bient&ocirc;t&nbsp;&raquo;. En swahili, &laquo;&nbsp;karibu sana&nbsp;&raquo; accueille mieux que &laquo;&nbsp;bienvenue&nbsp;&raquo;. En kirundi, s'adresser aux a&icirc;n&eacute;s n&eacute;cessite des honorifiques. Testez avec des natifs.">Native idiom, not literal translation. In French Africa, 'on se voit' is warmer than 'à bientôt'. In Swahili, 'karibu sana' welcomes more than 'welcome'. In Kirundi, addressing elders requires honorifics. Test with native speakers, not just bilingual ones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="cta-strip">
+    <h3 data-en="Want a multilingual AI agent shipped for your business?" data-fr="Vous voulez un agent IA multilingue livr&eacute; pour votre entreprise ?">Want a multilingual AI agent shipped for your business?</h3>
+    <p data-en="Top AI Africa deploys the full stack &mdash; multilingual WhatsApp agents that sound native in French, English, Swahili, Arabic, and Kirundi. Free 15-min strategy call to see if your business is a fit." data-fr="Top AI Africa d&eacute;ploie le stack complet &mdash; agents WhatsApp multilingues qui sonnent natifs en fran&ccedil;ais, anglais, swahili, arabe, et kirundi. Appel strat&eacute;gie gratuit de 15 min.">Top AI Africa deploys the full stack — multilingual WhatsApp agents that sound native in French, English, Swahili, Arabic, and Kirundi. Free 15-min strategy call to see if your business is a fit.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/15144669402?text=Hello%20Top%20AI%20Africa%2C%20I%27d%20like%20a%20multilingual%20WhatsApp%20AI%20agent%20for%20my%20business" class="btn btn-green">
+        <span>&#128172;</span>
+        <span data-en="Build with us &mdash; WhatsApp" data-fr="Construire avec nous &mdash; WhatsApp">Build with us — WhatsApp</span>
+      </a>
+      <a href="https://topaiafrica.com/en/contact/" class="btn btn-primary" data-en="Book Free Strategy Call &rarr;" data-fr="R&eacute;server un Appel Gratuit &rarr;">Book Free Strategy Call &rarr;</a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe for Lesson 4.2" data-fr="S'abonner pour la Le&ccedil;on 4.2">Subscribe for Lesson 4.2</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="lesson-nav" aria-label="Lesson navigation">
+    <a href="/course-module3-lesson34.html" class="prev">
+      <div class="dir" data-en="&larr; PREVIOUS" data-fr="&larr; PR&Eacute;C&Eacute;DENT">&larr; PREVIOUS</div>
+      <h4 data-en="Lesson 3.4 &mdash; Going Live + Monitoring" data-fr="Le&ccedil;on 3.4 &mdash; Mise en Ligne + Supervision">Lesson 3.4 — Going Live + Monitoring</h4>
+      <p data-en="Module 3 finale. Production deploy + monitoring dashboard." data-fr="Finale du Module 3. D&eacute;ploiement production + tableau de bord.">Module 3 finale. Production deploy + monitoring dashboard.</p>
+    </a>
+    <a href="/course-module4-lesson42.html" class="next">
+      <div class="dir" data-en="NEXT &rarr;" data-fr="SUIVANT &rarr;">NEXT &rarr;</div>
+      <h4 data-en="Lesson 4.2 &mdash; The Language Detector at the Gate" data-fr="Le&ccedil;on 4.2 &mdash; Le D&eacute;tecteur de Langue &agrave; la Porte">Lesson 4.2 — The Language Detector at the Gate</h4>
+      <p data-en="Live code: Claude classifier + fastText fallback. Under 50ms latency." data-fr="Code en direct&nbsp;: classifieur Claude + fallback fastText. Latence sous 50ms.">Live code: Claude classifier + fastText fallback. Under 50ms latency.</p>
+    </a>
+  </nav>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="/course" data-en="All lessons" data-fr="Toutes les le&ccedil;ons">All lessons</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  const VIDEO_EN = 'tDukRQNzADs';
+  const VIDEO_FR = 'ksF90k0Ctn0';
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    const frame = document.getElementById('lessonVideo');
+    const videoId = lang === 'fr' ? VIDEO_FR : VIDEO_EN;
+    if (frame && !frame.src.includes(videoId)) {
+      frame.src = 'https://www.youtube.com/embed/' + videoId;
+    }
+    try { localStorage.setItem('topai_lang', lang); } catch (e) {}
+  }
+
+  (function() {
+    let lang = 'en';
+    try { lang = localStorage.getItem('topai_lang') || (navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en'; } catch (e) {}
+    if (lang === 'fr') switchLang('fr');
+  })();
+</script>
+
+</body>
+</html>

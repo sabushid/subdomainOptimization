@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4 &middot; Lesson 4.4 — Native Voice Layer (Module 4 Finale) | Top AI Africa</title>
+<meta name="description" content="Module 4 finale: clone your agent's voice in 5 languages with ElevenLabs. Source samples, clone via Voice Lab, per-language voice map, TTS the Claude reply, send as WhatsApp audio. Optional layer, big perceived value, $22–99/mo.">
+<meta name="keywords" content="voice cloning, ElevenLabs, multilingual TTS, WhatsApp voice message, voice clone, Top AI Africa Module 4 finale">
+<link rel="canonical" href="https://topaiafrica.com/course/module-4/lesson-4">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Module 4 · Lesson 4.4 — Native Voice Layer (Module 4 Finale)">
+<meta property="og:description" content="Clone the agent's voice in 5 languages. ElevenLabs + WhatsApp audio. Finale Module 4.">
+<meta property="og:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson44-EN.png">
+<meta property="og:url" content="https://topaiafrica.com/course/module-4/lesson-4">
+<meta property="og:video" content="https://www.youtube.com/embed/YXT-u5p4kzo">
+<meta name="twitter:card" content="player">
+<meta name="twitter:title" content="Native Voice Layer — Clone Your Agent's Voice in 5 Languages (Lesson 4.4)">
+<meta name="twitter:description" content="Module 4 finale from Top AI Africa. ElevenLabs voice cloning per language + WhatsApp audio.">
+<meta name="twitter:image" content="https://topaiafrica.com/Thumbnail-Module4-Lesson44-EN.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Native Voice Layer — Clone Your Agent's Voice in 5 Languages (Module 4 Finale, Lesson 4.4)",
+  "description": "Module 4 finale of the free WhatsApp AI Agent Mastery course by Top AI Africa. ElevenLabs voice cloning per language (French, English, Swahili, Arabic, Kirundi), per-language voice map, TTS through eleven_multilingual_v2, and delivery as WhatsApp audio messages via Meta's media endpoint. Optional layer with big perceived value. Marginal cost on top of text agent: $22 to $99/month.",
+  "thumbnailUrl": "https://topaiafrica.com/Thumbnail-Module4-Lesson44-EN.png",
+  "uploadDate": "2026-05-23",
+  "contentUrl": "https://www.youtube.com/watch?v=YXT-u5p4kzo",
+  "embedUrl": "https://www.youtube.com/embed/YXT-u5p4kzo",
+  "duration": "PT5M21S",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Top AI Africa",
+    "logo": { "@type": "ImageObject", "url": "https://topaiafrica.com/wp-content/uploads/2025/10/top-ai-africa-logo-v5.png" }
+  }
+}
+</script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --dark:#0a0a1e; --purple:#a19bfd; --purple-deep:#6c5ce7;
+    --gold:#f1c40f; --white:#ffffff; --muted:#9aa0b4;
+    --red:#e74c3c; --green:#2ecc71; --whatsapp:#25D366; --blue:#3498db;
+    --terra:#d4a574; --teal:#16a085; --pink:#e84393;
+  }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:var(--white); line-height:1.6; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,30,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(161,155,253,0.15); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); font-weight:800; font-size:17px; }
+  .brand .dot { width:9px; height:9px; background:var(--gold); border-radius:50%; }
+  .nav-links { display:flex; align-items:center; gap:20px; }
+  .nav-links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+  .nav-links a:hover { color:var(--white); }
+  .lang-toggle { display:inline-flex; border:1px solid rgba(161,155,253,0.3); border-radius:24px; overflow:hidden; }
+  .lang-btn { background:transparent; color:var(--muted); border:0; padding:6px 14px; cursor:pointer; font-weight:700; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:var(--purple-deep); color:var(--white); }
+
+  .hero { padding:80px 24px 60px; max-width:1200px; margin:0 auto; text-align:center; }
+  .breadcrumb { font-size:13px; color:var(--muted); margin-bottom:20px; letter-spacing:1px; }
+  .breadcrumb a { color:var(--purple); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--white); }
+  .course-badge { display:inline-block; background:linear-gradient(135deg, var(--gold), #e67e22); color:var(--dark); padding:7px 18px; border-radius:24px; font-weight:800; font-size:12px; letter-spacing:1.2px; margin-bottom:20px; }
+  .m4-badge { display:inline-flex; gap:6px; align-items:center; background:rgba(232,67,147,0.18); color:var(--pink); border:1px solid var(--pink); padding:6px 14px; border-radius:20px; font-weight:800; font-size:11px; letter-spacing:1.2px; margin-bottom:20px; margin-left:12px; }
+  .hero h1 { font-size:clamp(32px,6vw,58px); line-height:1.1; font-weight:900; margin-bottom:18px; background:linear-gradient(120deg,#fff 0%,var(--pink) 60%,var(--gold) 120%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero .lesson-label { color:var(--purple); font-weight:700; margin-bottom:10px; letter-spacing:1px; font-size:13px; text-transform:uppercase; }
+  .hero .hero-sub { color:var(--muted); font-size:18px; max-width:780px; margin:0 auto 36px; }
+  .stat-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:24px 0 40px; }
+  .stat { text-align:center; min-width:140px; }
+  .stat-num { font-size:44px; font-weight:900; display:block; line-height:1; }
+  .stat-num.gold { color:var(--gold); }
+  .stat-num.pink { color:var(--pink); }
+  .stat-num.green { color:var(--green); }
+  .stat-label { color:var(--muted); font-size:13px; letter-spacing:0.5px; margin-top:4px; display:block; }
+  .video-wrap { max-width:980px; margin:0 auto; border-radius:20px; overflow:hidden; box-shadow:0 30px 80px rgba(232,67,147,0.30); border:1px solid rgba(161,155,253,0.2); }
+  .video-ratio { position:relative; padding-bottom:56.25%; height:0; background:#000; }
+  .video-ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  .section { padding:72px 24px; max-width:1200px; margin:0 auto; }
+  .section h2 { font-size:clamp(28px,4.4vw,42px); font-weight:900; text-align:center; margin-bottom:16px; }
+  .section .lead { color:var(--muted); text-align:center; max-width:760px; margin:0 auto 48px; font-size:17px; }
+
+  /* Steps stack */
+  .steps { max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+  .step { display:grid; grid-template-columns:90px 1fr; gap:22px; align-items:center; padding:22px 28px; background:rgba(255,255,255,0.03); border:2px solid; border-radius:14px; }
+  .step.s1 { border-color:var(--teal); background:linear-gradient(90deg, rgba(22,160,133,0.18), rgba(22,160,133,0.04)); }
+  .step.s2 { border-color:var(--pink); background:linear-gradient(90deg, rgba(232,67,147,0.18), rgba(232,67,147,0.04)); }
+  .step.s3 { border-color:var(--blue); background:linear-gradient(90deg, rgba(52,152,219,0.18), rgba(52,152,219,0.04)); }
+  .step.s4 { border-color:var(--gold); background:linear-gradient(90deg, rgba(241,196,15,0.18), rgba(241,196,15,0.04)); }
+  .step.s5 { border-color:var(--green); background:linear-gradient(90deg, rgba(46,204,113,0.18), rgba(46,204,113,0.04)); }
+  .step .num { width:72px; height:72px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-family:"Arial Black",sans-serif; font-size:42px; font-weight:900; color:var(--dark); }
+  .step.s1 .num { background:var(--teal); }
+  .step.s2 .num { background:var(--pink); }
+  .step.s3 .num { background:var(--blue); }
+  .step.s4 .num { background:var(--gold); }
+  .step.s5 .num { background:var(--green); }
+  .step .body h3 { font-size:22px; font-weight:900; margin-bottom:6px; letter-spacing:0.5px; }
+  .step .body p { color:rgba(255,255,255,0.78); font-size:14.5px; line-height:1.5; }
+
+  /* Cost recap */
+  .cost-recap { max-width:980px; margin:48px auto 0; padding:36px; background:linear-gradient(135deg, rgba(46,204,113,0.10), rgba(241,196,15,0.06)); border:2px solid rgba(46,204,113,0.4); border-radius:20px; text-align:center; }
+  .cost-recap .tc-tag { font-size:13px; font-weight:800; color:var(--green); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+  .cost-recap .tc-amount { font-family:"Arial Black",sans-serif; font-size:50px; font-weight:900; color:var(--white); line-height:1; }
+  .cost-recap .tc-amount .gold { color:var(--gold); }
+  .cost-recap .tc-sub { color:var(--muted); font-size:15px; margin-top:14px; }
+
+  /* CTA */
+  .cta-strip { margin:48px auto; max-width:980px; background:linear-gradient(135deg, rgba(108,92,231,0.18), rgba(241,196,15,0.08)); border:1px solid rgba(241,196,15,0.25); border-radius:18px; padding:40px 28px; text-align:center; }
+  .cta-strip h3 { font-size:26px; font-weight:900; margin-bottom:10px; }
+  .cta-strip p { color:var(--muted); margin-bottom:22px; }
+  .cta-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:30px; font-weight:800; font-size:15px; text-decoration:none; transition:transform 0.15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn-primary { background:linear-gradient(135deg, var(--purple-deep), var(--purple)); color:var(--white); }
+  .btn-red { background:linear-gradient(135deg, #ff0000, #c00); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+  .btn-green { background:linear-gradient(135deg, #25D366, #128C7E); color:var(--white); display:inline-flex; align-items:center; gap:8px; }
+
+  .lesson-nav { max-width:980px; margin:32px auto 0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .lesson-nav a { text-decoration:none; color:inherit; padding:22px 26px; background:rgba(161,155,253,0.06); border:1px dashed rgba(161,155,253,0.3); border-radius:14px; transition:transform 0.2s, background 0.2s; display:block; }
+  .lesson-nav a:hover { transform:translateY(-3px); background:rgba(161,155,253,0.12); }
+  .lesson-nav .dir { color:var(--purple); font-size:12px; font-weight:800; letter-spacing:1.2px; }
+  .lesson-nav h4 { font-size:20px; font-weight:900; margin:6px 0; }
+  .lesson-nav p { color:var(--muted); font-size:14px; }
+  .lesson-nav .prev { text-align:left; }
+  .lesson-nav .next { text-align:right; }
+  .lesson-nav .next.coming-soon { border-style:solid; opacity:0.85; }
+
+  footer { background:#06061a; padding:40px 24px 20px; text-align:center; border-top:1px solid rgba(161,155,253,0.1); color:var(--muted); font-size:13px; }
+  footer a { color:var(--purple); text-decoration:none; }
+  footer a:hover { color:var(--white); }
+  .social-row { margin:16px 0; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .social-row a { font-weight:700; }
+
+  @media (max-width:720px) {
+    .hero { padding:48px 18px 36px; }
+    .section { padding:48px 18px; }
+    .stat-row { gap:22px; }
+    .lesson-nav { grid-template-columns:1fr; }
+    .lesson-nav .next { text-align:left; }
+    .nav-links a:not(.lang-toggle):not(.cta-nav) { display:none; }
+    .step { grid-template-columns:54px 1fr; gap:14px; padding:18px; }
+    .step .num { width:50px; height:50px; font-size:28px; border-radius:10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="https://topaiafrica.com"><span class="dot"></span><span>Top AI Africa</span></a>
+  <div class="nav-links">
+    <a href="/course" data-en="Course" data-fr="Cours">Course</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="switchLang('fr')">FR</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/course" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</a>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Module 4" data-fr="Module 4">Module 4</span>
+    &nbsp;&middot;&nbsp;
+    <span data-en="Lesson 4.4 (Finale)" data-fr="Le&ccedil;on 4.4 (Finale)">Lesson 4.4 (Finale)</span>
+  </div>
+  <div>
+    <span class="course-badge" data-en="FREE COURSE &middot; MODULE 4 &middot; FINALE" data-fr="COURS GRATUIT &middot; MODULE 4 &middot; FINALE">FREE COURSE &middot; MODULE 4 &middot; FINALE</span>
+    <span class="m4-badge"><span>🎙️</span><span data-en="NATIVE VOICE LAYER" data-fr="COUCHE VOIX NATIVE">NATIVE VOICE LAYER</span></span>
+  </div>
+  <div class="lesson-label" data-en="WhatsApp AI Agent Mastery" data-fr="Ma&icirc;trise de l'Agent IA WhatsApp">WhatsApp AI Agent Mastery</div>
+  <h1><span data-en="Native Voice Layer (Optional)" data-fr="Couche Voix Native (Optionnelle)">Native Voice Layer (Optional)</span></h1>
+  <p class="hero-sub" data-en="Module 4 finale. The agent stops just writing native — it starts SPEAKING native. ElevenLabs voice cloning per language. When the customer texts in Kirundi, they hear back in a native Kirundi voice. Optional layer, big perceived value. $22–99/mo marginal." data-fr="Finale du Module 4. L'agent arr&ecirc;te juste d'&eacute;crire natif &mdash; il commence &agrave; PARLER natif. Clonage vocal ElevenLabs par langue. Quand le client texte en kirundi, il entend la r&eacute;ponse dans une voix native kirundi. Couche optionnelle, grande valeur per&ccedil;ue. 22&ndash;99 $/mois marginal.">Module 4 finale. The agent stops just writing native — it starts SPEAKING native. ElevenLabs voice cloning per language. When the customer texts in Kirundi, they hear back in a native Kirundi voice. Optional layer, big perceived value. $22–99/mo marginal.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num pink">5</span><span class="stat-label" data-en="Voice clones" data-fr="Voix clon&eacute;es">Voice clones</span></div>
+    <div class="stat"><span class="stat-num gold">$22–99</span><span class="stat-label" data-en="Per month" data-fr="Par mois">Per month</span></div>
+    <div class="stat"><span class="stat-num green">$0</span><span class="stat-label" data-en="Audio delivery cost" data-fr="Co&ucirc;t livraison audio">Audio delivery cost</span></div>
+  </div>
+
+  <div class="video-wrap">
+    <div class="video-ratio">
+      <iframe id="lessonVideo" src="https://www.youtube.com/embed/YXT-u5p4kzo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Module 4 Lesson 4.4 — Native Voice Layer"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- The Steps -->
+<section class="section">
+  <h2 data-en="The 5 Steps You'll Execute" data-fr="Les 5 &Eacute;tapes &agrave; Ex&eacute;cuter">The 5 Steps You'll Execute</h2>
+  <p class="lead" data-en="By the end: when a customer messages in Kirundi, they hear back in a native Kirundi voice. Same for FR, EN, Swahili, Arabic." data-fr="&Agrave; la fin&nbsp;: quand un client envoie un message en kirundi, il entend la r&eacute;ponse dans une voix native kirundi. Pareil pour FR, EN, swahili, arabe.">By the end: when a customer messages in Kirundi, they hear back in a native Kirundi voice. Same for FR, EN, Swahili, Arabic.</p>
+
+  <div class="steps">
+    <div class="step s1">
+      <div class="num">1</div>
+      <div class="body">
+        <h3 data-en="Source the Voice Samples" data-fr="Sourcer les &Eacute;chantillons">Source the Voice Samples</h3>
+        <p data-en="5 min of CLEAN audio per language from a native speaker. No noise, no music. Varied script: tones, numbers, greetings. Quality matters more than length. Always get written consent before cloning." data-fr="5 min d'audio PROPRE par langue d'un locuteur natif. Pas de bruit, pas de musique. Script vari&eacute;&nbsp;: tons, chiffres, salutations. La qualit&eacute; prime sur la longueur. Toujours obtenir un consentement &eacute;crit avant de cloner.">5 min of CLEAN audio per language from a native speaker. No noise, no music. Varied script: tones, numbers, greetings. Quality matters more than length. Always get written consent before cloning.</p>
+      </div>
+    </div>
+    <div class="step s2">
+      <div class="num">2</div>
+      <div class="body">
+        <h3 data-en="Clone Each Voice (ElevenLabs)" data-fr="Cloner Chaque Voix (ElevenLabs)">Clone Each Voice (ElevenLabs)</h3>
+        <p data-en="Voice Lab → Add Voice → Instant Voice Clone. Upload the 5-min sample. Name clearly: agent_voice_french, agent_voice_swahili. ElevenLabs returns a voice_id for each. Clone is ready in under 60 seconds. Test before production." data-fr="Voice Lab &rarr; Add Voice &rarr; Instant Voice Clone. T&eacute;l&eacute;chargez l'&eacute;chantillon de 5 min. Nommez clairement&nbsp;: agent_voice_french, agent_voice_swahili. ElevenLabs retourne un voice_id par voix. Pr&ecirc;t en moins de 60 secondes. Testez avant production.">Voice Lab → Add Voice → Instant Voice Clone. Upload the 5-min sample. Name clearly: agent_voice_french, agent_voice_swahili. ElevenLabs returns a voice_id for each. Clone is ready in under 60 seconds. Test before production.</p>
+      </div>
+    </div>
+    <div class="step s3">
+      <div class="num">3</div>
+      <div class="body">
+        <h3 data-en="Per-Language Voice Map" data-fr="Map Vocale par Langue">Per-Language Voice Map</h3>
+        <p data-en="Same pattern as Lesson 4.3 — config map. Key = lang code, value = voice ID. VOICE_MAP = { 'fr': voice_id_fr, 'en': voice_id_en, 'sw': voice_id_sw, 'ar': voice_id_ar, 'rn': voice_id_rn }. Store IDs in env vars (don't hardcode)." data-fr="M&ecirc;me pattern que Le&ccedil;on 4.3 &mdash; map config. Cl&eacute; = code langue, valeur = voice ID. VOICE_MAP = { 'fr': voice_id_fr, 'en': voice_id_en, 'sw': voice_id_sw, 'ar': voice_id_ar, 'rn': voice_id_rn }. Stockez les IDs dans des env vars (ne hardcodez pas).">Same pattern as Lesson 4.3 — config map. Key = lang code, value = voice ID. VOICE_MAP = { 'fr': voice_id_fr, 'en': voice_id_en, 'sw': voice_id_sw, 'ar': voice_id_ar, 'rn': voice_id_rn }. Store IDs in env vars (don't hardcode).</p>
+      </div>
+    </div>
+    <div class="step s4">
+      <div class="num">4</div>
+      <div class="body">
+        <h3 data-en="TTS the Response" data-fr="TTS de la R&eacute;ponse">TTS the Response</h3>
+        <p data-en="After Claude generates the reply in the matched language, POST to api.elevenlabs.io/v1/text-to-speech/{voice_id}. Use eleven_multilingual_v2 — handles all 5 languages cleanly. Response: MP3 file. Save to temp storage on your server." data-fr="Apr&egrave;s que Claude g&eacute;n&egrave;re la r&eacute;ponse dans la langue correspondante, POST sur api.elevenlabs.io/v1/text-to-speech/{voice_id}. Utilisez eleven_multilingual_v2 &mdash; g&egrave;re les 5 langues proprement. R&eacute;ponse&nbsp;: fichier MP3. Sauvegardez en stockage temp sur votre serveur.">After Claude generates the reply in the matched language, POST to api.elevenlabs.io/v1/text-to-speech/{voice_id}. Use eleven_multilingual_v2 — handles all 5 languages cleanly. Response: MP3 file. Save to temp storage on your server.</p>
+      </div>
+    </div>
+    <div class="step s5">
+      <div class="num">5</div>
+      <div class="body">
+        <h3 data-en="Send as WhatsApp Audio" data-fr="Envoyer comme Audio WhatsApp">Send as WhatsApp Audio</h3>
+        <p data-en="WhatsApp Cloud API supports audio natively. Upload MP3 to Meta's /media endpoint → returns media_id. Send a message of type 'audio' with that media_id. Customer's phone receives a voice note. They tap play → hear the agent speak in their language. Magic — but it's just 5 connected APIs." data-fr="L'API WhatsApp Cloud supporte l'audio nativement. Uploadez le MP3 sur l'endpoint /media de Meta &rarr; retourne media_id. Envoyez un message de type 'audio' avec ce media_id. T&eacute;l&eacute;phone du client re&ccedil;oit une note vocale. Il tape play &rarr; entend l'agent parler dans sa langue. Magique &mdash; mais ce n'est que 5 APIs connect&eacute;es.">WhatsApp Cloud API supports audio natively. Upload MP3 to Meta's /media endpoint → returns media_id. Send a message of type 'audio' with that media_id. Customer's phone receives a voice note. They tap play → hear the agent speak in their language. Magic — but it's just 5 connected APIs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cost recap -->
+  <div class="cost-recap">
+    <div class="tc-tag" data-en="Voice layer cost" data-fr="Co&ucirc;t couche voix">Voice layer cost</div>
+    <div class="tc-amount"><span class="gold">$22–99</span> <span style="font-size:24px; color:var(--muted); font-weight:600;" data-en="/month marginal" data-fr="/mois marginal">/month marginal</span></div>
+    <div class="tc-sub" data-en="ElevenLabs Creator: $22/mo (~300 audio replies) · ElevenLabs Pro: $99/mo (~1,500 replies) · WhatsApp audio delivery: $0 extra. Customers remember voices — text is forgotten." data-fr="ElevenLabs Creator&nbsp;: 22 $/mois (~300 r&eacute;ponses audio) &middot; ElevenLabs Pro&nbsp;: 99 $/mois (~1 500 r&eacute;ponses) &middot; Livraison audio WhatsApp&nbsp;: 0 $ extra. Les clients retiennent les voix &mdash; le texte est oubli&eacute;.">ElevenLabs Creator: $22/mo (~300 audio replies) · ElevenLabs Pro: $99/mo (~1,500 replies) · WhatsApp audio delivery: $0 extra. Customers remember voices — text is forgotten.</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="cta-strip">
+    <h3 data-en="Want a multilingual WhatsApp AI agent with voice shipped for your business?" data-fr="Vous voulez un agent IA WhatsApp multilingue avec voix livr&eacute; pour votre entreprise ?">Want a multilingual WhatsApp AI agent with voice shipped for your business?</h3>
+    <p data-en="Top AI Africa deploys the full Module 4 stack — language detection, native prompts, native KB, voice cloning per language. WhatsApp agents that sound native in French, English, Swahili, Arabic, Kirundi. Free 15-min strategy call." data-fr="Top AI Africa d&eacute;ploie le stack complet du Module 4 &mdash; d&eacute;tection de langue, prompts natifs, KB native, clonage vocal par langue. Agents WhatsApp qui sonnent natifs en fran&ccedil;ais, anglais, swahili, arabe, kirundi. Appel strat&eacute;gie gratuit de 15 min.">Top AI Africa deploys the full Module 4 stack — language detection, native prompts, native KB, voice cloning per language. WhatsApp agents that sound native in French, English, Swahili, Arabic, Kirundi. Free 15-min strategy call.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/15144669402?text=Hello%20Top%20AI%20Africa%2C%20I%27d%20like%20a%20multilingual%20WhatsApp%20AI%20agent%20with%20voice%20for%20my%20business" class="btn btn-green">
+        <span>&#128172;</span>
+        <span data-en="Build with us &mdash; WhatsApp" data-fr="Construire avec nous &mdash; WhatsApp">Build with us — WhatsApp</span>
+      </a>
+      <a href="https://topaiafrica.com/en/contact/" class="btn btn-primary" data-en="Book Free Strategy Call &rarr;" data-fr="R&eacute;server un Appel Gratuit &rarr;">Book Free Strategy Call &rarr;</a>
+      <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-red">
+        <span>&#9654;</span>
+        <span data-en="Subscribe for Module 5" data-fr="S'abonner pour le Module 5">Subscribe for Module 5</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="lesson-nav" aria-label="Lesson navigation">
+    <a href="/course-module4-lesson43.html" class="prev">
+      <div class="dir" data-en="&larr; PREVIOUS" data-fr="&larr; PR&Eacute;C&Eacute;DENT">&larr; PREVIOUS</div>
+      <h4 data-en="Lesson 4.3 &mdash; Multilingual Prompts + KB" data-fr="Le&ccedil;on 4.3 &mdash; Prompts Multilingues + KB">Lesson 4.3 — Multilingual Prompts + KB</h4>
+      <p data-en="5 native system prompts + 5 KB shards. Scoped RAG." data-fr="5 prompts syst&egrave;me natifs + 5 shards KB. RAG limit&eacute;.">5 native system prompts + 5 KB shards. Scoped RAG.</p>
+    </a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener" class="next coming-soon">
+      <div class="dir" data-en="NEXT &middot; MODULE 5 &rarr;" data-fr="SUIVANT &middot; MODULE 5 &rarr;">NEXT &middot; MODULE 5 &rarr;</div>
+      <h4 data-en="Module 5 &mdash; Integrations + Workflows" data-fr="Module 5 &mdash; Int&eacute;grations + Workflows">Module 5 — Integrations + Workflows</h4>
+      <p data-en="CRM · Payments · Booking · Voice calls · Human handoff" data-fr="CRM &middot; Paiements &middot; R&eacute;servation &middot; Appels vocaux &middot; Transfert humain">CRM · Payments · Booking · Voice calls · Human handoff</p>
+    </a>
+  </nav>
+</section>
+
+<footer>
+  <p style="margin-bottom:10px;" data-en="Top AI Africa &mdash; AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi." data-fr="Top AI Africa &mdash; Automatisation IA pour les entreprises africaines. Montr&eacute;al, Canada &amp; Bujumbura, Burundi.">Top AI Africa — AI automation for African businesses. Montreal, Canada &amp; Bujumbura, Burundi.</p>
+  <div class="social-row">
+    <a href="https://topaiafrica.com">topaiafrica.com</a>
+    <a href="/course" data-en="All lessons" data-fr="Toutes les le&ccedil;ons">All lessons</a>
+    <a href="https://www.youtube.com/@TopAIAfrica?sub_confirmation=1" target="_blank" rel="noopener">&#9654; YouTube</a>
+    <a href="mailto:info@topaiafrica.com">info@topaiafrica.com</a>
+    <a href="https://wa.me/15144669402">+1 514 466 9402</a>
+  </div>
+  <p>&copy; 2026 Top AI Africa. <span data-en="All rights reserved." data-fr="Tous droits r&eacute;serv&eacute;s.">All rights reserved.</span></p>
+</footer>
+
+<script>
+  const VIDEO_EN = 'YXT-u5p4kzo';
+  const VIDEO_FR = 'jJ_Klczrv5U';
+  let currentLang = 'en';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    const frame = document.getElementById('lessonVideo');
+    const videoId = lang === 'fr' ? VIDEO_FR : VIDEO_EN;
+    if (frame && !frame.src.includes(videoId)) {
+      frame.src = 'https://www.youtube.com/embed/' + videoId;
+    }
+    try { localStorage.setItem('topai_lang', lang); } catch (e) {}
+  }
+
+  (function() {
+    let lang = 'en';
+    try { lang = localStorage.getItem('topai_lang') || (navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en'; } catch (e) {}
+    if (lang === 'fr') switchLang('fr');
+  })();
+</script>
+
+</body>
+</html>
